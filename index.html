@@ -1,0 +1,693 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Beast Gym & Fitness &mdash; Stronger Than Yesterday | Premium Fitness Arena</title>
+  <meta name="description" content="Beast Gym & Fitness is a luxury fitness destination offering Olympic weight training, CrossFit, personal coaching, Zumba, yoga, diet plans, and certified sports nutrition in India.">
+  <meta name="keywords" content="Beast Gym, Beast Gym and Fitness, gym near me, personal trainer, crossfit gym, luxury gym India, fitness transformation">
+  <meta name="robots" content="index, follow">
+  <link rel="canonical" href="https://beastgym.in/">
+
+  <meta property="og:title" content="Beast Gym & Fitness &mdash; Stronger Than Yesterday">
+  <meta property="og:description" content="Train with world-class coaches and Olympic equipment. Join the Beast community today.">
+  <meta property="og:image" content="assets/hero-banner-new.jpg">
+
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Cinzel:wght@600;700;800;900&family=Outfit:wght@300;400;500;600;700;800;900&family=Plus+Jakarta+Sans:ital,wght@0,300;0,400;0,500;0,600;0,700;0,800;1,400&display=swap" rel="stylesheet">
+
+  <link rel="stylesheet" href="css/design-system.css">
+  <link rel="stylesheet" href="css/main.css">
+  <link rel="stylesheet" href="css/animations.css">
+</head>
+<body>
+
+
+  <!-- ANNOUNCEMENT BAR -->
+  <div id="announcement-bar" class="announcement-bar" role="banner" aria-label="Announcement">
+    <span>PREMIUM UNISEX FITNESS ARENA IN NEELANKARAI &mdash; <a href="#join-modal" data-open-join-modal>JOIN TODAY</a></span>
+    <button id="announcement-close" class="announcement-close" aria-label="Close announcement">
+      <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><line x1="18" y1="6" x2="6" y2="18"/><line x1="6" y1="6" x2="18" y2="18"/></svg>
+    </button>
+  </div>
+
+  <!-- GLOSSY GLASSMORPHISM NAVIGATION -->
+  <nav id="main-nav" class="nav has-announcement" role="navigation" aria-label="Main navigation">
+    <div class="nav__inner">
+      <a href="index.html" class="nav__logo" aria-label="Beast Gym & Fitness - Home">
+        <img src="assets/beast-gym-logo.png" alt="Beast Gym &amp; Fitness Official Logo" class="nav__logo-img">
+      </a>
+
+      <div class="nav__links" role="menubar">
+        <a href="index.html" class="nav__link active" role="menuitem">Home</a>
+        <a href="programs.html" class="nav__link " role="menuitem">Programs</a>
+        <a href="memberships.html" class="nav__link " role="menuitem">Memberships</a>
+        <a href="about.html" class="nav__link " role="menuitem">About</a>
+        <a href="gallery.html" class="nav__link " role="menuitem">Gallery</a>
+        <a href="medical/index.html" class="nav__link nav__link--supplements " role="menuitem">Supplements</a>
+        <a href="contact.html" class="nav__link " role="menuitem">Contact</a>
+      </div>
+
+      <div class="nav__cta">
+        <a href="tel:+917092030786" class="btn btn--ghost btn--sm">
+          <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M22 16.92v3a2 2 0 01-2.18 2 19.79 19.79 0 01-8.63-3.07A19.5 19.5 0 014.5 11.5a19.79 19.79 0 01-3.07-8.63A2 2 0 013.41 0.68h3a2 2 0 012 1.72c.127.96.361 1.903.7 2.81a2 2 0 01-.45 2.11L7.09 8.91a16 16 0 006 6l1.27-1.27a2 2 0 012.11-.45c.907.339 1.85.573 2.81.7A2 2 0 0121.32 16z"/></svg>
+          Call
+        </a>
+        <a href="#join-modal" class="btn btn--primary btn--sm" id="nav-join-btn" data-open-join-modal>JOIN NOW</a>
+      </div>
+
+      <button id="nav-toggle" class="nav__toggle" aria-label="Open menu" aria-expanded="false" aria-controls="nav-drawer">
+        <span></span><span></span><span></span>
+      </button>
+    </div>
+  </nav>
+
+  <!-- MOBILE NAV OVERLAY -->
+  <div id="nav-overlay" class="nav__overlay" aria-hidden="true"></div>
+
+  <!-- MOBILE NAV DRAWER -->
+  <div id="nav-drawer" class="nav__drawer" role="dialog" aria-modal="true" aria-label="Navigation menu">
+    <nav class="nav__drawer-links" role="menubar" aria-label="Mobile navigation">
+      <a href="index.html" class="nav__drawer-link active" role="menuitem">Home</a>
+      <a href="programs.html" class="nav__drawer-link " role="menuitem">Programs</a>
+      <a href="memberships.html" class="nav__drawer-link " role="menuitem">Memberships</a>
+      <a href="about.html" class="nav__drawer-link " role="menuitem">About &amp; Coaches</a>
+      <a href="gallery.html" class="nav__drawer-link " role="menuitem">Facility Gallery</a>
+      <a href="medical/index.html" class="nav__drawer-link nav__drawer-link--red " role="menuitem">Supplements Store</a>
+      <a href="contact.html" class="nav__drawer-link " role="menuitem">Contact &amp; Location</a>
+    </nav>
+    <div class="nav__drawer-cta">
+      <a href="#join-modal" class="btn btn--primary btn--full" data-open-join-modal>JOIN BEAST GYM</a>
+      <a href="tel:+917092030786" class="btn btn--outline btn--full">
+        <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M22 16.92v3a2 2 0 01-2.18 2 19.79 19.79 0 01-8.63-3.07A19.5 19.5 0 014.5 11.5a19.79 19.79 0 01-3.07-8.63A2 2 0 013.41 0.68h3a2 2 0 012 1.72c.127.96.361 1.903.7 2.81a2 2 0 01-.45 2.11L7.09 8.91a16 16 0 006 6l1.27-1.27a2 2 0 012.11-.45c.907.339 1.85.573 2.81.7A2 2 0 0121.32 16z"/></svg>
+        +91 70920 30786
+      </a>
+    </div>
+  </div>
+
+
+  <main>
+
+    <!-- HERO SECTION WITH REPLACED NEW USER BANNER -->
+    <section id="home" class="hero" aria-labelledby="hero-title">
+      <div class="hero__bg" aria-hidden="true">
+        <img src="assets/hero-banner-new.jpg" alt="Beast Gym &amp; Fitness - Stronger Than Yesterday Athlete Training" loading="eager" fetchpriority="high">
+      </div>
+      <div class="hero__overlay" aria-hidden="true"></div>
+
+      <div class="hero__content">
+
+        <h1 id="hero-title" class="hero__title">
+          STRONGER<br><em>THAN YESTERDAY.</em>
+        </h1>
+        <p class="hero__description">
+          Bespoke functional training, Olympic platforms, certified coaches, and custom nutrition protocols. Built for everyday athletes who refuse to settle.
+        </p>
+        <div class="hero__actions">
+          <a href="#join-modal" class="btn btn--primary btn--lg" id="hero-join-btn" data-open-join-modal>JOIN BEAST GYM</a>
+          <a href="programs.html" class="btn btn--outline btn--lg" id="hero-programs-btn">EXPLORE OUR PROGRAMS</a>
+          <a href="tel:+917092030786" class="btn btn--ghost" style="color:#FFF;">
+            <svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M22 16.92v3a2 2 0 01-2.18 2 19.79 19.79 0 01-8.63-3.07A19.5 19.5 0 014.5 11.5a19.79 19.79 0 01-3.07-8.63A2 2 0 013.41 0.68h3a2 2 0 012 1.72c.127.96.361 1.903.7 2.81a2 2 0 01-.45 2.11L7.09 8.91a16 16 0 006 6l1.27-1.27a2 2 0 012.11-.45c.907.339 1.85.573 2.81.7A2 2 0 0121.32 16z"/></svg>
+            +91 70920 30786
+          </a>
+        </div>
+        <div class="hero__features">
+          <div class="hero__feature">
+            <span class="hero__feature-icon"><svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="20 6 9 17 4 12"/></svg></span>
+            <span class="hero__feature-text">Certified Coaches</span>
+          </div>
+          <div class="hero__feature">
+            <span class="hero__feature-icon"><svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="20 6 9 17 4 12"/></svg></span>
+            <span class="hero__feature-text">10,000+ Sq Ft Floor</span>
+          </div>
+          <div class="hero__feature">
+            <span class="hero__feature-icon"><svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="20 6 9 17 4 12"/></svg></span>
+            <span class="hero__feature-text">Authentic Supplements</span>
+          </div>
+          <div class="hero__feature">
+            <span class="hero__feature-icon"><svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="20 6 9 17 4 12"/></svg></span>
+            <span class="hero__feature-text">Open Mon&ndash;Sun</span>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    
+
+    <!-- BRAND INTRO -->
+    <section class="brand-intro" aria-labelledby="about-title">
+      <div class="brand-intro__inner">
+        <div class="brand-intro__image reveal" data-src="assets/Supplements banner.png" data-alt="Beast Gym authentic supplements desk" title="Beast Gym Supplements">
+          <img src="assets/Supplements banner.png" alt="Beast Gym authentic supplements desk" loading="lazy">
+        </div>
+        <div class="brand-intro__content">
+          <div class="reveal">
+            <span class="section-label">Nutrition &amp; Recovery Desk</span>
+            <h2 id="about-title" class="brand-intro__quote">
+              100% Authentic<br><em>Sports Nutrition.</em>
+            </h2>
+            <span class="accent-line"></span>
+            <p class="brand-intro__body">
+              Protect yourself from counterfeits. Direct manufacturer imports of pure whey isolates, creatine monohydrate, EAAs, and joint health vitamins available right at reception.
+            </p>
+            <div class="flex gap-4" style="margin-top:2rem;flex-wrap:wrap;">
+              <a href="medical/index.html" class="btn btn--primary">VISIT SUPPLEMENTS STORE</a>
+              <a href="https://wa.me/917092030786?text=Hi%20Beast%20Gym%2C%20I%20have%20an%20enquiry%20regarding%20supplements" target="_blank" rel="noopener noreferrer" class="btn btn--outline">ENQUIRE VIA WHATSAPP</a>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- FEATURED PROGRAMS TEASER -->
+    <section class="programs section" aria-labelledby="programs-title">
+      <div class="container">
+        <div class="flex justify-between items-center reveal" style="flex-wrap:wrap;gap:1.5rem;">
+          <div>
+            <span class="section-label">Curated Training Disciplines</span>
+            <h2 id="programs-title">Engineered For Every Goal</h2>
+          </div>
+          <a href="programs.html" class="btn btn--outline-red">
+            VIEW ALL PROGRAMS &rarr;
+          </a>
+        </div>
+
+        <div class="programs__grid" style="margin-top:2.5rem;">
+          <!-- CARD 1 -->
+          <article class="program-card reveal reveal--delay-1" tabindex="0">
+            <div class="program-card__image">
+              <img src="assets/CrossFIt.png" alt="CrossFit Training at Beast Gym" loading="lazy">
+              <div class="program-card__icon" aria-hidden="true"><svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M13 2L3 14h9l-1 8 10-12h-9l1-8z"/></svg></div>
+            </div>
+            <div class="program-card__body">
+              <h3 class="program-card__name">CrossFit Conditioning</h3>
+              <p class="program-card__desc">High-intensity functional movements, Olympic lifts, and metabolic conditioning programmed for relentless work capacity.</p>
+              <a href="programs.html#crossfit" class="program-card__link">Program Details &rarr;</a>
+            </div>
+          </article>
+
+          <!-- CARD 2 -->
+          <article class="program-card reveal reveal--delay-2" tabindex="0">
+            <div class="program-card__image">
+              <img src="assets/Personal Training.png" alt="1-on-1 Personal Training Coaching" loading="lazy">
+              <div class="program-card__icon" aria-hidden="true"><svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M20 21v-2a4 4 0 00-4-4H8a4 4 0 00-4 4v2"/><circle cx="12" cy="7" r="4"/></svg></div>
+            </div>
+            <div class="program-card__body">
+              <h3 class="program-card__name">1-on-1 Personal Coaching</h3>
+              <p class="program-card__desc">Dedicated one-on-one sessions, movement screening, progressive overload tracking, and personal accountability.</p>
+              <a href="programs.html#personal-training" class="program-card__link">Program Details &rarr;</a>
+            </div>
+          </article>
+
+          <!-- CARD 3 -->
+          <article class="program-card reveal reveal--delay-3" tabindex="0">
+            <div class="program-card__image">
+              <img src="assets/weight traing.png" alt="Olympic Weight Training & Hypertrophy" loading="lazy">
+              <div class="program-card__icon" aria-hidden="true"><svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M6.5 6.5h1m9 0h1M5 12h14M6.5 17.5h1m9 0h1"/><rect x="2" y="10" width="3" height="4" rx="1"/><rect x="19" y="10" width="3" height="4" rx="1"/></svg></div>
+            </div>
+            <div class="program-card__body">
+              <h3 class="program-card__name">Weight Training &amp; Strength</h3>
+              <p class="program-card__desc">Heavy-duty power racks, Olympic platforms, and calibrated plates designed for hypertrophy and raw compound strength.</p>
+              <a href="programs.html#weight-training" class="program-card__link">Program Details &rarr;</a>
+            </div>
+          </article>
+
+          <!-- CARD 4 -->
+          <article class="program-card reveal reveal--delay-4" tabindex="0">
+            <div class="program-card__image">
+              <img src="assets/Zumba.png" alt="Zumba & Dance Cardio at Beast Gym" loading="lazy">
+              <div class="program-card__icon" aria-hidden="true"><svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M9 18V5l12-2v13"/><circle cx="6" cy="18" r="3"/><circle cx="18" cy="16" r="3"/></svg></div>
+            </div>
+            <div class="program-card__body">
+              <h3 class="program-card__name">Zumba &amp; Group Fitness</h3>
+              <p class="program-card__desc">Rhythm-driven cardiovascular conditioning combining dance and athletic intervals. Fun, intense, and calorie-torching.</p>
+              <a href="programs.html#zumba" class="program-card__link">Program Details &rarr;</a>
+            </div>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <!-- MEMBERSHIP PLANS TEASER -->
+    <section class="memberships section" style="background:#141414;" aria-labelledby="mem-teaser-title">
+      <div class="container">
+        <div class="text-center reveal">
+          <span class="section-label" style="justify-content:center;">Membership Pricing</span>
+          <h2 id="mem-teaser-title">Straightforward Pricing.<br>Maximum Access.</h2>
+          <p style="max-width:540px;margin:0.75rem auto 2.5rem;">Choose the duration that fits your commitment. Full gym access, cardio zone, and locker amenities on every plan.</p>
+        </div>
+
+        <div class="membership__grid">
+          <!-- MONTHLY -->
+          <div class="membership-card reveal reveal--delay-1">
+            <div class="membership-card__header">
+              <span class="membership-card__plan">1 MONTH</span>
+              <h3 class="membership-card__name">Monthly</h3>
+              <p class="membership-card__desc">Maximum flexibility with no long-term commitment.</p>
+            </div>
+            <div class="membership-card__pricing">
+              <div class="membership-card__price">
+                <span class="membership-card__currency">&#8377;</span>
+                <span class="membership-card__amount">1,700</span>
+              </div>
+              <div class="membership-card__price-note" style="color:#A5A5A5;">Per month</div>
+            </div>
+            <div class="membership-card__footer" style="padding-top:1.5rem;">
+              <a href="https://wa.me/917092030786?text=Hi%20Beast%20Gym%20%26%20Fitness%2C%20I%20am%20interested%20in%20the%20Monthly%20Gym%20Membership%20priced%20at%20%E2%82%B91%2C700.%20Please%20share%20the%20joining%20details." target="_blank" rel="noopener noreferrer" class="btn btn--outline btn--full">JOIN MONTHLY</a>
+            </div>
+          </div>
+
+          <!-- QUARTERLY (featured) -->
+          <div class="membership-card membership-card--featured reveal reveal--delay-2">
+            <div class="membership-card__badge badge badge--red">POPULAR</div>
+            <div class="membership-card__header">
+              <span class="membership-card__plan">3 MONTHS</span>
+              <h3 class="membership-card__name">Quarterly</h3>
+              <p class="membership-card__desc">Build a solid fitness habit over three months.</p>
+            </div>
+            <div class="membership-card__pricing">
+              <div class="membership-card__price">
+                <span class="membership-card__currency">&#8377;</span>
+                <span class="membership-card__amount">4,200</span>
+              </div>
+              <div class="membership-card__price-note" style="color:#FC0F12;">3-month total</div>
+            </div>
+            <div class="membership-card__footer" style="padding-top:1.5rem;">
+              <a href="https://wa.me/917092030786?text=Hi%20Beast%20Gym%20%26%20Fitness%2C%20I%20am%20interested%20in%20the%20Quarterly%20Gym%20Membership%20priced%20at%20%E2%82%B94%2C200.%20Please%20share%20the%20joining%20details." target="_blank" rel="noopener noreferrer" class="btn btn--primary btn--full">CHOOSE QUARTERLY</a>
+            </div>
+          </div>
+
+          <!-- YEARLY -->
+          <div class="membership-card reveal reveal--delay-3">
+            <div class="membership-card__header">
+              <span class="membership-card__plan">12 MONTHS</span>
+              <h3 class="membership-card__name">Yearly</h3>
+              <p class="membership-card__desc">Best long-term value for committed members.</p>
+            </div>
+            <div class="membership-card__pricing">
+              <div class="membership-card__price">
+                <span class="membership-card__currency">&#8377;</span>
+                <span class="membership-card__amount">7,199</span>
+              </div>
+              <div class="membership-card__price-note" style="color:#A5A5A5;">Full-year total</div>
+            </div>
+            <div class="membership-card__footer" style="padding-top:1.5rem;">
+              <a href="https://wa.me/917092030786?text=Hi%20Beast%20Gym%20%26%20Fitness%2C%20I%20am%20interested%20in%20the%20Yearly%20Gym%20Membership%20priced%20at%20%E2%82%B97%2C199.%20Please%20share%20the%20joining%20details." target="_blank" rel="noopener noreferrer" class="btn btn--outline btn--full">GET YEARLY</a>
+            </div>
+          </div>
+        </div>
+
+        <div class="text-center" style="margin-top:2.5rem;">
+          <a href="memberships.html" class="btn btn--outline-red">VIEW ALL PLANS + PERSONAL TRAINING + GROUP CLASSES &rarr;</a>
+        </div>
+      </div>
+    </section>
+
+    <!-- GOOGLE REVIEWS & MEMBER TRANSFORMATIONS -->
+    <section class="section" style="background:#090909;" aria-labelledby="reviews-heading">
+      <div class="container">
+        <div class="text-center reveal">
+          <!-- GOOGLE TRUST BADGE -->
+          <div class="google-badge">
+            <svg xmlns="http://www.w3.org/2000/svg" width="22" height="22" viewBox="0 0 24 24">
+              <path fill="#4285F4" d="M23.745 12.27c0-.7-.06-1.4-.19-2.07H12v4.51h6.6c-.29 1.52-1.14 2.82-2.4 3.68v3.05h3.88c2.27-2.09 3.66-5.17 3.66-9.17z"/>
+              <path fill="#34A853" d="M12 24c3.24 0 5.95-1.08 7.93-2.91l-3.88-3.05c-1.08.72-2.45 1.16-4.05 1.16-3.12 0-5.77-2.1-6.72-4.93H1.25v3.15C3.26 21.36 7.33 24 12 24z"/>
+              <path fill="#FBBC05" d="M5.28 14.27c-.25-.72-.38-1.49-.38-2.27s.13-1.55.38-2.27V6.58H1.25C.45 8.18 0 10.04 0 12s.45 3.82 1.25 5.42l4.03-3.15z"/>
+              <path fill="#EA4335" d="M12 4.75c1.77 0 3.35.61 4.6 1.8l3.42-3.42C17.95 1.19 15.24 0 12 0 7.33 0 3.26 2.64 1.25 6.58l4.03 3.15c.95-2.83 3.6-4.98 6.72-4.98z"/>
+            </svg>
+            <span class="google-badge__stars">★★★★★</span>
+            <span class="google-badge__score">4.4 / 5.0</span>
+            <span class="google-badge__count">• 50+ Verified Google Reviews</span>
+          </div>
+
+          <span class="section-label" style="justify-content:center;">Verified Member Feedback</span>
+          <h2 id="reviews-heading">Loved By Fitness Enthusiasts In Neelankarai</h2>
+          <p style="max-width:620px;margin:0.75rem auto 0;color:var(--muted-grey);line-height:1.7;">
+            Read authentic reviews from members training at Beast Gym &amp; Fitness, Pandian Salai, Neelankarai, Chennai. Real results, supportive coaching, and zero excuses.
+          </p>
+
+          <div class="flex justify-center gap-4" style="margin-top:1.5rem;flex-wrap:wrap;">
+            <a href="https://share.google/c82nGcmtq20Y6S7NX" target="_blank" rel="noopener noreferrer" class="btn btn--outline btn--sm" style="display:inline-flex;align-items:center;gap:6px;">
+              <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6"/><polyline points="15 3 21 3 21 9"/><line x1="10" y1="14" x2="21" y2="3"/></svg>
+              VIEW ON GOOGLE MAPS
+            </a>
+            <a href="https://share.google/c82nGcmtq20Y6S7NX" target="_blank" rel="noopener noreferrer" class="btn btn--primary btn--sm">
+              WRITE A GOOGLE REVIEW
+            </a>
+          </div>
+        </div>
+
+        <div class="reviews__grid">
+          <!-- REVIEW 1 -->
+          <div class="review-card reveal reveal--delay-1">
+            <div class="review-card__header">
+              <div class="review-card__author">
+                <div class="review-card__avatar">KR</div>
+                <div>
+                  <div class="review-card__name">Karthik R.</div>
+                  <div class="review-card__meta">Local Guide • 18 Google Reviews</div>
+                </div>
+              </div>
+              <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24"><path fill="#4285F4" d="M23.745 12.27c0-.7-.06-1.4-.19-2.07H12v4.51h6.6c-.29 1.52-1.14 2.82-2.4 3.68v3.05h3.88c2.27-2.09 3.66-5.17 3.66-9.17z"/><path fill="#34A853" d="M12 24c3.24 0 5.95-1.08 7.93-2.91l-3.88-3.05c-1.08.72-2.45 1.16-4.05 1.16-3.12 0-5.77-2.1-6.72-4.93H1.25v3.15C3.26 21.36 7.33 24 12 24z"/><path fill="#FBBC05" d="M5.28 14.27c-.25-.72-.38-1.49-.38-2.27s.13-1.55.38-2.27V6.58H1.25C.45 8.18 0 10.04 0 12s.45 3.82 1.25 5.42l4.03-3.15z"/><path fill="#EA4335" d="M12 4.75c1.77 0 3.35.61 4.6 1.8l3.42-3.42C17.95 1.19 15.24 0 12 0 7.33 0 3.26 2.64 1.25 6.58l4.03 3.15c.95-2.83 3.6-4.98 6.72-4.98z"/></svg>
+            </div>
+            <div class="review-card__stars">★★★★★</div>
+            <p class="review-card__text">
+              “One of the best unisex gyms in the Neelankarai ECR belt. The trainers are polite, humble, and very supportive. High-quality strength equipment, heavy dumbbell sets, and clean facilities. Highly recommended for beginners and serious lifters!”
+            </p>
+            <div class="review-card__footer">
+              <span class="google-source-tag"><svg xmlns="http://www.w3.org/2000/svg" width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="#22c55e" stroke-width="2.5"><polyline points="20 6 9 17 4 12"/></svg> Verified Google Review</span>
+              <span>Neelankarai Member</span>
+            </div>
+          </div>
+
+          <!-- REVIEW 2 -->
+          <div class="review-card reveal reveal--delay-2">
+            <div class="review-card__header">
+              <div class="review-card__author">
+                <div class="review-card__avatar" style="background:linear-gradient(135deg, #3b82f6, #1d4ed8);">AV</div>
+                <div>
+                  <div class="review-card__name">Ananya V.</div>
+                  <div class="review-card__meta">Verified Member • 8 Months</div>
+                </div>
+              </div>
+              <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24"><path fill="#4285F4" d="M23.745 12.27c0-.7-.06-1.4-.19-2.07H12v4.51h6.6c-.29 1.52-1.14 2.82-2.4 3.68v3.05h3.88c2.27-2.09 3.66-5.17 3.66-9.17z"/><path fill="#34A853" d="M12 24c3.24 0 5.95-1.08 7.93-2.91l-3.88-3.05c-1.08.72-2.45 1.16-4.05 1.16-3.12 0-5.77-2.1-6.72-4.93H1.25v3.15C3.26 21.36 7.33 24 12 24z"/><path fill="#FBBC05" d="M5.28 14.27c-.25-.72-.38-1.49-.38-2.27s.13-1.55.38-2.27V6.58H1.25C.45 8.18 0 10.04 0 12s.45 3.82 1.25 5.42l4.03-3.15z"/><path fill="#EA4335" d="M12 4.75c1.77 0 3.35.61 4.6 1.8l3.42-3.42C17.95 1.19 15.24 0 12 0 7.33 0 3.26 2.64 1.25 6.58l4.03 3.15c.95-2.83 3.6-4.98 6.72-4.98z"/></svg>
+            </div>
+            <div class="review-card__stars">★★★★★</div>
+            <p class="review-card__text">
+              “Coaches actually care about your form and posture on every single exercise. Special shoutout to the trainers who give genuine floor guidance and custom diet advice without forcing costly packages. Love the vibe here!”
+            </p>
+            <div class="review-card__footer">
+              <span class="google-source-tag"><svg xmlns="http://www.w3.org/2000/svg" width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="#22c55e" stroke-width="2.5"><polyline points="20 6 9 17 4 12"/></svg> Verified Google Review</span>
+              <span>General Fitness &amp; Tone</span>
+            </div>
+          </div>
+
+          <!-- REVIEW 3 -->
+          <div class="review-card reveal reveal--delay-3">
+            <div class="review-card__header">
+              <div class="review-card__author">
+                <div class="review-card__avatar" style="background:linear-gradient(135deg, #10b981, #047857);">VS</div>
+                <div>
+                  <div class="review-card__name">Vignesh S.</div>
+                  <div class="review-card__meta">Local Guide • 24 Google Reviews</div>
+                </div>
+              </div>
+              <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24"><path fill="#4285F4" d="M23.745 12.27c0-.7-.06-1.4-.19-2.07H12v4.51h6.6c-.29 1.52-1.14 2.82-2.4 3.68v3.05h3.88c2.27-2.09 3.66-5.17 3.66-9.17z"/><path fill="#34A853" d="M12 24c3.24 0 5.95-1.08 7.93-2.91l-3.88-3.05c-1.08.72-2.45 1.16-4.05 1.16-3.12 0-5.77-2.1-6.72-4.93H1.25v3.15C3.26 21.36 7.33 24 12 24z"/><path fill="#FBBC05" d="M5.28 14.27c-.25-.72-.38-1.49-.38-2.27s.13-1.55.38-2.27V6.58H1.25C.45 8.18 0 10.04 0 12s.45 3.82 1.25 5.42l4.03-3.15z"/><path fill="#EA4335" d="M12 4.75c1.77 0 3.35.61 4.6 1.8l3.42-3.42C17.95 1.19 15.24 0 12 0 7.33 0 3.26 2.64 1.25 6.58l4.03 3.15c.95-2.83 3.6-4.98 6.72-4.98z"/></svg>
+            </div>
+            <div class="review-card__stars">★★★★★</div>
+            <p class="review-card__text">
+              “Excellent ambience for both men and women. The 5:00 AM opening time is a blessing for morning workouts before office traffic. Well-maintained machines, Olympic bars, and a motivating fitness community.”
+            </p>
+            <div class="review-card__footer">
+              <span class="google-source-tag"><svg xmlns="http://www.w3.org/2000/svg" width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="#22c55e" stroke-width="2.5"><polyline points="20 6 9 17 4 12"/></svg> Verified Google Review</span>
+              <span>Strength &amp; Conditioning</span>
+            </div>
+          </div>
+
+          <!-- REVIEW 4 -->
+          <div class="review-card reveal reveal--delay-1">
+            <div class="review-card__header">
+              <div class="review-card__author">
+                <div class="review-card__avatar" style="background:linear-gradient(135deg, #8b5cf6, #6d28d9);">DM</div>
+                <div>
+                  <div class="review-card__name">Divya M.</div>
+                  <div class="review-card__meta">Verified Member • 1 Year</div>
+                </div>
+              </div>
+              <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24"><path fill="#4285F4" d="M23.745 12.27c0-.7-.06-1.4-.19-2.07H12v4.51h6.6c-.29 1.52-1.14 2.82-2.4 3.68v3.05h3.88c2.27-2.09 3.66-5.17 3.66-9.17z"/><path fill="#34A853" d="M12 24c3.24 0 5.95-1.08 7.93-2.91l-3.88-3.05c-1.08.72-2.45 1.16-4.05 1.16-3.12 0-5.77-2.1-6.72-4.93H1.25v3.15C3.26 21.36 7.33 24 12 24z"/><path fill="#FBBC05" d="M5.28 14.27c-.25-.72-.38-1.49-.38-2.27s.13-1.55.38-2.27V6.58H1.25C.45 8.18 0 10.04 0 12s.45 3.82 1.25 5.42l4.03-3.15z"/><path fill="#EA4335" d="M12 4.75c1.77 0 3.35.61 4.6 1.8l3.42-3.42C17.95 1.19 15.24 0 12 0 7.33 0 3.26 2.64 1.25 6.58l4.03 3.15c.95-2.83 3.6-4.98 6.72-4.98z"/></svg>
+            </div>
+            <div class="review-card__stars">★★★★★</div>
+            <p class="review-card__text">
+              “Very safe and comfortable unisex workout atmosphere. Good cardio setup with treadmills and turf area. Great value membership plans compared to other gyms on ECR. The staff is always welcoming.”
+            </p>
+            <div class="review-card__footer">
+              <span class="google-source-tag"><svg xmlns="http://www.w3.org/2000/svg" width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="#22c55e" stroke-width="2.5"><polyline points="20 6 9 17 4 12"/></svg> Verified Google Review</span>
+              <span>Cardio &amp; Mobility</span>
+            </div>
+          </div>
+
+          <!-- REVIEW 5 -->
+          <div class="review-card reveal reveal--delay-2">
+            <div class="review-card__header">
+              <div class="review-card__author">
+                <div class="review-card__avatar">PK</div>
+                <div>
+                  <div class="review-card__name">Praveen Kumar</div>
+                  <div class="review-card__meta">Verified Member • Transformation</div>
+                </div>
+              </div>
+              <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24"><path fill="#4285F4" d="M23.745 12.27c0-.7-.06-1.4-.19-2.07H12v4.51h6.6c-.29 1.52-1.14 2.82-2.4 3.68v3.05h3.88c2.27-2.09 3.66-5.17 3.66-9.17z"/><path fill="#34A853" d="M12 24c3.24 0 5.95-1.08 7.93-2.91l-3.88-3.05c-1.08.72-2.45 1.16-4.05 1.16-3.12 0-5.77-2.1-6.72-4.93H1.25v3.15C3.26 21.36 7.33 24 12 24z"/><path fill="#FBBC05" d="M5.28 14.27c-.25-.72-.38-1.49-.38-2.27s.13-1.55.38-2.27V6.58H1.25C.45 8.18 0 10.04 0 12s.45 3.82 1.25 5.42l4.03-3.15z"/><path fill="#EA4335" d="M12 4.75c1.77 0 3.35.61 4.6 1.8l3.42-3.42C17.95 1.19 15.24 0 12 0 7.33 0 3.26 2.64 1.25 6.58l4.03 3.15c.95-2.83 3.6-4.98 6.72-4.98z"/></svg>
+            </div>
+            <div class="review-card__stars">★★★★★</div>
+            <p class="review-card__text">
+              “Joining Beast Gym completely changed my relationship with fitness. In 5 months, I shed 14kg of stubborn fat and gained remarkable endurance. The coaches actually care about your form every single set.”
+            </p>
+            <div class="review-card__footer">
+              <span class="google-source-tag"><svg xmlns="http://www.w3.org/2000/svg" width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="#22c55e" stroke-width="2.5"><polyline points="20 6 9 17 4 12"/></svg> Verified Google Review</span>
+              <span>-14 KG Fat Loss Protocol</span>
+            </div>
+          </div>
+
+          <!-- REVIEW 6 -->
+          <div class="review-card reveal reveal--delay-3">
+            <div class="review-card__header">
+              <div class="review-card__author">
+                <div class="review-card__avatar" style="background:linear-gradient(135deg, #f59e0b, #d97706);">AK</div>
+                <div>
+                  <div class="review-card__name">Arun Kumar</div>
+                  <div class="review-card__meta">Verified Member • 2 Years</div>
+                </div>
+              </div>
+              <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24"><path fill="#4285F4" d="M23.745 12.27c0-.7-.06-1.4-.19-2.07H12v4.51h6.6c-.29 1.52-1.14 2.82-2.4 3.68v3.05h3.88c2.27-2.09 3.66-5.17 3.66-9.17z"/><path fill="#34A853" d="M12 24c3.24 0 5.95-1.08 7.93-2.91l-3.88-3.05c-1.08.72-2.45 1.16-4.05 1.16-3.12 0-5.77-2.1-6.72-4.93H1.25v3.15C3.26 21.36 7.33 24 12 24z"/><path fill="#FBBC05" d="M5.28 14.27c-.25-.72-.38-1.49-.38-2.27s.13-1.55.38-2.27V6.58H1.25C.45 8.18 0 10.04 0 12s.45 3.82 1.25 5.42l4.03-3.15z"/><path fill="#EA4335" d="M12 4.75c1.77 0 3.35.61 4.6 1.8l3.42-3.42C17.95 1.19 15.24 0 12 0 7.33 0 3.26 2.64 1.25 6.58l4.03 3.15c.95-2.83 3.6-4.98 6.72-4.98z"/></svg>
+            </div>
+            <div class="review-card__stars">★★★★★</div>
+            <p class="review-card__text">
+              “Clean space, good crowd, and genuine equipment. From deadlift platforms to cable stations and dumbbells, everything you need for solid bodybuilding and strength training is here in Neelankarai.”
+            </p>
+            <div class="review-card__footer">
+              <span class="google-source-tag"><svg xmlns="http://www.w3.org/2000/svg" width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="#22c55e" stroke-width="2.5"><polyline points="20 6 9 17 4 12"/></svg> Verified Google Review</span>
+              <span>Bodybuilding &amp; Power</span>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- GYM BRAND INTRO -->
+    <section class="section" style="background:#090909;border-top:1px solid #222;">
+      <div class="container">
+        <div class="supplements__inner">
+          <div class="supplements__image">
+            <img src="assets/Banner.png" alt="Beast Gym & Fitness - No Excuses Just Results" loading="lazy">
+          </div>
+          <div class="supplements__content">
+            <h2 style="margin-bottom:1rem;">A gym built for<br><em style="color:#FC0F12;">real transformation.</em></h2>
+            <p style="color:var(--muted-grey);margin-bottom:1.5rem;">
+              Beast Gym &amp; Fitness is not a commercial revolving-door gym. It's a performance sanctum where excuses are left outside. From beginner weight management to competitive powerlifting and functional sports conditioning.
+            </p>
+            <div class="flex gap-4" style="flex-wrap:wrap;">
+              <a href="about.html" class="btn btn--primary">READ OUR STORY &amp; COACHES</a>
+              <a href="programs.html" class="btn btn--outline">BROWSE ALL PROGRAMS</a>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- GALLERY PREVIEW -->
+    <section class="section" style="background:#141414;">
+      <div class="container">
+        <div class="flex justify-between items-center reveal" style="flex-wrap:wrap;gap:1.5rem;">
+          <div>
+            <span class="section-label">Inside The Facility</span>
+            <h2>Take A Look Inside The Arena</h2>
+          </div>
+          <a href="gallery.html" class="btn btn--outline">
+            VIEW ALL 13 FACILITY PHOTOS &rarr;
+          </a>
+        </div>
+
+        <div class="gallery__grid" style="margin-top:2rem;">
+          <div class="gallery-item reveal" data-src="assets/unnamed.webp" data-alt="Main gym training floor">
+            <img src="assets/unnamed.webp" alt="Main gym training floor" loading="lazy">
+            <div class="gallery-item__overlay"><div class="gallery-item__icon"><svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="11" cy="11" r="8"/><line x1="21" y1="21" x2="16.65" y2="16.65"/><line x1="11" y1="8" x2="11" y2="14"/><line x1="8" y1="11" x2="14" y2="11"/></svg></div></div>
+          </div>
+          <div class="gallery-item reveal reveal--delay-1" data-src="assets/unnamed (1).webp" data-alt="Free weight dumbbell area">
+            <img src="assets/unnamed (1).webp" alt="Free weight dumbbell area" loading="lazy">
+            <div class="gallery-item__overlay"><div class="gallery-item__icon"><svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="11" cy="11" r="8"/><line x1="21" y1="21" x2="16.65" y2="16.65"/><line x1="11" y1="8" x2="11" y2="14"/><line x1="8" y1="11" x2="14" y2="11"/></svg></div></div>
+          </div>
+          <div class="gallery-item reveal reveal--delay-2" data-src="assets/unnamed (2).webp" data-alt="Cardio conditioning floor">
+            <img src="assets/unnamed (2).webp" alt="Cardio conditioning floor" loading="lazy">
+            <div class="gallery-item__overlay"><div class="gallery-item__icon"><svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="11" cy="11" r="8"/><line x1="21" y1="21" x2="16.65" y2="16.65"/><line x1="11" y1="8" x2="11" y2="14"/><line x1="8" y1="11" x2="14" y2="11"/></svg></div></div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- FACILITY VISIT & ENQUIRY -->
+    <section class="section" style="background:#141414;" aria-labelledby="visit-title">
+      <div class="container">
+        <div class="grid grid-2 items-center" style="gap:3.5rem;">
+          <div>
+            <span class="section-label">Your Next Chapter</span>
+            <h2 id="visit-title" style="margin-bottom:1.25rem;">Schedule Your Facility Visit<br>&amp; Fitness Assessment</h2>
+            <p style="color:var(--muted-grey);margin-bottom:2rem;">
+              Tour the arena, meet our certified coaches, and get your baseline fitness profile assessed. Discover the training atmosphere built for everyday athletes.
+            </p>
+            <div style="display:flex;flex-direction:column;gap:1rem;">
+              <div style="display:flex;gap:0.75rem;align-items:center;">
+                <svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="#FC0F12" stroke-width="2.5"><polyline points="20 6 9 17 4 12"/></svg>
+                <span>Comprehensive InBody &amp; mobility screening with a senior coach</span>
+              </div>
+              <div style="display:flex;gap:0.75rem;align-items:center;">
+                <svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="#FC0F12" stroke-width="2.5"><polyline points="20 6 9 17 4 12"/></svg>
+                <span>Full access to group classes and locker amenities</span>
+              </div>
+              <div style="display:flex;gap:0.75rem;align-items:center;">
+                <svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="#FC0F12" stroke-width="2.5"><polyline points="20 6 9 17 4 12"/></svg>
+                <span>Direct WhatsApp confirmation within 15 minutes</span>
+              </div>
+            </div>
+          </div>
+
+          <div style="background:var(--graphite);border:1px solid var(--border-grey);border-radius:12px;padding:2.5rem;">
+            <form id="enquiry-form" novalidate>
+              <div class="form__group">
+                <label class="form__label" for="name">Your Name <span>*</span></label>
+                <input type="text" id="name" name="name" class="form__input" placeholder="e.g. Rahul Sharma" required>
+                <div id="name-error" class="form__error">Please enter your name.</div>
+              </div>
+              <div class="form__group">
+                <label class="form__label" for="phone">Phone Number <span>*</span></label>
+                <input type="tel" id="phone" name="phone" class="form__input" placeholder="+91 98765 43210" required>
+                <div id="phone-error" class="form__error">Please enter a valid phone number.</div>
+              </div>
+              <div class="form__group">
+                <label class="form__label" for="goal">Primary Goal <span>*</span></label>
+                <select id="goal" name="goal" class="form__select" required>
+                  <option value="">Select Primary Goal</option>
+                  <option value="Fat Loss & Toning">Fat Loss &amp; Toning</option>
+                  <option value="Muscle Building">Muscle Building</option>
+                  <option value="CrossFit / Athletic Training">CrossFit Conditioning</option>
+                  <option value="1-on-1 Personal Coaching">1-on-1 Personal Coaching</option>
+                  <option value="Zumba & Dance Cardio">Zumba &amp; Group Fitness</option>
+                  <option value="General Health">General Longevity &amp; Stamina</option>
+                </select>
+                <div id="goal-error" class="form__error">Please select your primary goal.</div>
+              </div>
+              <button type="submit" class="btn btn--primary btn--full btn--lg" style="margin-top:1rem;">
+                ENQUIRE NOW ON WHATSAPP &rarr;
+              </button>
+            </form>
+          </div>
+        </div>
+      </div>
+    </section>
+
+  </main>
+
+
+  <!-- FOOTER -->
+  <footer class="footer" role="contentinfo">
+    <div class="footer__grid">
+      <div class="footer__brand">
+        <a href="index.html" class="footer__logo" aria-label="Beast Gym & Fitness">
+          <img src="assets/beast-gym-logo.png" alt="Beast Gym &amp; Fitness" class="footer__logo-img">
+        </a>
+        <p class="footer__desc">Bespoke training facility, world-class equipment, certified coaches, and authentic sports nutrition. Train hard. Build strength. Transform.</p>
+        <div class="footer__contact">
+          <div class="footer__contact-item">
+            <div class="footer__contact-icon"><svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0118 0z"/><circle cx="12" cy="10" r="3"/></svg></div>
+            <a href="https://share.google/c82nGcmtq20Y6S7NX" target="_blank" rel="noopener noreferrer">1, Pandian Salai, Saraswathy Nagar North, Neelankarai, Chennai 600115</a>
+          </div>
+          <div class="footer__contact-item">
+            <div class="footer__contact-icon"><svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M22 16.92v3a2 2 0 01-2.18 2 19.79 19.79 0 01-8.63-3.07A19.5 19.5 0 014.5 11.5a19.79 19.79 0 01-3.07-8.63A2 2 0 013.41 0.68h3a2 2 0 012 1.72c.127.96.361 1.903.7 2.81a2 2 0 01-.45 2.11L7.09 8.91a16 16 0 006 6l1.27-1.27a2 2 0 012.11-.45c.907.339 1.85.573 2.81.7A2 2 0 0121.32 16z"/></svg></div>
+            <a href="tel:+917092030786">+91 70920 30786</a>
+          </div>
+          <div class="footer__contact-item">
+            <div class="footer__contact-icon"><svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"/><polyline points="22,6 12,13 2,6"/></svg></div>
+            <span>beastgym2018@gmail.com</span>
+          </div>
+          <div class="footer__contact-item">
+            <div class="footer__contact-icon"><svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="10"/><polyline points="12 6 12 12 16 14"/></svg></div>
+            <span>Mon&ndash;Sat: 5 AM &ndash; 10 PM | Sun: 5 AM &ndash; 12 PM &amp; 6 PM &ndash; 8 PM</span>
+          </div>
+        </div>
+      </div>
+
+      <div>
+        <h4 class="footer__heading">Programs</h4>
+        <ul class="footer__links">
+          <li><a href="programs.html" class="footer__link">CrossFit Training</a></li>
+          <li><a href="programs.html" class="footer__link">Zumba &amp; Dance</a></li>
+          <li><a href="programs.html" class="footer__link">Personal Coaching</a></li>
+          <li><a href="programs.html" class="footer__link">Youth Sports</a></li>
+          <li><a href="programs.html" class="footer__link">Yoga Classes</a></li>
+          <li><a href="programs.html" class="footer__link">Weight Training</a></li>
+          <li><a href="programs.html" class="footer__link">Diet &amp; Nutrition Plans</a></li>
+          <li><a href="programs.html#rehab" class="footer__link">Injury Rehab &amp; Recovery</a></li>
+        </ul>
+      </div>
+
+      <div>
+        <h4 class="footer__heading">Quick Navigation</h4>
+        <ul class="footer__links">
+          <li><a href="index.html" class="footer__link">Home</a></li>
+          <li><a href="programs.html" class="footer__link">Training Programs</a></li>
+          <li><a href="memberships.html" class="footer__link">Memberships &amp; Plans</a></li>
+          <li><a href="about.html" class="footer__link">About &amp; Coaches</a></li>
+          <li><a href="gallery.html" class="footer__link">Facility Gallery</a></li>
+          <li><a href="medical/index.html" class="footer__link footer__link--red">Supplements Store</a></li>
+          <li><a href="contact.html" class="footer__link">Contact &amp; Location</a></li>
+        </ul>
+      </div>
+
+      <div>
+        <h4 class="footer__heading">Membership Enquiries</h4>
+        <a href="#join-modal" class="btn btn--primary btn--sm btn--full" data-open-join-modal style="margin-bottom:0.75rem;">JOIN BEAST GYM</a>
+        <a href="https://wa.me/917092030786" target="_blank" rel="noopener noreferrer" class="btn btn--outline btn--sm btn--full">WHATSAPP CHAT</a>
+      </div>
+    </div>
+
+    <div class="footer__bottom">
+      <div class="footer__copyright">
+        &copy; 2026 Beast Gym &amp; Fitness. All Rights Reserved. Crafted for Peak Performance.
+      </div>
+      <div class="footer__legal">
+        <a href="about.html">Privacy Policy</a>
+        <a href="about.html">Terms of Service</a>
+        <a href="about.html">Gym Rules &amp; Etiquette</a>
+      </div>
+    </div>
+  </footer>
+
+  <!-- LIGHTBOX MODAL -->
+  <div id="lightbox" class="lightbox" role="dialog" aria-modal="true" aria-label="Facility photo preview">
+    <button id="lightbox-close" class="lightbox__close" aria-label="Close photo preview">
+      <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><line x1="18" y1="6" x2="6" y2="18"/><line x1="6" y1="6" x2="18" y2="18"/></svg>
+    </button>
+    <button id="lightbox-prev" class="lightbox__prev" aria-label="Previous photo">
+      <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="15 18 9 12 15 6"/></svg>
+    </button>
+    <img id="lightbox-img" class="lightbox__img" src="" alt="">
+    <button id="lightbox-next" class="lightbox__next" aria-label="Next photo">
+      <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="9 18 15 12 9 6"/></svg>
+    </button>
+  </div>
+
+  <!-- FLOATING WHATSAPP BUTTON -->
+  <a href="https://wa.me/917092030786?text=Hi%20Beast%20Gym%20%26%20Fitness%2C%20I%20would%20like%20to%20know%20more%20about%20memberships%20and%20training!" class="whatsapp-float" target="_blank" rel="noopener noreferrer" aria-label="Chat with Beast Gym on WhatsApp">
+    <svg xmlns="http://www.w3.org/2000/svg" width="32" height="32" viewBox="0 0 24 24" fill="currentColor">
+      <path d="M12.04 2c-5.46 0-9.91 4.45-9.91 9.91 0 1.75.46 3.45 1.32 4.95L2.05 22l5.25-1.38c1.45.79 3.08 1.21 4.74 1.21 5.46 0 9.91-4.45 9.91-9.91 0-2.65-1.03-5.14-2.9-7.01A9.816 9.816 0 0012.04 2zm5.78 14.34c-.24.68-1.39 1.3-1.92 1.35-.51.05-1.17.07-3.79-1.01-3.23-1.34-5.32-4.63-5.48-4.84-.16-.21-1.31-1.74-1.31-3.32 0-1.58.83-2.36 1.12-2.68.29-.32.64-.4.86-.4.21 0 .43 0 .62.01.2.01.47-.08.73.56.27.68.93 2.27 1.01 2.43.08.16.13.35.03.56-.11.21-.16.35-.32.53-.16.19-.34.42-.49.56-.16.16-.33.34-.14.67.19.32.84 1.39 1.8 2.25 1.24 1.1 2.29 1.44 2.61 1.6.32.16.51.13.7-.08.19-.21.8-.93 1.01-1.25.21-.32.43-.27.72-.16.29.11 1.86.88 2.18 1.04.32.16.53.24.61.37.08.13.08.79-.16 1.47z"/>
+    </svg>
+  </a>
+
+  <!-- SCRIPTS -->
+  <script src="js/main.js"></script>
+  <script src="js/animations.js"></script>
+
+
+</body>
+</html>
+

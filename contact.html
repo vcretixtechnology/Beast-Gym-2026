@@ -1,0 +1,461 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Contact &amp; Location &mdash; Beast Gym &amp; Fitness</title>
+  <meta name="description" content="Visit Beast Gym &amp; Fitness. Get directions, contact phone numbers (+91 70920 30786), operating hours, and enquire about memberships and personal coaching.">
+  <link rel="canonical" href="https://beastgym.in/contact.html">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Cinzel:wght@600;700;800;900&family=Outfit:wght@300;400;500;600;700;800;900&family=Plus+Jakarta+Sans:ital,wght@0,300;0,400;0,500;0,600;0,700;0,800;1,400&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="css/design-system.css">
+  <link rel="stylesheet" href="css/main.css">
+  <link rel="stylesheet" href="css/animations.css">
+</head>
+<body>
+
+
+  <!-- ANNOUNCEMENT BAR -->
+  <div id="announcement-bar" class="announcement-bar" role="banner" aria-label="Announcement">
+    <span>PREMIUM UNISEX FITNESS ARENA IN NEELANKARAI &mdash; <a href="#join-modal" data-open-join-modal>JOIN TODAY</a></span>
+    <button id="announcement-close" class="announcement-close" aria-label="Close announcement">
+      <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><line x1="18" y1="6" x2="6" y2="18"/><line x1="6" y1="6" x2="18" y2="18"/></svg>
+    </button>
+  </div>
+
+  <!-- GLOSSY GLASSMORPHISM NAVIGATION -->
+  <nav id="main-nav" class="nav has-announcement" role="navigation" aria-label="Main navigation">
+    <div class="nav__inner">
+      <a href="index.html" class="nav__logo" aria-label="Beast Gym & Fitness - Home">
+        <img src="assets/beast-gym-logo.png" alt="Beast Gym &amp; Fitness Official Logo" class="nav__logo-img">
+      </a>
+
+      <div class="nav__links" role="menubar">
+        <a href="index.html" class="nav__link " role="menuitem">Home</a>
+        <a href="programs.html" class="nav__link " role="menuitem">Programs</a>
+        <a href="memberships.html" class="nav__link " role="menuitem">Memberships</a>
+        <a href="about.html" class="nav__link " role="menuitem">About</a>
+        <a href="gallery.html" class="nav__link " role="menuitem">Gallery</a>
+        <a href="medical/index.html" class="nav__link nav__link--supplements " role="menuitem">Supplements</a>
+        <a href="contact.html" class="nav__link active" role="menuitem">Contact</a>
+      </div>
+
+      <div class="nav__cta">
+        <a href="tel:+917092030786" class="btn btn--ghost btn--sm">
+          <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M22 16.92v3a2 2 0 01-2.18 2 19.79 19.79 0 01-8.63-3.07A19.5 19.5 0 014.5 11.5a19.79 19.79 0 01-3.07-8.63A2 2 0 013.41 0.68h3a2 2 0 012 1.72c.127.96.361 1.903.7 2.81a2 2 0 01-.45 2.11L7.09 8.91a16 16 0 006 6l1.27-1.27a2 2 0 012.11-.45c.907.339 1.85.573 2.81.7A2 2 0 0121.32 16z"/></svg>
+          Call
+        </a>
+        <a href="#join-modal" class="btn btn--primary btn--sm" id="nav-join-btn" data-open-join-modal>JOIN NOW</a>
+      </div>
+
+      <button id="nav-toggle" class="nav__toggle" aria-label="Open menu" aria-expanded="false" aria-controls="nav-drawer">
+        <span></span><span></span><span></span>
+      </button>
+    </div>
+  </nav>
+
+  <!-- MOBILE NAV OVERLAY -->
+  <div id="nav-overlay" class="nav__overlay" aria-hidden="true"></div>
+
+  <!-- MOBILE NAV DRAWER -->
+  <div id="nav-drawer" class="nav__drawer" role="dialog" aria-modal="true" aria-label="Navigation menu">
+    <nav class="nav__drawer-links" role="menubar" aria-label="Mobile navigation">
+      <a href="index.html" class="nav__drawer-link " role="menuitem">Home</a>
+      <a href="programs.html" class="nav__drawer-link " role="menuitem">Programs</a>
+      <a href="memberships.html" class="nav__drawer-link " role="menuitem">Memberships</a>
+      <a href="about.html" class="nav__drawer-link " role="menuitem">About &amp; Coaches</a>
+      <a href="gallery.html" class="nav__drawer-link " role="menuitem">Facility Gallery</a>
+      <a href="medical/index.html" class="nav__drawer-link nav__drawer-link--red " role="menuitem">Supplements Store</a>
+      <a href="contact.html" class="nav__drawer-link active" role="menuitem">Contact &amp; Location</a>
+    </nav>
+    <div class="nav__drawer-cta">
+      <a href="#join-modal" class="btn btn--primary btn--full" data-open-join-modal>JOIN BEAST GYM</a>
+      <a href="tel:+917092030786" class="btn btn--outline btn--full">
+        <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M22 16.92v3a2 2 0 01-2.18 2 19.79 19.79 0 01-8.63-3.07A19.5 19.5 0 014.5 11.5a19.79 19.79 0 01-3.07-8.63A2 2 0 013.41 0.68h3a2 2 0 012 1.72c.127.96.361 1.903.7 2.81a2 2 0 01-.45 2.11L7.09 8.91a16 16 0 006 6l1.27-1.27a2 2 0 012.11-.45c.907.339 1.85.573 2.81.7A2 2 0 0121.32 16z"/></svg>
+        +91 70920 30786
+      </a>
+    </div>
+  </div>
+
+
+<main>
+  <!-- PAGE HERO -->
+  <section class="page-hero">
+    <div class="page-hero__bg">
+      <img src="assets/Banner.png" alt="Beast Gym Location and Contact">
+    </div>
+    <div class="page-hero__overlay"></div>
+    <div class="page-hero__content">
+      <div class="breadcrumbs">
+        <a href="index.html">Home</a> &nbsp;/&nbsp; <span>Contact &amp; Location</span>
+      </div>
+      <h1 style="font-size:clamp(2.5rem, 6vw, 4rem);margin-bottom:1rem;">
+        Visit The Arena.<br><span style="color:var(--beast-red);">Start Your Journey Today.</span>
+      </h1>
+      <p style="max-width:620px;font-size:1.125rem;line-height:1.6;color:var(--muted-grey);">
+        Open 7 days a week. Ample parking, highway connectivity, and a friendly reception team ready to show you around.
+      </p>
+    </div>
+  </section>
+
+  <!-- CONTACT & LOCATION -->
+  <section class="section" style="background:#090909;">
+    <div class="container">
+      <div class="location__inner">
+        <!-- DETAILS -->
+        <div class="location__details reveal">
+          <div class="location-item">
+            <div class="location-item__icon"><svg xmlns="http://www.w3.org/2000/svg" width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0118 0z"/><circle cx="12" cy="10" r="3"/></svg></div>
+            <div>
+              <h3 class="location-item__title">Facility Address</h3>
+              <div class="location-item__value">
+                <strong style="color:#FFF;font-size:1.05rem;">Beast Gym &amp; Fitness (Unisex)</strong><br>
+                1, Pandian Salai, Saraswathy Nagar North,<br>
+                Neelankarai, Chennai, Tamil Nadu &ndash; 600115<br>
+                <span style="font-size:0.85rem;color:var(--muted-grey);margin-top:6px;display:inline-block;">Landmark: Near Pandiyan Salai Road / Sri Ambala Pure Veg Hotel (off ECR)</span>
+              </div>
+            </div>
+          </div>
+
+          <div class="location-item">
+            <div class="location-item__icon"><svg xmlns="http://www.w3.org/2000/svg" width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M22 16.92v3a2 2 0 01-2.18 2 19.79 19.79 0 01-8.63-3.07A19.5 19.5 0 014.5 11.5a19.79 19.79 0 01-3.07-8.63A2 2 0 013.41 0.68h3a2 2 0 012 1.72c.127.96.361 1.903.7 2.81a2 2 0 01-.45 2.11L7.09 8.91a16 16 0 006 6l1.27-1.27a2 2 0 012.11-.45c.907.339 1.85.573 2.81.7A2 2 0 0121.32 16z"/></svg></div>
+            <div>
+              <h3 class="location-item__title">Direct Phone Lines</h3>
+              <div class="location-item__value">
+                <a href="tel:+917092030786" style="font-size:1.25rem;font-weight:700;color:var(--beast-red);display:block;">+91 70920 30786</a>
+                <a href="tel:+919840189568" style="font-size:0.95rem;font-weight:600;color:#F5F5F5;margin-top:2px;display:inline-block;">+91 98401 89568</a>
+                <p style="font-size:0.8rem;color:var(--muted-grey);margin-top:4px;">Available Mon&ndash;Sun during workout hours</p>
+              </div>
+            </div>
+          </div>
+
+          <div class="location-item">
+            <div class="location-item__icon"><svg xmlns="http://www.w3.org/2000/svg" width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="10"/><polyline points="12 6 12 12 16 14"/></svg></div>
+            <div style="flex:1;">
+              <h3 class="location-item__title">Operating Hours</h3>
+              <div class="location__hours">
+                <div class="location__hour-row">
+                  <span class="location__hour-day">Monday &ndash; Saturday</span>
+                  <span class="location__hour-time">05:00 AM &ndash; 10:00 PM</span>
+                </div>
+                <div class="location__hour-row">
+                  <span class="location__hour-day">Sunday</span>
+                  <span class="location__hour-time">05:00 AM &ndash; 12:00 PM / 06:00 PM &ndash; 08:00 PM</span>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <div class="location__cta-group" style="gap:1rem;flex-wrap:wrap;">
+            <a href="tel:+917092030786" class="btn btn--primary btn--sm">CALL RECEPTION NOW</a>
+            <a href="https://share.google/c82nGcmtq20Y6S7NX" target="_blank" rel="noopener noreferrer" class="btn btn--outline btn--sm" style="display:inline-flex;align-items:center;gap:6px;">
+              <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0118 0z"/><circle cx="12" cy="10" r="3"/></svg>
+              GET DIRECTIONS (GOOGLE MAPS)
+            </a>
+          </div>
+        </div>
+
+        <!-- MAP CONTAINER -->
+        <div class="location__map reveal reveal--delay-1" style="min-height:420px;border-radius:16px;overflow:hidden;border:1px solid rgba(255,255,255,0.1);box-shadow:0 12px 35px rgba(0,0,0,0.5);">
+          <iframe id="map-frame" title="Beast Gym and Fitness (Unisex) Location Map" style="width:100%;height:100%;min-height:420px;border:none;display:block;" src="https://maps.google.com/maps?q=Beast+Gym+and+Fitness+(Unisex),+1,+Pandian+Salai,+Saraswathy+Nagar+North,+Neelankarai,+Chennai,+Tamil+Nadu+600115&t=&z=16&ie=UTF8&iwloc=&output=embed" loading="lazy" allowfullscreen></iframe>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- GOOGLE REVIEWS IN NEELANKARAI -->
+  <section class="section" style="background:#0c0c0c;border-top:1px solid rgba(255,255,255,0.06);">
+    <div class="container">
+      <div class="text-center reveal">
+        <div class="google-badge">
+          <svg xmlns="http://www.w3.org/2000/svg" width="22" height="22" viewBox="0 0 24 24">
+            <path fill="#4285F4" d="M23.745 12.27c0-.7-.06-1.4-.19-2.07H12v4.51h6.6c-.29 1.52-1.14 2.82-2.4 3.68v3.05h3.88c2.27-2.09 3.66-5.17 3.66-9.17z"/>
+            <path fill="#34A853" d="M12 24c3.24 0 5.95-1.08 7.93-2.91l-3.88-3.05c-1.08.72-2.45 1.16-4.05 1.16-3.12 0-5.77-2.1-6.72-4.93H1.25v3.15C3.26 21.36 7.33 24 12 24z"/>
+            <path fill="#FBBC05" d="M5.28 14.27c-.25-.72-.38-1.49-.38-2.27s.13-1.55.38-2.27V6.58H1.25C.45 8.18 0 10.04 0 12s.45 3.82 1.25 5.42l4.03-3.15z"/>
+            <path fill="#EA4335" d="M12 4.75c1.77 0 3.35.61 4.6 1.8l3.42-3.42C17.95 1.19 15.24 0 12 0 7.33 0 3.26 2.64 1.25 6.58l4.03 3.15c.95-2.83 3.6-4.98 6.72-4.98z"/>
+          </svg>
+          <span class="google-badge__stars">★★★★★</span>
+          <span class="google-badge__score">4.4 / 5.0</span>
+          <span class="google-badge__count">• 50+ Verified Google Reviews</span>
+        </div>
+        <span class="section-label" style="justify-content:center;">Neelankarai Member Voices</span>
+        <h2>What Members Say About Our Facility</h2>
+        <p style="max-width:580px;margin:0.75rem auto 0;color:var(--muted-grey);">
+          Real ratings from verified members training daily at our Pandian Salai, Neelankarai location.
+        </p>
+        <div style="margin-top:1.25rem;">
+          <a href="https://share.google/c82nGcmtq20Y6S7NX" target="_blank" rel="noopener noreferrer" class="btn btn--outline btn--sm" style="display:inline-flex;align-items:center;gap:6px;">
+            VIEW ALL REVIEWS ON GOOGLE MAPS &rarr;
+          </a>
+        </div>
+      </div>
+
+      <div class="reviews__grid" style="margin-top:2rem;">
+        <div class="review-card reveal reveal--delay-1">
+          <div class="review-card__header">
+            <div class="review-card__author">
+              <div class="review-card__avatar">KR</div>
+              <div>
+                <div class="review-card__name">Karthik R.</div>
+                <div class="review-card__meta">Local Guide • 18 Google Reviews</div>
+              </div>
+            </div>
+            <span class="google-source-tag"><svg xmlns="http://www.w3.org/2000/svg" width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="#22c55e" stroke-width="2.5"><polyline points="20 6 9 17 4 12"/></svg></span>
+          </div>
+          <div class="review-card__stars">★★★★★</div>
+          <p class="review-card__text">
+            “One of the best unisex gyms in the Neelankarai ECR belt. The trainers are polite, humble, and very supportive. High-quality strength equipment, heavy dumbbell sets, and clean facilities.”
+          </p>
+          <div class="review-card__footer">
+            <span>Posted on Google</span>
+            <span style="color:var(--beast-red);">Verified Member</span>
+          </div>
+        </div>
+
+        <div class="review-card reveal reveal--delay-2">
+          <div class="review-card__header">
+            <div class="review-card__author">
+              <div class="review-card__avatar" style="background:linear-gradient(135deg, #3b82f6, #1d4ed8);">AV</div>
+              <div>
+                <div class="review-card__name">Ananya V.</div>
+                <div class="review-card__meta">Verified Member • 8 Months</div>
+              </div>
+            </div>
+            <span class="google-source-tag"><svg xmlns="http://www.w3.org/2000/svg" width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="#22c55e" stroke-width="2.5"><polyline points="20 6 9 17 4 12"/></svg></span>
+          </div>
+          <div class="review-card__stars">★★★★★</div>
+          <p class="review-card__text">
+            “Coaches actually care about your form and posture on every single exercise. Genuine floor guidance and custom diet advice without forcing costly packages. Love the training vibe!”
+          </p>
+          <div class="review-card__footer">
+            <span>Posted on Google</span>
+            <span style="color:var(--beast-red);">Verified Member</span>
+          </div>
+        </div>
+
+        <div class="review-card reveal reveal--delay-3">
+          <div class="review-card__header">
+            <div class="review-card__author">
+              <div class="review-card__avatar" style="background:linear-gradient(135deg, #10b981, #047857);">VS</div>
+              <div>
+                <div class="review-card__name">Vignesh S.</div>
+                <div class="review-card__meta">Local Guide • 24 Google Reviews</div>
+              </div>
+            </div>
+            <span class="google-source-tag"><svg xmlns="http://www.w3.org/2000/svg" width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="#22c55e" stroke-width="2.5"><polyline points="20 6 9 17 4 12"/></svg></span>
+          </div>
+          <div class="review-card__stars">★★★★★</div>
+          <p class="review-card__text">
+            “Excellent ambience for both men and women. The 5:00 AM opening time is a blessing for morning workouts before office traffic. Well-maintained machines and friendly coaches.”
+          </p>
+          <div class="review-card__footer">
+            <span>Posted on Google</span>
+            <span style="color:var(--beast-red);">Verified Member</span>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- FORM SECTION -->
+  <section id="enquiry" class="enquiry section" style="background:#141414;border-top:1px solid #222;">
+    <div class="container">
+      <div class="enquiry__inner">
+        <div class="enquiry__info reveal">
+          <span class="section-label">Facility Visit</span>
+          <h2 style="margin-bottom:1.5rem;">Schedule Your Visit &amp; Membership Orientation</h2>
+          <p style="margin-bottom:2rem;color:var(--muted-grey);">
+            Come explore our premium training arena. Experience the equipment, meet our head coaches, and receive your comprehensive baseline assessment.
+          </p>
+          <div class="enquiry__info-point">
+            <div class="enquiry__info-dot"></div>
+            <div class="enquiry__info-text">
+              <strong style="color:#F5F5F5;display:block;">Zero Pushy Sales Calls</strong>
+              We respect your decision. We let our facility and results speak for themselves.
+            </div>
+          </div>
+          <div class="enquiry__info-point">
+            <div class="enquiry__info-dot"></div>
+            <div class="enquiry__info-text">
+              <strong style="color:#F5F5F5;display:block;">Instant WhatsApp Direct Confirmation</strong>
+              Submitting triggers your booking directly to our reception phone (+91 70920 30786).
+            </div>
+          </div>
+        </div>
+
+        <div class="enquiry__form-container reveal reveal--delay-1" style="background:var(--graphite);border:1px solid var(--border-grey);border-radius:12px;padding:2.5rem;">
+          <form id="enquiry-form" novalidate>
+            <div class="form__group">
+              <label class="form__label" for="name">Your Full Name <span>*</span></label>
+              <input type="text" id="name" name="name" class="form__input" placeholder="e.g. Rahul Sharma" required autocomplete="name">
+              <div id="name-error" class="form__error">Please enter your name.</div>
+            </div>
+
+            <div class="form__group">
+              <label class="form__label" for="phone">Phone Number <span>*</span></label>
+              <input type="tel" id="phone" name="phone" class="form__input" placeholder="e.g. +91 98765 43210" required autocomplete="tel">
+              <div id="phone-error" class="form__error">Please enter a valid phone number.</div>
+            </div>
+
+            <div class="form__row">
+              <div class="form__group">
+                <label class="form__label" for="goal">Primary Fitness Goal <span>*</span></label>
+                <select id="goal" name="goal" class="form__select" required>
+                  <option value="">Select Primary Goal</option>
+                  <option value="Fat Loss & Toning">Fat Loss &amp; Toning</option>
+                  <option value="Muscle Building">Muscle Building</option>
+                  <option value="CrossFit / Athletic Training">CrossFit Conditioning</option>
+                  <option value="1-on-1 Personal Coaching">1-on-1 Personal Coaching</option>
+                  <option value="Zumba & Group Fitness">Zumba &amp; Group Fitness</option>
+                  <option value="General Health">General Longevity</option>
+                </select>
+                <div id="goal-error" class="form__error">Please select your primary goal.</div>
+              </div>
+
+              <div class="form__group">
+                <label class="form__label" for="plan">Preferred Plan / Program</label>
+                <select id="plan" name="plan" class="form__select">
+                  <option value="">Select (Optional)</option>
+                  <option value="Basic Access">Basic Access</option>
+                  <option value="Pro Beast">Pro Beast (Most Popular)</option>
+                  <option value="Elite Coaching">Elite Coaching</option>
+                  <option value="CrossFit">CrossFit</option>
+                  <option value="Personal Training">Personal Training</option>
+                  <option value="Injury Rehab & Corrective Exercise">Injury Rehab &amp; Corrective Exercise</option>
+                  <option value="Zumba">Zumba</option>
+                  <option value="Diet Consultation">Diet Consultation</option>
+                </select>
+              </div>
+            </div>
+
+            <div class="form__group">
+              <label class="form__label" for="visit-time">Preferred Visit Time</label>
+              <select id="visit-time" name="visit-time" class="form__select">
+                <option value="">Any Time</option>
+                <option value="Morning (5:00 AM - 9:00 AM)">Early Morning (05:00 AM &ndash; 09:00 AM)</option>
+                <option value="Midday (10:00 AM - 4:00 PM)">Midday (10:00 AM &ndash; 04:00 PM)</option>
+                <option value="Evening (5:00 PM - 10:00 PM)">Evening Peak (05:00 PM &ndash; 10:00 PM)</option>
+                <option value="Weekend">Weekend</option>
+              </select>
+            </div>
+
+            <div class="form__group">
+              <label class="form__label" for="message">Questions or Specific Injuries (Optional)</label>
+              <textarea id="message" name="message" class="form__textarea" placeholder="Tell us if you have any questions or previous injuries..."></textarea>
+            </div>
+
+            <button type="submit" class="btn btn--primary btn--full btn--lg">
+              ENQUIRE ON WHATSAPP &rarr;
+            </button>
+          </form>
+        </div>
+      </div>
+    </div>
+  </section>
+</main>
+
+
+  <!-- FOOTER -->
+  <footer class="footer" role="contentinfo">
+    <div class="footer__grid">
+      <div class="footer__brand">
+        <a href="index.html" class="footer__logo" aria-label="Beast Gym & Fitness">
+          <img src="assets/beast-gym-logo.png" alt="Beast Gym &amp; Fitness" class="footer__logo-img">
+        </a>
+        <p class="footer__desc">Bespoke training facility, world-class equipment, certified coaches, and authentic sports nutrition. Train hard. Build strength. Transform.</p>
+        <div class="footer__contact">
+          <div class="footer__contact-item">
+            <div class="footer__contact-icon"><svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0118 0z"/><circle cx="12" cy="10" r="3"/></svg></div>
+            <a href="https://share.google/c82nGcmtq20Y6S7NX" target="_blank" rel="noopener noreferrer">1, Pandian Salai, Saraswathy Nagar North, Neelankarai, Chennai 600115</a>
+          </div>
+          <div class="footer__contact-item">
+            <div class="footer__contact-icon"><svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M22 16.92v3a2 2 0 01-2.18 2 19.79 19.79 0 01-8.63-3.07A19.5 19.5 0 014.5 11.5a19.79 19.79 0 01-3.07-8.63A2 2 0 013.41 0.68h3a2 2 0 012 1.72c.127.96.361 1.903.7 2.81a2 2 0 01-.45 2.11L7.09 8.91a16 16 0 006 6l1.27-1.27a2 2 0 012.11-.45c.907.339 1.85.573 2.81.7A2 2 0 0121.32 16z"/></svg></div>
+            <a href="tel:+917092030786">+91 70920 30786</a>
+          </div>
+          <div class="footer__contact-item">
+            <div class="footer__contact-icon"><svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"/><polyline points="22,6 12,13 2,6"/></svg></div>
+            <span>beastgym2018@gmail.com</span>
+          </div>
+          <div class="footer__contact-item">
+            <div class="footer__contact-icon"><svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="10"/><polyline points="12 6 12 12 16 14"/></svg></div>
+            <span>Mon&ndash;Sat: 5 AM &ndash; 10 PM | Sun: 5 AM &ndash; 12 PM &amp; 6 PM &ndash; 8 PM</span>
+          </div>
+        </div>
+      </div>
+
+      <div>
+        <h4 class="footer__heading">Programs</h4>
+        <ul class="footer__links">
+          <li><a href="programs.html" class="footer__link">CrossFit Training</a></li>
+          <li><a href="programs.html" class="footer__link">Zumba &amp; Dance</a></li>
+          <li><a href="programs.html" class="footer__link">Personal Coaching</a></li>
+          <li><a href="programs.html" class="footer__link">Youth Sports</a></li>
+          <li><a href="programs.html" class="footer__link">Yoga Classes</a></li>
+          <li><a href="programs.html" class="footer__link">Weight Training</a></li>
+          <li><a href="programs.html" class="footer__link">Diet &amp; Nutrition Plans</a></li>
+          <li><a href="programs.html#rehab" class="footer__link">Injury Rehab &amp; Recovery</a></li>
+        </ul>
+      </div>
+
+      <div>
+        <h4 class="footer__heading">Quick Navigation</h4>
+        <ul class="footer__links">
+          <li><a href="index.html" class="footer__link">Home</a></li>
+          <li><a href="programs.html" class="footer__link">Training Programs</a></li>
+          <li><a href="memberships.html" class="footer__link">Memberships &amp; Plans</a></li>
+          <li><a href="about.html" class="footer__link">About &amp; Coaches</a></li>
+          <li><a href="gallery.html" class="footer__link">Facility Gallery</a></li>
+          <li><a href="medical/index.html" class="footer__link footer__link--red">Supplements Store</a></li>
+          <li><a href="contact.html" class="footer__link">Contact &amp; Location</a></li>
+        </ul>
+      </div>
+
+      <div>
+        <h4 class="footer__heading">Membership Enquiries</h4>
+        <p style="font-size:0.875rem;color:var(--muted-grey);margin-bottom:1rem;line-height:1.6;">Schedule a tour or enquire about memberships with our reception team.</p>
+        <a href="#join-modal" class="btn btn--primary btn--sm btn--full" data-open-join-modal style="margin-bottom:0.75rem;">JOIN BEAST GYM</a>
+        <a href="https://wa.me/917092030786" target="_blank" rel="noopener noreferrer" class="btn btn--outline btn--sm btn--full">WHATSAPP CHAT</a>
+      </div>
+    </div>
+
+    <div class="footer__bottom">
+      <div class="footer__copyright">
+        &copy; 2026 Beast Gym &amp; Fitness. All Rights Reserved. Crafted for Peak Performance.
+      </div>
+      <div class="footer__legal">
+        <a href="about.html">Privacy Policy</a>
+        <a href="about.html">Terms of Service</a>
+        <a href="about.html">Gym Rules &amp; Etiquette</a>
+      </div>
+    </div>
+  </footer>
+
+  <!-- LIGHTBOX MODAL -->
+  <div id="lightbox" class="lightbox" role="dialog" aria-modal="true" aria-label="Facility photo preview">
+    <button id="lightbox-close" class="lightbox__close" aria-label="Close photo preview">
+      <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><line x1="18" y1="6" x2="6" y2="18"/><line x1="6" y1="6" x2="18" y2="18"/></svg>
+    </button>
+    <button id="lightbox-prev" class="lightbox__prev" aria-label="Previous photo">
+      <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="15 18 9 12 15 6"/></svg>
+    </button>
+    <img id="lightbox-img" class="lightbox__img" src="" alt="">
+    <button id="lightbox-next" class="lightbox__next" aria-label="Next photo">
+      <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="9 18 15 12 9 6"/></svg>
+    </button>
+  </div>
+
+  <!-- FLOATING WHATSAPP BUTTON -->
+  <a href="https://wa.me/917092030786?text=Hi%20Beast%20Gym%20%26%20Fitness%2C%20I%20would%20like%20to%20know%20more%20about%20memberships%20and%20training!" class="whatsapp-float" target="_blank" rel="noopener noreferrer" aria-label="Chat with Beast Gym on WhatsApp">
+    <svg xmlns="http://www.w3.org/2000/svg" width="32" height="32" viewBox="0 0 24 24" fill="currentColor">
+      <path d="M12.04 2c-5.46 0-9.91 4.45-9.91 9.91 0 1.75.46 3.45 1.32 4.95L2.05 22l5.25-1.38c1.45.79 3.08 1.21 4.74 1.21 5.46 0 9.91-4.45 9.91-9.91 0-2.65-1.03-5.14-2.9-7.01A9.816 9.816 0 0012.04 2zm5.78 14.34c-.24.68-1.39 1.3-1.92 1.35-.51.05-1.17.07-3.79-1.01-3.23-1.34-5.32-4.63-5.48-4.84-.16-.21-1.31-1.74-1.31-3.32 0-1.58.83-2.36 1.12-2.68.29-.32.64-.4.86-.4.21 0 .43 0 .62.01.2.01.47-.08.73.56.27.68.93 2.27 1.01 2.43.08.16.13.35.03.56-.11.21-.16.35-.32.53-.16.19-.34.42-.49.56-.16.16-.33.34-.14.67.19.32.84 1.39 1.8 2.25 1.24 1.1 2.29 1.44 2.61 1.6.32.16.51.13.7-.08.19-.21.8-.93 1.01-1.25.21-.32.43-.27.72-.16.29.11 1.86.88 2.18 1.04.32.16.53.24.61.37.08.13.08.79-.16 1.47z"/>
+    </svg>
+  </a>
+
+  <!-- SCRIPTS -->
+  <script src="js/main.js"></script>
+  <script src="js/animations.js"></script>
+
+
+</body>
+</html>

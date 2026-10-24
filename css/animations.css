@@ -1,0 +1,723 @@
+/* ============================================================
+   BEAST GYM & FITNESS — PREMIUM ANIMATION SYSTEM
+   ============================================================
+   Architecture:
+   - All keyframe definitions live here
+   - Page transition overlay (JS-controlled class toggles)
+   - Scroll-reveal utility classes (JS adds .is-visible)
+   - Hero entrance sequence (JS-controlled, fires once on load)
+   - Gallery, card, button micro-interactions (CSS-only)
+   - Lightbox smooth open/close
+   - Reduced-motion safe throughout
+   ============================================================ */
+
+/* ──────────────────────────────────────────────────
+   1. KEYFRAME LIBRARY
+────────────────────────────────────────────────── */
+
+@keyframes bgm-fadeUp {
+  from { opacity: 0; transform: translateY(28px); }
+  to   { opacity: 1; transform: translateY(0); }
+}
+
+@keyframes bgm-fadeDown {
+  from { opacity: 0; transform: translateY(-20px); }
+  to   { opacity: 1; transform: translateY(0); }
+}
+
+@keyframes bgm-fadeLeft {
+  from { opacity: 0; transform: translateX(32px); }
+  to   { opacity: 1; transform: translateX(0); }
+}
+
+@keyframes bgm-fadeRight {
+  from { opacity: 0; transform: translateX(-32px); }
+  to   { opacity: 1; transform: translateX(0); }
+}
+
+@keyframes bgm-fadeIn {
+  from { opacity: 0; }
+  to   { opacity: 1; }
+}
+
+@keyframes bgm-scaleIn {
+  from { opacity: 0; transform: scale(0.92); }
+  to   { opacity: 1; transform: scale(1); }
+}
+
+@keyframes bgm-textMask {
+  from { clip-path: inset(0 0 100% 0); transform: translateY(12px); opacity: 0; }
+  to   { clip-path: inset(0 0 0% 0);   transform: translateY(0);    opacity: 1; }
+}
+
+@keyframes bgm-heroImageScale {
+  from { transform: scale(1.06); opacity: 0; }
+  to   { transform: scale(1);    opacity: 1; }
+}
+
+@keyframes bgm-lineExpand {
+  from { transform: scaleX(0); }
+  to   { transform: scaleX(1); }
+}
+
+@keyframes bgm-scrollBounce {
+  0%, 100% { transform: translateX(-50%) translateY(0); }
+  50%       { transform: translateX(-50%) translateY(9px); }
+}
+
+@keyframes bgm-pageSlideIn {
+  from { opacity: 0; transform: translateY(18px); }
+  to   { opacity: 1; transform: translateY(0); }
+}
+
+@keyframes bgm-navSlideDown {
+  from { opacity: 0; transform: translateY(-16px); }
+  to   { opacity: 1; transform: translateY(0); }
+}
+
+@keyframes bgm-drawerLinkSlide {
+  from { opacity: 0; transform: translateX(24px); }
+  to   { opacity: 1; transform: translateX(0); }
+}
+
+@keyframes bgm-counterTick {
+  from { transform: translateY(-4px); opacity: 0; }
+  to   { transform: translateY(0);    opacity: 1; }
+}
+
+@keyframes bgm-accentPulse {
+  0%   { box-shadow: 0 0 0 0 rgba(252, 15, 18, 0.4); }
+  70%  { box-shadow: 0 0 0 8px rgba(252, 15, 18, 0); }
+  100% { box-shadow: 0 0 0 0 rgba(252, 15, 18, 0); }
+}
+
+@keyframes bgm-dotPulse {
+  0%, 100% { transform: scale(1); opacity: 1; }
+  50%       { transform: scale(1.4); opacity: 0.6; }
+}
+
+/* ──────────────────────────────────────────────────
+   2. PAGE TRANSITION OVERLAY
+────────────────────────────────────────────────── */
+
+#page-transition {
+  position: fixed;
+  inset: 0;
+  z-index: 9000;
+  pointer-events: none;
+  overflow: hidden;
+}
+
+#page-transition::before {
+  content: '';
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(135deg, #090909 0%, #181818 50%, #0f0f0f 100%);
+  transform: scaleY(0);
+  transform-origin: top;
+  transition: transform 0.38s cubic-bezier(0.86, 0, 0.07, 1);
+}
+
+#page-transition::after {
+  content: '';
+  position: absolute;
+  top: 0; left: 0; right: 0;
+  height: 4px;
+  background: linear-gradient(90deg, transparent, #FC0F12 40%, #FC0F12 60%, transparent);
+  opacity: 0;
+  transition: opacity 0.2s ease;
+}
+
+body.page-leaving #page-transition {
+  pointer-events: all;
+}
+
+body.page-leaving #page-transition::before {
+  transform: scaleY(1);
+  transform-origin: top;
+}
+
+body.page-leaving #page-transition::after {
+  opacity: 1;
+}
+
+body.page-entering #page-transition::before {
+  transform: scaleY(0);
+  transform-origin: bottom;
+  transition: transform 0.35s cubic-bezier(0.86, 0, 0.07, 1) 0.05s;
+}
+
+/* ──────────────────────────────────────────────────
+   3. PAGE CONTENT ENTRANCE
+────────────────────────────────────────────────── */
+
+body.page-loaded main {
+  animation: bgm-pageSlideIn 0.55s cubic-bezier(0.22, 1, 0.36, 1) both;
+}
+
+body.page-loaded .nav {
+  animation: bgm-navSlideDown 0.5s cubic-bezier(0.22, 1, 0.36, 1) 0.05s both;
+}
+
+/* ──────────────────────────────────────────────────
+   4. HERO ENTRANCE SEQUENCE
+   JS adds .hero--animated to fire these
+────────────────────────────────────────────────── */
+
+.hero--animated .hero__bg img {
+  animation: bgm-heroImageScale 1.2s cubic-bezier(0.22, 1, 0.36, 1) both;
+}
+
+.hero--animated .hero__overlay {
+  animation: bgm-fadeIn 1.4s ease both;
+}
+
+.hero--animated .hero__eyebrow-line {
+  animation: bgm-lineExpand 0.6s cubic-bezier(0.22, 1, 0.36, 1) 0.12s both;
+  transform-origin: left;
+}
+
+.hero--animated .hero__eyebrow-text {
+  animation: bgm-fadeLeft 0.6s cubic-bezier(0.22, 1, 0.36, 1) 0.2s both;
+}
+
+/* Title lines — wrap each line in .hero__title-line > span for mask reveal */
+.hero__title-line {
+  display: block;
+  overflow: hidden;
+}
+
+.hero__title-line span {
+  display: block;
+}
+
+.hero--animated .hero__title-line:nth-child(1) span {
+  animation: bgm-textMask 0.7s cubic-bezier(0.22, 1, 0.36, 1) 0.25s both;
+}
+
+.hero--animated .hero__title-line:nth-child(2) span {
+  animation: bgm-textMask 0.7s cubic-bezier(0.22, 1, 0.36, 1) 0.38s both;
+}
+
+.hero--animated .hero__description {
+  animation: bgm-fadeUp 0.65s cubic-bezier(0.22, 1, 0.36, 1) 0.52s both !important;
+}
+
+.hero--animated .hero__actions {
+  animation: bgm-fadeUp 0.65s cubic-bezier(0.22, 1, 0.36, 1) 0.64s both !important;
+}
+
+.hero--animated .hero__features {
+  animation: bgm-fadeUp 0.6s cubic-bezier(0.22, 1, 0.36, 1) 0.76s both !important;
+}
+
+.hero--animated .hero__scroll {
+  animation: bgm-scrollBounce 2.2s ease-in-out 1.2s infinite;
+}
+
+/* ──────────────────────────────────────────────────
+   5. SCROLL-REVEAL SYSTEM
+   JS adds .is-visible when element enters viewport
+────────────────────────────────────────────────── */
+
+[data-reveal] {
+  opacity: 0;
+  will-change: opacity, transform;
+  transition-property: opacity, transform;
+  transition-timing-function: cubic-bezier(0.22, 1, 0.36, 1);
+  transition-duration: 0.65s;
+}
+
+[data-reveal].is-visible {
+  opacity: 1;
+  transform: none !important;
+}
+
+/* Direction variants */
+[data-reveal="up"]    { transform: translateY(28px); }
+[data-reveal="down"]  { transform: translateY(-20px); }
+[data-reveal="left"]  { transform: translateX(32px); }
+[data-reveal="right"] { transform: translateX(-32px); }
+[data-reveal="scale"] { transform: scale(0.93); }
+[data-reveal="fade"]  { transform: none; }
+
+/* Delay variants */
+[data-delay="100"] { transition-delay: 0.1s; }
+[data-delay="150"] { transition-delay: 0.15s; }
+[data-delay="200"] { transition-delay: 0.2s; }
+[data-delay="250"] { transition-delay: 0.25s; }
+[data-delay="300"] { transition-delay: 0.3s; }
+[data-delay="350"] { transition-delay: 0.35s; }
+[data-delay="400"] { transition-delay: 0.4s; }
+[data-delay="500"] { transition-delay: 0.5s; }
+[data-delay="600"] { transition-delay: 0.6s; }
+[data-delay="700"] { transition-delay: 0.7s; }
+
+/* Stagger siblings (JS assigns data-stagger-index) */
+[data-stagger-index="0"] { transition-delay: 0s; }
+[data-stagger-index="1"] { transition-delay: 0.08s; }
+[data-stagger-index="2"] { transition-delay: 0.16s; }
+[data-stagger-index="3"] { transition-delay: 0.24s; }
+[data-stagger-index="4"] { transition-delay: 0.32s; }
+[data-stagger-index="5"] { transition-delay: 0.40s; }
+[data-stagger-index="6"] { transition-delay: 0.48s; }
+[data-stagger-index="7"] { transition-delay: 0.56s; }
+[data-stagger-index="8"] { transition-delay: 0.64s; }
+[data-stagger-index="9"] { transition-delay: 0.72s; }
+
+/* ──────────────────────────────────────────────────
+   6. BRAND INTRO CLIP-PATH REVEAL
+────────────────────────────────────────────────── */
+
+.brand-intro__image[data-reveal] {
+  clip-path: inset(0 100% 0 0);
+  opacity: 0;
+  transform: none !important;
+  transition: clip-path 0.85s cubic-bezier(0.22, 1, 0.36, 1),
+              opacity 0.5s ease !important;
+}
+
+.brand-intro__image[data-reveal].is-visible {
+  clip-path: inset(0 0% 0 0);
+  opacity: 1;
+}
+
+/* ──────────────────────────────────────────────────
+   7. ANIMATED ACCENT LINE
+────────────────────────────────────────────────── */
+
+.accent-line--anim {
+  width: 0 !important;
+  height: 3px;
+  background: #FC0F12;
+  display: block;
+  border-radius: 2px;
+  transition: width 0.65s cubic-bezier(0.22, 1, 0.36, 1);
+  box-shadow: 0 0 10px rgba(252, 15, 18, 0.5);
+  margin: 1rem 0;
+}
+
+.accent-line--anim.is-expanded {
+  width: 48px !important;
+}
+
+/* ──────────────────────────────────────────────────
+   8. CARD HOVER INTERACTIONS
+────────────────────────────────────────────────── */
+
+.program-card {
+  transition: transform 0.3s cubic-bezier(0.22, 1, 0.36, 1),
+              border-color 0.25s ease,
+              box-shadow 0.3s ease !important;
+}
+
+.program-card:hover {
+  transform: translateY(-7px) !important;
+  box-shadow: 0 24px 60px rgba(0, 0, 0, 0.65),
+              0 0 30px rgba(252, 15, 18, 0.15) !important;
+}
+
+.program-card:active {
+  transform: translateY(-3px) !important;
+  transition-duration: 0.1s !important;
+}
+
+.program-card__link {
+  transition: gap 0.3s ease, color 0.2s ease;
+}
+
+.membership-card {
+  transition: transform 0.3s cubic-bezier(0.22, 1, 0.36, 1),
+              box-shadow 0.3s ease,
+              border-color 0.25s ease !important;
+}
+
+.membership-card:hover {
+  box-shadow: 0 24px 70px rgba(0, 0, 0, 0.75) !important;
+}
+
+.membership-card:active {
+  transform: translateY(-2px) !important;
+}
+
+.why-item {
+  transition: transform 0.3s cubic-bezier(0.22, 1, 0.36, 1),
+              border-color 0.25s ease,
+              box-shadow 0.25s ease !important;
+}
+
+.why-item:hover {
+  transform: translateY(-5px) !important;
+  box-shadow: 0 16px 40px rgba(0, 0, 0, 0.5) !important;
+}
+
+.review-card {
+  transition: transform 0.3s cubic-bezier(0.22, 1, 0.36, 1),
+              border-color 0.25s ease,
+              box-shadow 0.3s ease !important;
+}
+
+.coach-card {
+  transition: transform 0.3s cubic-bezier(0.22, 1, 0.36, 1),
+              border-color 0.25s ease,
+              box-shadow 0.3s ease !important;
+}
+
+.testimonial-card {
+  transition: transform 0.3s cubic-bezier(0.22, 1, 0.36, 1),
+              border-color 0.25s ease,
+              box-shadow 0.3s ease !important;
+}
+
+/* ──────────────────────────────────────────────────
+   9. BUTTON MICRO-ANIMATIONS
+────────────────────────────────────────────────── */
+
+.btn--primary:active {
+  transform: translateY(1px) scale(0.99) !important;
+  transition-duration: 0.1s !important;
+}
+
+.btn--outline:active,
+.btn--outline-red:active {
+  transform: translateY(1px) scale(0.99) !important;
+  transition-duration: 0.1s !important;
+}
+
+/* CTA shimmer sweep */
+#nav-join-btn {
+  overflow: hidden;
+  position: relative;
+}
+
+#nav-join-btn::after {
+  content: '';
+  position: absolute;
+  inset: 0;
+  background: rgba(255,255,255,0.12);
+  transform: translateX(-100%) skewX(-12deg);
+  transition: transform 0.4s cubic-bezier(0.22, 1, 0.36, 1);
+}
+
+#nav-join-btn:hover::after {
+  transform: translateX(110%) skewX(-12deg);
+}
+
+/* Hero buttons */
+#hero-join-btn,
+#hero-programs-btn {
+  transition: transform 0.25s cubic-bezier(0.22, 1, 0.36, 1),
+              box-shadow 0.25s ease !important;
+}
+
+#hero-join-btn:hover {
+  box-shadow: 0 8px 32px rgba(252, 15, 18, 0.5) !important;
+}
+
+/* ──────────────────────────────────────────────────
+   10. GALLERY ANIMATIONS
+────────────────────────────────────────────────── */
+
+.gallery-item {
+  transition: transform 0.35s cubic-bezier(0.22, 1, 0.36, 1),
+              border-color 0.3s ease,
+              box-shadow 0.35s ease !important;
+}
+
+.gallery-item:hover {
+  transform: translateY(-6px) scale(1.01) !important;
+}
+
+.gallery-item img {
+  transition: transform 0.7s cubic-bezier(0.22, 1, 0.36, 1) !important;
+}
+
+.gallery-item:hover img {
+  transform: scale(1.08) !important;
+}
+
+.gallery-item__overlay {
+  background: linear-gradient(to top, rgba(9,9,9,0.75) 0%, transparent 60%) !important;
+  transition: opacity 0.35s ease !important;
+}
+
+.gallery-item__icon {
+  transition: transform 0.35s cubic-bezier(0.22, 1, 0.36, 1) !important;
+}
+
+.gallery-item:hover .gallery-item__icon {
+  transform: scale(1.15) rotate(5deg) !important;
+}
+
+/* ──────────────────────────────────────────────────
+   11. LIGHTBOX ANIMATIONS
+────────────────────────────────────────────────── */
+
+/* Override display:none — use opacity/visibility instead */
+.lightbox {
+  display: flex !important;
+  opacity: 0;
+  visibility: hidden;
+  pointer-events: none;
+  transition: opacity 0.3s ease, visibility 0.3s ease,
+              backdrop-filter 0.3s ease !important;
+  backdrop-filter: blur(0px);
+  -webkit-backdrop-filter: blur(0px);
+}
+
+.lightbox.open {
+  opacity: 1;
+  visibility: visible;
+  pointer-events: all;
+  backdrop-filter: blur(12px) !important;
+  -webkit-backdrop-filter: blur(12px) !important;
+}
+
+.lightbox__img {
+  transition: transform 0.4s cubic-bezier(0.22, 1, 0.36, 1), opacity 0.35s ease;
+  transform: scale(0.94);
+  opacity: 0;
+}
+
+.lightbox.open .lightbox__img {
+  transform: scale(1);
+  opacity: 1;
+  transition-delay: 0.06s;
+}
+
+.lightbox__close:hover {
+  transform: rotate(90deg) !important;
+}
+
+.lightbox__prev:hover {
+  transform: translateY(-50%) translateX(-3px) !important;
+}
+
+.lightbox__next:hover {
+  transform: translateY(-50%) translateX(3px) !important;
+}
+
+/* ──────────────────────────────────────────────────
+   12. NAVIGATION ENTRANCE
+────────────────────────────────────────────────── */
+
+.nav__link {
+  opacity: 0;
+  animation: bgm-fadeDown 0.45s cubic-bezier(0.22, 1, 0.36, 1) both;
+}
+
+.nav__link:nth-child(1) { animation-delay: 0.18s; }
+.nav__link:nth-child(2) { animation-delay: 0.23s; }
+.nav__link:nth-child(3) { animation-delay: 0.28s; }
+.nav__link:nth-child(4) { animation-delay: 0.33s; }
+.nav__link:nth-child(5) { animation-delay: 0.38s; }
+.nav__link:nth-child(6) { animation-delay: 0.43s; }
+.nav__link:nth-child(7) { animation-delay: 0.48s; }
+
+.nav__cta {
+  opacity: 0;
+  animation: bgm-fadeDown 0.45s cubic-bezier(0.22, 1, 0.36, 1) 0.5s both;
+}
+
+.nav__logo {
+  opacity: 0;
+  animation: bgm-fadeIn 0.5s cubic-bezier(0.22, 1, 0.36, 1) 0.1s both;
+}
+
+.announcement-bar {
+  animation: bgm-fadeDown 0.4s cubic-bezier(0.22, 1, 0.36, 1) both;
+}
+
+/* Mobile drawer links stagger */
+.nav__drawer.open .nav__drawer-link {
+  animation: bgm-drawerLinkSlide 0.35s cubic-bezier(0.22, 1, 0.36, 1) both;
+}
+
+.nav__drawer.open .nav__drawer-link:nth-child(1) { animation-delay: 0.05s; }
+.nav__drawer.open .nav__drawer-link:nth-child(2) { animation-delay: 0.10s; }
+.nav__drawer.open .nav__drawer-link:nth-child(3) { animation-delay: 0.15s; }
+.nav__drawer.open .nav__drawer-link:nth-child(4) { animation-delay: 0.20s; }
+.nav__drawer.open .nav__drawer-link:nth-child(5) { animation-delay: 0.25s; }
+.nav__drawer.open .nav__drawer-link:nth-child(6) { animation-delay: 0.30s; }
+.nav__drawer.open .nav__drawer-link:nth-child(7) { animation-delay: 0.35s; }
+
+.nav__drawer.open .nav__drawer-cta {
+  animation: bgm-fadeUp 0.35s cubic-bezier(0.22, 1, 0.36, 1) 0.4s both;
+}
+
+/* ──────────────────────────────────────────────────
+   13. SCROLL PROGRESS BAR
+────────────────────────────────────────────────── */
+
+#scroll-progress {
+  position: fixed;
+  top: 0;
+  left: 0;
+  height: 2.5px;
+  background: linear-gradient(90deg, #FC0F12, #ff5c70);
+  box-shadow: 0 0 8px rgba(252, 15, 18, 0.6);
+  z-index: 9001;
+  width: 0%;
+  transition: width 0.08s linear;
+  pointer-events: none;
+  border-radius: 0 2px 2px 0;
+}
+
+/* ──────────────────────────────────────────────────
+   14. FORM MICRO-INTERACTIONS
+────────────────────────────────────────────────── */
+
+.form__input,
+.form__select,
+.form__textarea {
+  transition: border-color 0.2s ease,
+              box-shadow 0.25s ease,
+              transform 0.15s ease !important;
+}
+
+.form__input:focus,
+.form__select:focus,
+.form__textarea:focus {
+  transform: translateY(-1px);
+}
+
+/* ──────────────────────────────────────────────────
+   15. FAQ ACCORDION
+────────────────────────────────────────────────── */
+
+.faq-icon {
+  transition: transform 0.35s cubic-bezier(0.22, 1, 0.36, 1) !important;
+}
+
+/* ──────────────────────────────────────────────────
+   16. WHATSAPP FLOAT
+────────────────────────────────────────────────── */
+
+.whatsapp-float {
+  opacity: 0;
+  animation: bgm-scaleIn 0.5s cubic-bezier(0.22, 1, 0.36, 1) 1.2s both;
+}
+
+/* ──────────────────────────────────────────────────
+   17. FILTER PILLS
+────────────────────────────────────────────────── */
+
+.filter-btn {
+  transition: background 0.25s ease,
+              color 0.2s ease,
+              border-color 0.25s ease,
+              box-shadow 0.25s ease,
+              transform 0.2s cubic-bezier(0.22, 1, 0.36, 1) !important;
+}
+
+.filter-btn:hover {
+  transform: translateY(-2px);
+}
+
+.filter-btn:active {
+  transform: translateY(0px);
+}
+
+/* ──────────────────────────────────────────────────
+   18. SUPPLEMENTS PILL HOVER
+────────────────────────────────────────────────── */
+
+.supplements__pill {
+  transition: border-color 0.2s ease, color 0.2s ease, transform 0.2s ease;
+}
+
+.supplements__pill:hover {
+  border-color: rgba(252, 15, 18, 0.5);
+  color: #FC0F12;
+  transform: translateY(-2px);
+}
+
+/* ──────────────────────────────────────────────────
+   19. STAT COUNTER ANIMATION
+────────────────────────────────────────────────── */
+
+.stat-number.counting {
+  animation: bgm-counterTick 0.15s ease;
+}
+
+/* ──────────────────────────────────────────────────
+   20. REDUCED MOTION
+────────────────────────────────────────────────── */
+
+@media (prefers-reduced-motion: reduce) {
+  *,
+  *::before,
+  *::after {
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.01ms !important;
+  }
+
+  [data-reveal] {
+    opacity: 1 !important;
+    transform: none !important;
+    clip-path: none !important;
+    transition: none !important;
+  }
+
+  .hero__title-line span {
+    opacity: 1 !important;
+    transform: none !important;
+    clip-path: none !important;
+    animation: none !important;
+  }
+
+  .nav__link,
+  .nav__cta,
+  .nav__logo,
+  .whatsapp-float,
+  .announcement-bar {
+    opacity: 1 !important;
+    animation: none !important;
+  }
+
+  body.page-loaded main,
+  body.page-loaded .nav {
+    animation: none !important;
+  }
+
+  .brand-intro__image[data-reveal] {
+    clip-path: none !important;
+    opacity: 1 !important;
+    transition: none !important;
+  }
+
+  .lightbox {
+    transition: opacity 0.01ms, visibility 0.01ms !important;
+  }
+}
+
+/* ──────────────────────────────────────────────────
+   21. MOBILE PERFORMANCE OVERRIDES
+────────────────────────────────────────────────── */
+
+@media (max-width: 768px) {
+  [data-reveal] {
+    transform: none !important;
+  }
+
+  .hero--animated .hero__bg img {
+    animation: bgm-fadeIn 0.8s ease both !important;
+  }
+
+  body.page-loaded main {
+    animation: bgm-fadeIn 0.4s ease both !important;
+  }
+
+  .gallery-item:hover {
+    transform: none !important;
+  }
+
+  .program-card:hover {
+    transform: translateY(-3px) !important;
+  }
+
+  .membership-card:hover {
+    transform: translateY(-3px) !important;
+  }
+}

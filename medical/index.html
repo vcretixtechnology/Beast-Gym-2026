@@ -1,0 +1,717 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Supplements & Sports Nutrition — Beast Gym & Fitness</title>
+  <meta name="description" content="100% Authentic sports supplements, whey proteins, creatine, pre-workouts, and healthcare vitamins at Beast Gym & Fitness. Official brand verification & certified nutritionist guidance.">
+  <meta name="keywords" content="Beast Gym supplements, authentic whey protein, creatine monohydrate, pre-workout, BCAA, multivitamins, fitness nutrition, sports nutrition India">
+  <meta name="robots" content="index, follow">
+  <link rel="canonical" href="https://beastgym.in/medical/">
+
+  <!-- Open Graph -->
+  <meta property="og:title" content="Supplements & Sports Nutrition — Beast Gym & Fitness">
+  <meta property="og:description" content="100% Authentic sports nutrition, whey proteins, and health supplements with in-house expert guidance.">
+  <meta property="og:type" content="website">
+  <meta property="og:url" content="https://beastgym.in/medical/">
+  <meta property="og:image" content="../assets/Supplements banner.png">
+
+  <!-- Fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Cinzel:wght@600;700;800;900&family=Outfit:wght@300;400;500;600;700;800;900&family=Plus+Jakarta+Sans:ital,wght@0,300;0,400;0,500;0,600;0,700;0,800;1,400&display=swap" rel="stylesheet">
+
+  <!-- Styles -->
+  <link rel="stylesheet" href="../css/design-system.css">
+  <link rel="stylesheet" href="../css/main.css">
+  <link rel="stylesheet" href="../css/animations.css">
+  <style>
+    .supp-hero {
+      position: relative;
+      min-height: 60vh;
+      display: flex;
+      align-items: center;
+      padding-top: 120px;
+      padding-bottom: 60px;
+      overflow: hidden;
+    }
+    .supp-hero__bg {
+      position: absolute;
+      inset: 0;
+      z-index: 0;
+    }
+    .supp-hero__bg img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+      object-position: center;
+    }
+    .supp-hero__overlay {
+      position: absolute;
+      inset: 0;
+      background: linear-gradient(135deg, rgba(9,9,9,0.96) 0%, rgba(9,9,9,0.85) 50%, rgba(9,9,9,0.7) 100%);
+      z-index: 1;
+    }
+    .supp-hero__content {
+      position: relative;
+      z-index: 2;
+      max-width: 1280px;
+      margin: 0 auto;
+      padding: 0 1.5rem;
+      width: 100%;
+    }
+    .category-pills {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 0.75rem;
+      margin: 2.5rem 0 1.5rem;
+      justify-content: center;
+    }
+    .cat-btn {
+      padding: 10px 20px;
+      font-family: var(--font-display);
+      font-size: 0.8rem;
+      font-weight: 600;
+      letter-spacing: 0.08em;
+      text-transform: uppercase;
+      border-radius: 9999px;
+      background: var(--graphite);
+      border: 1px solid var(--border-grey);
+      color: var(--muted-grey);
+      cursor: pointer;
+      transition: all 0.2s ease;
+    }
+    .cat-btn:hover, .cat-btn.active {
+      background: var(--beast-red);
+      color: #fff;
+      border-color: var(--beast-red);
+      box-shadow: 0 4px 20px rgba(252,15,18,0.3);
+    }
+    .products-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
+      gap: 1.5rem;
+      margin-top: 2rem;
+    }
+    .prod-card {
+      background: var(--graphite);
+      border: 1px solid var(--border-grey);
+      border-radius: 12px;
+      padding: 1.5rem;
+      display: flex;
+      flex-direction: column;
+      transition: all 0.25s ease;
+      position: relative;
+    }
+    .prod-card:hover {
+      border-color: rgba(252,15,18,0.4);
+      transform: translateY(-4px);
+      box-shadow: 0 16px 48px rgba(0,0,0,0.7);
+    }
+    .prod-card-top {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      gap: 0.5rem;
+      margin-bottom: 0.65rem;
+      flex-wrap: wrap;
+    }
+    .prod-badge {
+      position: static !important;
+      font-size: 0.65rem;
+      padding: 3px 8px;
+      border-radius: 9999px;
+      font-weight: 700;
+      letter-spacing: 0.05em;
+      text-transform: uppercase;
+      background: rgba(252,15,18,0.15);
+      color: var(--beast-red);
+      border: 1px solid rgba(252,15,18,0.35);
+      white-space: nowrap;
+      flex-shrink: 0;
+      margin-left: auto;
+    }
+    .prod-category {
+      font-size: 0.75rem;
+      font-weight: 700;
+      color: var(--beast-red);
+      letter-spacing: 0.08em;
+      text-transform: uppercase;
+      font-family: var(--font-display);
+      margin-bottom: 0;
+      line-height: 1.2;
+    }
+    .prod-title {
+      font-size: 1.25rem;
+      font-weight: 700;
+      color: var(--off-white);
+      margin-bottom: 0.5rem;
+      line-height: 1.25;
+    }
+    .prod-meta {
+      font-size: 0.8125rem;
+      color: var(--muted-grey);
+      margin-bottom: 1rem;
+      line-height: 1.5;
+      flex: 1;
+    }
+    .prod-specs {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      padding: 0.75rem 0;
+      border-top: 1px solid var(--border-subtle);
+      border-bottom: 1px solid var(--border-subtle);
+      margin-bottom: 1.25rem;
+      font-size: 0.8125rem;
+    }
+    .prod-specs span {
+      color: var(--muted-grey);
+    }
+    .prod-specs strong {
+      color: var(--off-white);
+      font-family: var(--font-display);
+    }
+    .prod-footer {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      gap: 0.75rem;
+    }
+    .prod-price {
+      display: flex;
+      flex-direction: column;
+    }
+    .prod-price-label {
+      font-size: 0.65rem;
+      text-transform: uppercase;
+      color: var(--muted-grey);
+      letter-spacing: 0.05em;
+    }
+    .prod-price-val {
+      font-size: 1.25rem;
+      font-weight: 700;
+      color: var(--off-white);
+      font-family: var(--font-display);
+    }
+    .trust-grid {
+      display: grid;
+      grid-template-columns: repeat(4, 1fr);
+      gap: 1.5rem;
+      margin: 4rem 0 2rem;
+    }
+    .trust-box {
+      background: var(--graphite);
+      border: 1px solid var(--border-grey);
+      border-radius: 8px;
+      padding: 1.5rem;
+      text-align: center;
+    }
+    .trust-box svg {
+      color: var(--beast-red);
+      margin-bottom: 0.75rem;
+    }
+    .trust-box h4 {
+      font-size: 1rem;
+      color: var(--off-white);
+      margin-bottom: 0.25rem;
+    }
+    .trust-box p {
+      font-size: 0.8125rem;
+      color: var(--muted-grey);
+    }
+    @media(max-width: 900px) {
+      .trust-grid {
+        grid-template-columns: repeat(2, 1fr);
+      }
+    }
+    @media(max-width: 500px) {
+      .trust-grid {
+        grid-template-columns: 1fr;
+      }
+    }
+  </style>
+</head>
+<body>
+
+  
+  <!-- ANNOUNCEMENT BAR -->
+  <div id="announcement-bar" class="announcement-bar" role="banner" aria-label="Announcement">
+    <span>PREMIUM UNISEX FITNESS ARENA IN NEELANKARAI — <a href="#join-modal" data-open-join-modal>JOIN TODAY</a></span>
+    <button id="announcement-close" class="announcement-close" aria-label="Close announcement">
+      <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><line x1="18" y1="6" x2="6" y2="18"/><line x1="6" y1="6" x2="18" y2="18"/></svg>
+    </button>
+  </div>
+
+  <!-- GLOSSY GLASSMORPHISM NAVIGATION -->
+  <nav id="main-nav" class="nav has-announcement" role="navigation" aria-label="Main navigation">
+    <div class="nav__inner">
+      <a href="../index.html" class="nav__logo" aria-label="Beast Gym & Fitness - Home">
+        <img src="../assets/beast-gym-logo.png" alt="Beast Gym &amp; Fitness Official Logo" class="nav__logo-img">
+      </a>
+
+      <div class="nav__links" role="menubar">
+        <a href="../index.html" class="nav__link " role="menuitem">Home</a>
+        <a href="../programs.html" class="nav__link " role="menuitem">Programs</a>
+        <a href="../memberships.html" class="nav__link " role="menuitem">Memberships</a>
+        <a href="../about.html" class="nav__link " role="menuitem">About</a>
+        <a href="../gallery.html" class="nav__link " role="menuitem">Gallery</a>
+        <a href="../index.html" class="nav__link nav__link--supplements active" role="menuitem">Supplements</a>
+        <a href="../contact.html" class="nav__link " role="menuitem">Contact</a>
+      </div>
+
+      <div class="nav__cta">
+        <a href="tel:+917092030786" class="btn btn--ghost btn--sm">
+          <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M22 16.92v3a2 2 0 01-2.18 2 19.79 19.79 0 01-8.63-3.07A19.5 19.5 0 014.5 11.5a19.79 19.79 0 01-3.07-8.63A2 2 0 013.41 0.68h3a2 2 0 012 1.72c.127.96.361 1.903.7 2.81a2 2 0 01-.45 2.11L7.09 8.91a16 16 0 006 6l1.27-1.27a2 2 0 012.11-.45c.907.339 1.85.573 2.81.7A2 2 0 0121.32 16z"/></svg>
+          Call
+        </a>
+        <a href="#join-modal" class="btn btn--primary btn--sm" id="nav-join-btn" data-open-join-modal>JOIN NOW</a>
+      </div>
+
+      <button id="nav-toggle" class="nav__toggle" aria-label="Open menu" aria-expanded="false" aria-controls="nav-drawer">
+        <span></span><span></span><span></span>
+      </button>
+    </div>
+  </nav>
+
+  <!-- MOBILE NAV OVERLAY -->
+  <div id="nav-overlay" class="nav__overlay" aria-hidden="true"></div>
+
+  <!-- MOBILE NAV DRAWER -->
+  <div id="nav-drawer" class="nav__drawer" role="dialog" aria-modal="true" aria-label="Navigation menu">
+    <nav class="nav__drawer-links" role="menubar" aria-label="Mobile navigation">
+      <a href="../index.html" class="nav__drawer-link " role="menuitem">Home</a>
+      <a href="../programs.html" class="nav__drawer-link " role="menuitem">Programs</a>
+      <a href="../memberships.html" class="nav__drawer-link " role="menuitem">Memberships</a>
+      <a href="../about.html" class="nav__drawer-link " role="menuitem">About &amp; Coaches</a>
+      <a href="../gallery.html" class="nav__drawer-link " role="menuitem">Facility Gallery</a>
+      <a href="../index.html" class="nav__drawer-link nav__drawer-link--red active" role="menuitem">Supplements Store</a>
+      <a href="../contact.html" class="nav__drawer-link " role="menuitem">Contact &amp; Location</a>
+    </nav>
+    <div class="nav__drawer-cta">
+      <a href="#join-modal" class="btn btn--primary btn--full" data-open-join-modal>JOIN BEAST GYM</a>
+      <a href="tel:+917092030786" class="btn btn--outline btn--full">
+        <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M22 16.92v3a2 2 0 01-2.18 2 19.79 19.79 0 01-8.63-3.07A19.5 19.5 0 014.5 11.5a19.79 19.79 0 01-3.07-8.63A2 2 0 013.41 0.68h3a2 2 0 012 1.72c.127.96.361 1.903.7 2.81a2 2 0 01-.45 2.11L7.09 8.91a16 16 0 006 6l1.27-1.27a2 2 0 012.11-.45c.907.339 1.85.573 2.81.7A2 2 0 0121.32 16z"/></svg>
+        +91 70920 30786
+      </a>
+    </div>
+  </div>
+<main>
+
+    <!-- HERO -->
+    <section class="supp-hero">
+      <div class="supp-hero__bg">
+        <img src="../assets/Supplements banner.png" alt="Beast Gym authentic supplements display" fetchpriority="high">
+      </div>
+      <div class="supp-hero__overlay"></div>
+      <div class="supp-hero__content">
+        <span class="section-label">Official Nutrition Desk</span>
+        <h1 style="font-size:clamp(2.5rem, 6vw, 4.5rem);margin-bottom:1.25rem;">
+          Authentic Sports Nutrition.<br><span style="color:var(--beast-red);">Zero Counterfeits.</span>
+        </h1>
+        <p style="max-width:580px;font-size:1.125rem;line-height:1.6;margin-bottom:2rem;">
+          In an industry plagued by unverified powders and grey-market imports, Beast Gym guarantees 100% genuine supplements directly sourced from certified manufacturers and brand importers.
+        </p>
+        <div class="flex gap-4" style="flex-wrap:wrap;">
+          <a href="#catalog" class="btn btn--primary btn--lg">BROWSE PRODUCTS</a>
+          <a href="#consultation" class="btn btn--outline btn--lg">EXPERT NUTRITION AUDIT</a>
+        </div>
+      </div>
+    </section>
+
+    <!-- TRUST BADGES -->
+    <section class="section--sm" style="background:#090909;border-bottom:1px solid var(--border-grey);">
+      <div class="container">
+        <div class="trust-grid">
+          <div class="trust-box">
+            <svg xmlns="http://www.w3.org/2000/svg" width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/></svg>
+            <h4>100% Genuine Guarantee</h4>
+            <p>Every tub features direct brand scratch verification codes and importer hologram seals.</p>
+          </div>
+          <div class="trust-box">
+            <svg xmlns="http://www.w3.org/2000/svg" width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="8" r="7"/><polyline points="8.21 13.89 7 23 12 20 17 23 15.79 13.88"/></svg>
+            <h4>Certified Dietitians</h4>
+            <p>Get personalized supplement dosages matched to your bloodwork, goals, and training intensity.</p>
+          </div>
+          <div class="trust-box">
+            <svg xmlns="http://www.w3.org/2000/svg" width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="2" y="7" width="20" height="14" rx="2" ry="2"/><path d="M16 21V5a2 2 0 00-2-2h-4a2 2 0 00-2 2v16"/></svg>
+            <h4>Climate-Controlled Storage</h4>
+            <p>Stored in cool, moisture-controlled lockers so protein potency and micronutrients stay intact.</p>
+          </div>
+          <div class="trust-box">
+            <svg xmlns="http://www.w3.org/2000/svg" width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="20 6 9 17 4 12"/></svg>
+            <h4>Member Discounts</h4>
+            <p>Active Beast Gym members receive exclusive discounted pricing on all supplement tubs &amp; stacks.</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- CATALOG SECTION -->
+    <section id="catalog" class="section" style="background:#141414;">
+      <div class="container">
+        <div class="text-center">
+          <span class="section-label" style="justify-content:center;">Verified Inventory</span>
+          <h2>Curated Supplement Stacks</h2>
+          <p style="max-width:540px;margin:0.75rem auto 0;">All items available for immediate pickup at the Beast Gym front desk or express home dispatch.</p>
+
+          <div class="category-pills">
+            <button class="cat-btn active" onclick="filterCategory('all', this)">All Supplements</button>
+            <button class="cat-btn" onclick="filterCategory('protein', this)">Proteins</button>
+            <button class="cat-btn" onclick="filterCategory('creatine', this)">Creatine &amp; Pre-Workout</button>
+            <button class="cat-btn" onclick="filterCategory('amino', this)">BCAA &amp; Recovery</button>
+            <button class="cat-btn" onclick="filterCategory('health', this)">Vitamins &amp; Joint Health</button>
+          </div>
+        </div>
+
+        <div class="products-grid" id="products-list">
+
+          <!-- PROD 1 -->
+          <div class="prod-card" data-cat="protein">
+            <div class="prod-card-top">
+              <span class="prod-category">Proteins</span>
+              <span class="prod-badge">TOP SELLER</span>
+            </div>
+            <h3 class="prod-title">100% Pure Whey Isolate</h3>
+            <p class="prod-meta">Ultra-pure, micro-filtered cold-processed whey isolate for fast post-workout muscle repair. Low carb and zero added sugar.</p>
+            <div class="prod-specs">
+              <span>27g Protein / Scoop</span>
+              <strong>2 KG (66 Servings)</strong>
+            </div>
+            <div class="prod-footer">
+              <a href="store.html" class="btn btn--primary btn--full buy-prod-btn" data-product="100% Pure Whey Isolate (2KG)">
+                BUY NOW &rarr;
+              </a>
+            </div>
+          </div>
+
+          <!-- PROD 2 -->
+          <div class="prod-card" data-cat="protein">
+            <div class="prod-card-top">
+              <span class="prod-category">Proteins</span>
+              <span class="prod-badge">ESSENTIAL</span>
+            </div>
+            <h3 class="prod-title">Gold Standard Whey Blend</h3>
+            <p class="prod-meta">Balanced whey concentrate and isolate matrix with added digestive enzymes for smooth assimilation and zero bloat.</p>
+            <div class="prod-specs">
+              <span>24g Protein / Scoop</span>
+              <strong>2.27 KG (74 Servings)</strong>
+            </div>
+            <div class="prod-footer">
+              <a href="store.html" class="btn btn--primary btn--full buy-prod-btn" data-product="Gold Standard Whey Blend (2.27KG)">
+                BUY NOW &rarr;
+              </a>
+            </div>
+          </div>
+
+          <!-- PROD 3 -->
+          <div class="prod-card" data-cat="creatine">
+            <div class="prod-card-top">
+              <span class="prod-category">Creatine</span>
+              <span class="prod-badge">STRENGTH LAB</span>
+            </div>
+            <h3 class="prod-title">Micronized Creatine Monohydrate</h3>
+            <p class="prod-meta">200-mesh pharmaceutical grade unflavored creatine monohydrate. Maximizes ATP output, muscle hydration, and explosive power.</p>
+            <div class="prod-specs">
+              <span>5g Pure Creatine</span>
+              <strong>300g (60 Servings)</strong>
+            </div>
+            <div class="prod-footer">
+              <a href="store.html" class="btn btn--primary btn--full buy-prod-btn" data-product="Micronized Creatine Monohydrate (300g)">
+                BUY NOW &rarr;
+              </a>
+            </div>
+          </div>
+
+          <!-- PROD 4 -->
+          <div class="prod-card" data-cat="creatine">
+            <div class="prod-card-top">
+              <span class="prod-category">Pre-Workout</span>
+              <span class="prod-badge">HIGH INTENSITY</span>
+            </div>
+            <h3 class="prod-title">Ignite Matrix Pre-Workout</h3>
+            <p class="prod-meta">High-stimulant training booster formulated with 300mg Caffeine, 3.2g Beta-Alanine, and 6g L-Citrulline for skin-splitting pumps and focus.</p>
+            <div class="prod-specs">
+              <span>Laser Focus &amp; Pump</span>
+              <strong>30 Servings (Sour Apple)</strong>
+            </div>
+            <div class="prod-footer">
+              <a href="store.html" class="btn btn--primary btn--full buy-prod-btn" data-product="Ignite Matrix Pre-Workout">
+                BUY NOW &rarr;
+              </a>
+            </div>
+          </div>
+
+          <!-- PROD 5 -->
+          <div class="prod-card" data-cat="amino">
+            <div class="prod-card-top">
+              <span class="prod-category">Recovery</span>
+              <span class="prod-badge">HYDRATION</span>
+            </div>
+            <h3 class="prod-title">Intra-Workout BCAA + Electrolytes</h3>
+            <p class="prod-meta">Fermented 2:1:1 vegan BCAAs infused with Himalayan pink salt, coconut water powder, and potassium to prevent mid-set muscle cramps.</p>
+            <div class="prod-specs">
+              <span>7g BCAAs + Electrolytes</span>
+              <strong>400g (30 Servings)</strong>
+            </div>
+            <div class="prod-footer">
+              <a href="store.html" class="btn btn--primary btn--full buy-prod-btn" data-product="Intra-Workout BCAA + Electrolytes">
+                BUY NOW &rarr;
+              </a>
+            </div>
+          </div>
+
+          <!-- PROD 6 -->
+          <div class="prod-card" data-cat="amino">
+            <div class="prod-card-top">
+              <span class="prod-category">Amino Acids</span>
+              <span class="prod-badge">RECOVERY</span>
+            </div>
+            <h3 class="prod-title">Full Spectrum EAA Complex</h3>
+            <p class="prod-meta">All 9 essential amino acids including Histidine, Threonine, and Tryptophan. Faster absorption rate than whey for intra-workout stamina.</p>
+            <div class="prod-specs">
+              <span>9 Essential Aminos</span>
+              <strong>360g (30 Servings)</strong>
+            </div>
+            <div class="prod-footer">
+              <a href="store.html" class="btn btn--primary btn--full buy-prod-btn" data-product="Full Spectrum EAA Complex">
+                BUY NOW &rarr;
+              </a>
+            </div>
+          </div>
+
+          <!-- PROD 7 -->
+          <div class="prod-card" data-cat="health">
+            <div class="prod-card-top">
+              <span class="prod-category">Health &amp; Wellness</span>
+              <span class="prod-badge">HEALTH ESSENTIAL</span>
+            </div>
+            <h3 class="prod-title">Triple Strength Omega-3 Fish Oil</h3>
+            <p class="prod-meta">Molecularly distilled wild-caught fish oil delivering 1000mg EPA + DHA per enteric-coated softgel. Supports cardiovascular health and joints.</p>
+            <div class="prod-specs">
+              <span>550mg EPA / 350mg DHA</span>
+              <strong>60 Softgels</strong>
+            </div>
+            <div class="prod-footer">
+              <a href="store.html" class="btn btn--primary btn--full buy-prod-btn" data-product="Triple Strength Omega-3 Fish Oil">
+                BUY NOW &rarr;
+              </a>
+            </div>
+          </div>
+
+          <!-- PROD 8 -->
+          <div class="prod-card" data-cat="health">
+            <div class="prod-card-top">
+              <span class="prod-category">Multivitamin</span>
+              <span class="prod-badge">DAILY DEFENSE</span>
+            </div>
+            <h3 class="prod-title">Athlete Multivitamin &amp; Mineral Shield</h3>
+            <p class="prod-meta">High-potency blend of 28 bioavailable micronutrients, chelated Zinc, Magnesium, Vitamin D3, and an anti-oxidant herbal blend for hard trainers.</p>
+            <div class="prod-specs">
+              <span>28 Active Nutrients</span>
+              <strong>60 Veg Tablets</strong>
+            </div>
+            <div class="prod-footer">
+              <a href="store.html" class="btn btn--primary btn--full buy-prod-btn" data-product="Athlete Multivitamin &amp; Mineral Shield">
+                BUY NOW &rarr;
+              </a>
+            </div>
+          </div>
+
+        </div>
+      </div>
+    </section>
+
+    <!-- CONSULTATION & NUTRITION AUDIT -->
+    <section id="consultation" class="section" style="background:#090909;border-top:1px solid var(--border-grey);">
+      <div class="container">
+        <div class="grid grid-2 items-center" style="gap:3rem;">
+          <div>
+            <span class="section-label">Medical &amp; Nutrition Desk</span>
+            <h2>Not Sure What Stacks Fit Your Routine?</h2>
+            <span class="accent-line"></span>
+            <p style="margin-bottom:1.5rem;">
+              Taking the wrong supplement or incorrect dosages wastes money and delivers zero progress. Book a 15-minute consultation with our certified sports nutritionist to review your diet, current bloodwork, and target goals.
+            </p>
+            <ul style="display:flex;flex-direction:column;gap:1rem;margin-bottom:2rem;">
+              <li style="display:flex;gap:0.75rem;align-items:center;color:var(--off-white);">
+                <svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="#FC0F12" stroke-width="2.5"><polyline points="20 6 9 17 4 12"/></svg>
+                Personalized daily caloric &amp; macro breakdown
+              </li>
+              <li style="display:flex;gap:0.75rem;align-items:center;color:var(--off-white);">
+                <svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="#FC0F12" stroke-width="2.5"><polyline points="20 6 9 17 4 12"/></svg>
+                Evidence-based supplement timing (Pre / Intra / Post workout)
+              </li>
+              <li style="display:flex;gap:0.75rem;align-items:center;color:var(--off-white);">
+                <svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="#FC0F12" stroke-width="2.5"><polyline points="20 6 9 17 4 12"/></svg>
+                Hydration &amp; electrolyte protocol for heavy training
+              </li>
+            </ul>
+            <div class="flex gap-4" style="flex-wrap:wrap;">
+              <a href="https://wa.me/917092030786?text=Hi%20Beast%20Gym%2C%20I%20would%20like%20to%20book%20a%20Sports%20Nutrition%20Consultation" target="_blank" rel="noopener noreferrer" class="btn btn--primary">
+                BOOK NUTRITION CONSULTATION
+              </a>
+              <a href="tel:+917092030786" class="btn btn--outline">
+                CALL +91 70920 30786
+              </a>
+            </div>
+          </div>
+
+          <div style="background:var(--graphite);border:1px solid var(--border-grey);border-radius:12px;padding:2.5rem;">
+            <h3 style="color:#F5F5F5;margin-bottom:1rem;">Request Supplement Enquiry</h3>
+            <p style="font-size:0.875rem;color:var(--muted-grey);margin-bottom:1.5rem;">Fill out this quick form and our nutrition desk will contact you via WhatsApp with product prices and availability.</p>
+            <form onsubmit="handleSuppOrder(event)">
+              <div class="form__group">
+                <label class="form__label" for="supp-name">Full Name</label>
+                <input type="text" id="supp-name" class="form__input" placeholder="Your Name" required>
+              </div>
+              <div class="form__group">
+                <label class="form__label" for="supp-phone">Phone Number</label>
+                <input type="tel" id="supp-phone" class="form__input" placeholder="+91 XXXXX XXXXX" required>
+              </div>
+              <div class="form__group">
+                <label class="form__label" for="supp-item">Product or Goal</label>
+                <select id="supp-item" class="form__select">
+                  <option value="Whey Isolate Protein">Whey Isolate Protein</option>
+                  <option value="Gold Standard Whey Blend">Gold Standard Whey Blend</option>
+                  <option value="Creatine Monohydrate">Creatine Monohydrate</option>
+                  <option value="Pre-Workout Booster">Pre-Workout Booster</option>
+                  <option value="BCAA / Recovery Electrolytes">BCAA / Recovery Electrolytes</option>
+                  <option value="Omega-3 & Multivitamins">Omega-3 &amp; Multivitamins</option>
+                  <option value="General Nutrition Consultation">General Nutrition Consultation</option>
+                </select>
+              </div>
+              <button type="submit" class="btn btn--primary btn--full btn--lg" style="margin-top:1rem;">
+                SEND ENQUIRY ON WHATSAPP
+              </button>
+            </form>
+          </div>
+        </div>
+      </div>
+    </section>
+
+  </main>
+
+  
+  <!-- FOOTER -->
+  <footer class="footer" role="contentinfo">
+    <div class="footer__grid">
+      <div class="footer__brand">
+        <a href="../index.html" class="footer__logo">
+          <div class="nav__logo-text">
+            <span class="nav__logo-beast">BEAST<span> GYM</span></span>
+            <span class="nav__logo-sub">&amp; Fitness</span>
+          </div>
+        </a>
+        <p class="footer__desc">Bespoke training facility, world-class equipment, certified coaches, and authentic sports nutrition. Train hard. Build strength. Transform.</p>
+        <div class="footer__contact">
+          <div class="footer__contact-item">
+            <div class="footer__contact-icon"><svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0118 0z"/><circle cx="12" cy="10" r="3"/></svg></div>
+            <a href="https://share.google/c82nGcmtq20Y6S7NX" target="_blank" rel="noopener noreferrer">1, Pandian Salai, Saraswathy Nagar North, Neelankarai, Chennai 600115</a>
+          </div>
+          <div class="footer__contact-item">
+            <div class="footer__contact-icon"><svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M22 16.92v3a2 2 0 01-2.18 2 19.79 19.79 0 01-8.63-3.07A19.5 19.5 0 014.5 11.5a19.79 19.79 0 01-3.07-8.63A2 2 0 013.41 0.68h3a2 2 0 012 1.72c.127.96.361 1.903.7 2.81a2 2 0 01-.45 2.11L7.09 8.91a16 16 0 006 6l1.27-1.27a2 2 0 012.11-.45c.907.339 1.85.573 2.81.7A2 2 0 0121.32 16z"/></svg></div>
+            <a href="tel:+917092030786">+91 70920 30786</a>
+          </div>
+          <div class="footer__contact-item">
+            <div class="footer__contact-icon"><svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"/><polyline points="22,6 12,13 2,6"/></svg></div>
+            <span>beastgym2018@gmail.com</span>
+          </div>
+          <div class="footer__contact-item">
+            <div class="footer__contact-icon"><svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="10"/><polyline points="12 6 12 12 16 14"/></svg></div>
+            <span>Mon–Sat: 5 AM – 10 PM | Sun: 5 AM – 12 PM &amp; 6 PM – 8 PM</span>
+          </div>
+        </div>
+      </div>
+
+      <div>
+        <h4 class="footer__heading">Programs</h4>
+        <ul class="footer__links">
+          <li><a href="../programs.html" class="footer__link">CrossFit Training</a></li>
+          <li><a href="../programs.html" class="footer__link">Zumba &amp; Dance</a></li>
+          <li><a href="../programs.html" class="footer__link">Personal Coaching</a></li>
+          <li><a href="../programs.html" class="footer__link">Youth Sports</a></li>
+          <li><a href="../programs.html" class="footer__link">Yoga Classes</a></li>
+          <li><a href="../programs.html" class="footer__link">Weight Training</a></li>
+          <li><a href="../programs.html" class="footer__link">Diet &amp; Nutrition Plans</a></li>
+        </ul>
+      </div>
+
+      <div>
+        <h4 class="footer__heading">Quick Navigation</h4>
+        <ul class="footer__links">
+          <li><a href="../index.html" class="footer__link">Home</a></li>
+          <li><a href="../programs.html" class="footer__link">Training Programs</a></li>
+          <li><a href="../memberships.html" class="footer__link">Memberships &amp; Plans</a></li>
+          <li><a href="../about.html" class="footer__link">About &amp; Coaches</a></li>
+          <li><a href="../gallery.html" class="footer__link">Facility Gallery</a></li>
+          <li><a href="../index.html" class="footer__link footer__link--red">Supplements Store</a></li>
+          <li><a href="../contact.html" class="footer__link">Contact &amp; Location</a></li>
+        </ul>
+      </div>
+
+      <div>
+        <h4 class="footer__heading">Membership Enquiries</h4>
+        <p style="font-size:0.875rem;color:var(--muted-grey);margin-bottom:1rem;line-height:1.6;">Schedule a tour or enquire about memberships with our reception team.</p>
+        <a href="#join-modal" class="btn btn--primary btn--sm btn--full" data-open-join-modal style="margin-bottom:0.75rem;">JOIN BEAST GYM</a>
+        <a href="https://wa.me/917092030786" target="_blank" rel="noopener noreferrer" class="btn btn--outline btn--sm btn--full">WHATSAPP CHAT</a>
+      </div>
+    </div>
+
+    <div class="footer__bottom">
+      <div class="footer__copyright">
+        &copy; 2026 Beast Gym &amp; Fitness. All Rights Reserved. Crafted for Peak Performance.
+      </div>
+      <div class="footer__legal">
+        <a href="../about.html">Privacy Policy</a>
+        <a href="../about.html">Terms of Service</a>
+        <a href="../about.html">Gym Rules &amp; Etiquette</a>
+      </div>
+    </div>
+  </footer>
+
+  <!-- LIGHTBOX MODAL -->
+  <div id="lightbox" class="lightbox" role="dialog" aria-modal="true" aria-label="Facility photo preview">
+    <button id="lightbox-close" class="lightbox__close" aria-label="Close photo preview">
+      <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><line x1="18" y1="6" x2="6" y2="18"/><line x1="6" y1="6" x2="18" y2="18"/></svg>
+    </button>
+    <button id="lightbox-prev" class="lightbox__prev" aria-label="Previous photo">
+      <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="15 18 9 12 15 6"/></svg>
+    </button>
+    <img id="lightbox-img" class="lightbox__img" src="" alt="">
+    <button id="lightbox-next" class="lightbox__next" aria-label="Next photo">
+      <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="9 18 15 12 9 6"/></svg>
+    </button>
+  </div>
+
+  <!-- FLOATING WHATSAPP BUTTON -->
+  <a href="https://wa.me/917092030786?text=Hi%20Beast%20Gym%20%26%20Fitness%2C%20I%20would%20like%20to%20know%20more%20about%20memberships%20and%20training!" class="whatsapp-float" target="_blank" rel="noopener noreferrer" aria-label="Chat with Beast Gym on WhatsApp">
+    <svg xmlns="http://www.w3.org/2000/svg" width="32" height="32" viewBox="0 0 24 24" fill="currentColor">
+      <path d="M12.04 2c-5.46 0-9.91 4.45-9.91 9.91 0 1.75.46 3.45 1.32 4.95L2.05 22l5.25-1.38c1.45.79 3.08 1.21 4.74 1.21 5.46 0 9.91-4.45 9.91-9.91 0-2.65-1.03-5.14-2.9-7.01A9.816 9.816 0 0012.04 2zm5.78 14.34c-.24.68-1.39 1.3-1.92 1.35-.51.05-1.17.07-3.79-1.01-3.23-1.34-5.32-4.63-5.48-4.84-.16-.21-1.31-1.74-1.31-3.32 0-1.58.83-2.36 1.12-2.68.29-.32.64-.4.86-.4.21 0 .43 0 .62.01.2.01.47-.08.73.56.27.68.93 2.27 1.01 2.43.08.16.13.35.03.56-.11.21-.16.35-.32.53-.16.19-.34.42-.49.56-.16.16-.33.34-.14.67.19.32.84 1.39 1.8 2.25 1.24 1.1 2.29 1.44 2.61 1.6.32.16.51.13.7-.08.19-.21.8-.93 1.01-1.25.21-.32.43-.27.72-.16.29.11 1.86.88 2.18 1.04.32.16.53.24.61.37.08.13.08.79-.16 1.47z"/>
+    </svg>
+  </a>
+
+  <!-- SCRIPTS -->
+  <script src="../js/main.js"></script>
+  <script src="../js/animations.js"></script>
+  <script>
+    // ─── MEDICAL SUPPLEMENTS CATEGORY FILTER ───
+    window.filterCategory = function(cat, btn) {
+      const buttons = document.querySelectorAll('.cat-btn');
+      buttons.forEach(b => b.classList.remove('active'));
+      if (btn) btn.classList.add('active');
+
+      const cards = document.querySelectorAll('.prod-card');
+      cards.forEach(card => {
+        const cardCat = card.getAttribute('data-cat');
+        if (cat === 'all' || cardCat === cat) {
+          card.style.display = 'flex';
+          card.style.animation = 'bgm-fadeIn 0.3s ease both';
+        } else {
+          card.style.display = 'none';
+        }
+      });
+    };
+  </script>
+</body>
+</html>

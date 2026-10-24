@@ -1,0 +1,763 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Memberships &amp; Pricing — Beast Gym &amp; Fitness | Neelankarai Chennai</title>
+  <meta name="description" content="View transparent membership pricing at Beast Gym &amp; Fitness. Monthly ₹1,700 · Quarterly ₹4,200 · Half-Yearly ₹5,799 · Yearly ₹7,199. Personal Training and Group Classes also available.">
+  <link rel="canonical" href="https://beastgym.in/memberships.html">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Cinzel:wght@600;700;800;900&family=Outfit:wght@300;400;500;600;700;800;900&family=Plus+Jakarta+Sans:ital,wght@0,300;0,400;0,500;0,600;0,700;0,800;1,400&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="css/design-system.css">
+  <link rel="stylesheet" href="css/main.css">
+  <link rel="stylesheet" href="css/animations.css">
+  <style>
+    /* ─── MEMBERSHIP PAGE CUSTOM STYLES ─── */
+    .mem4-grid{display:grid;grid-template-columns:repeat(4,1fr);gap:1.25rem;align-items:stretch}
+    @media(max-width:1100px){.mem4-grid{grid-template-columns:repeat(2,1fr)}}
+    @media(max-width:600px){.mem4-grid{grid-template-columns:1fr}}
+    .mem-card{background:#181818;border:1px solid #292929;border-radius:12px;overflow:hidden;display:flex;flex-direction:column;transition:transform .25s ease,box-shadow .25s ease,border-color .25s ease;position:relative}
+    .mem-card:hover{transform:translateY(-6px);box-shadow:0 16px 64px rgba(0,0,0,.8);border-color:rgba(252,15,18,.35)}
+    .mem-card--best{border-color:#FC0F12;box-shadow:0 8px 40px rgba(252,15,18,.3)}
+    .mem-card--best:hover{box-shadow:0 16px 64px rgba(252,15,18,.45)}
+    .mem-card__badge{position:absolute;top:0;left:0;right:0;background:#FC0F12;color:#fff;font-family:var(--font-display);font-size:.65rem;font-weight:700;letter-spacing:.2em;text-transform:uppercase;text-align:center;padding:6px 12px}
+    .mem-card__header{padding:2rem 1.5rem 1.25rem;border-bottom:1px solid #292929}
+    .mem-card--best .mem-card__header{padding-top:3rem}
+    .mem-card__duration{font-family:var(--font-display);font-size:.7rem;font-weight:600;letter-spacing:.25em;text-transform:uppercase;color:#FC0F12;display:block;margin-bottom:.6rem}
+    .mem-card__name{font-family:var(--font-display);font-size:1.35rem;font-weight:700;color:#F5F5F5;margin:0}
+    .mem-card__pricing{padding:1.5rem;border-bottom:1px solid #1F1F1F}
+    .mem-card__price{display:flex;align-items:baseline;gap:.4rem}
+    .mem-card__currency{font-family:var(--font-display);font-size:1.1rem;font-weight:600;color:#A5A5A5}
+    .mem-card__amount{font-family:var(--font-display);font-size:2.75rem;font-weight:700;color:#F5F5F5;line-height:1}
+    .mem-card--best .mem-card__amount{color:#FC0F12}
+    .mem-card__footer{padding:1.25rem 1.5rem 1.5rem;margin-top:auto}
+    /* GOODIE */
+    .goodie-promo{background:#0D0D0D;border-top:1px solid #222;border-bottom:1px solid #222;padding:5rem 0}
+    .goodie-headline{font-family:var(--font-display);font-size:clamp(1.5rem,3vw,2.25rem);font-weight:800;letter-spacing:-.02em;color:#F5F5F5;margin-bottom:.6rem}
+    .goodie-headline span{color:#FC0F12}
+    .goodie-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:1.5rem}
+    @media(max-width:768px){.goodie-grid{grid-template-columns:1fr}}
+    .goodie-card{background:#181818;border:1px solid #292929;border-radius:14px;overflow:hidden;transition:transform .25s ease,border-color .25s ease,box-shadow .25s ease}
+    .goodie-card:hover{transform:translateY(-5px);border-color:rgba(252,15,18,.4);box-shadow:0 12px 40px rgba(252,15,18,.15)}
+    .goodie-card__img{width:100%;aspect-ratio:1/1;object-fit:cover;object-position:center;background:#f0f0f0}
+    .goodie-card__body{padding:1.25rem 1.5rem 1.5rem;border-top:1px solid #242424}
+    .goodie-card__label{font-family:var(--font-display);font-size:.65rem;font-weight:600;letter-spacing:.2em;text-transform:uppercase;color:#FC0F12;display:block;margin-bottom:.4rem}
+    .goodie-card__name{font-family:var(--font-display);font-size:1.15rem;font-weight:700;color:#F5F5F5;margin-bottom:.3rem}
+    .goodie-card__desc{font-size:.8rem;color:#A5A5A5;line-height:1.5}
+    .goodie-note{display:inline-flex;align-items:center;gap:.75rem;background:rgba(252,15,18,.08);border:1px solid rgba(252,15,18,.25);border-radius:8px;padding:1rem 1.5rem;margin-top:2.5rem;font-family:var(--font-display);font-size:.8rem;font-weight:600;letter-spacing:.05em;color:#F5F5F5}
+    /* PT */
+    /* PT WITH CLIENT BANNER BACKGROUND */
+    .pt-section {
+      position: relative;
+      background: #08080A url('assets/personal-training-banner.webp') center center / cover no-repeat;
+      padding: 7rem 0;
+      overflow: hidden;
+      border-top: 1px solid rgba(255, 255, 255, 0.08);
+      border-bottom: 1px solid rgba(255, 255, 255, 0.08);
+    }
+    .pt-section::before {
+      content: '';
+      position: absolute;
+      inset: 0;
+      background: linear-gradient(180deg, rgba(8, 8, 10, 0.88) 0%, rgba(8, 8, 10, 0.74) 45%, rgba(8, 8, 10, 0.94) 100%),
+                  radial-gradient(ellipse at 50% 20%, rgba(252, 15, 18, 0.15) 0%, transparent 60%);
+      pointer-events: none;
+      z-index: 1;
+    }
+    .pt-section > .container {
+      position: relative;
+      z-index: 2;
+    }
+    .pt-separator{display:flex;align-items:center;gap:1rem;margin-bottom:3rem}
+    .pt-separator::before,.pt-separator::after{content:'';flex:1;height:1px;background:rgba(255,255,255,0.1)}
+    .pt-separator span{font-family:var(--font-display);font-size:.65rem;font-weight:600;letter-spacing:.2em;text-transform:uppercase;color:#FC0F12;white-space:nowrap}
+    .pt-grid{display:grid;grid-template-columns:repeat(4,1fr);gap:1.25rem;align-items:stretch}
+    @media(max-width:1100px){.pt-grid{grid-template-columns:repeat(2,1fr)}}
+    @media(max-width:600px){.pt-grid{grid-template-columns:1fr}}
+    .pt-card{background:rgba(18,18,22,0.8);backdrop-filter:blur(20px);-webkit-backdrop-filter:blur(20px);border:1px solid rgba(255,255,255,0.1);border-radius:14px;padding:2.25rem 1.75rem;display:flex;flex-direction:column;transition:transform .3s cubic-bezier(0.16,1,0.3,1),box-shadow .3s ease,border-color .3s ease;position:relative;overflow:hidden;box-shadow:0 16px 40px rgba(0,0,0,0.6)}
+    .pt-card::before{content:'';position:absolute;top:0;left:0;right:0;height:3px;background:linear-gradient(90deg,#FC0F12,#D4090C);transform:scaleX(0);transform-origin:left;transition:transform .3s ease}
+    .pt-card:hover::before{transform:scaleX(1)}
+    .pt-card:hover{transform:translateY(-6px);box-shadow:0 20px 50px rgba(0,0,0,.8),0 0 25px rgba(252,15,18,0.2);border-color:rgba(252,15,18,.45)}
+    .pt-card__sessions{font-family:var(--font-display);font-size:3.5rem;font-weight:800;color:#FC0F12;line-height:1}
+    .pt-card__sessions-label{font-family:var(--font-display);font-size:.7rem;font-weight:600;letter-spacing:.2em;text-transform:uppercase;color:#A5A5A5;margin-top:.25rem;margin-bottom:1.5rem;display:block}
+    .pt-card__price{display:flex;align-items:baseline;gap:.35rem;margin-bottom:1.5rem}
+    .pt-card__currency{font-family:var(--font-display);font-size:1rem;font-weight:600;color:#A5A5A5}
+    .pt-card__amount{font-family:var(--font-display);font-size:2.25rem;font-weight:700;color:#F5F5F5;line-height:1}
+    .pt-card__footer{margin-top:auto}
+
+    /* GROUP CLASSES SECTION */
+    .gc-section{background:#0C0C0E;padding:7rem 0;border-top:1px solid #1E1E22;border-bottom:1px solid #1E1E22;position:relative}
+    .gc-grid{display:grid;grid-template-columns:repeat(4,1fr);gap:1.5rem;margin:3.5rem 0 2.5rem}
+    @media(max-width:1100px){.gc-grid{grid-template-columns:repeat(2,1fr)}}
+    @media(max-width:640px){.gc-grid{grid-template-columns:1fr}}
+    .gc-item{background:#141418;border:1px solid rgba(255,255,255,0.08);border-radius:14px;overflow:hidden;display:flex;flex-direction:column;transition:transform .3s cubic-bezier(0.16,1,0.3,1),border-color .3s ease,box-shadow .3s ease}
+    .gc-item:hover{transform:translateY(-6px);border-color:rgba(252,15,18,0.4);box-shadow:0 16px 40px rgba(0,0,0,0.6),0 0 20px rgba(252,15,18,0.15)}
+    .gc-item__img-wrap{position:relative;width:100%;height:190px;overflow:hidden}
+    .gc-item__img{width:100%;height:100%;object-fit:cover;transition:transform .4s ease}
+    .gc-item:hover .gc-item__img{transform:scale(1.08)}
+    .gc-item__badge{position:absolute;top:12px;left:12px;background:rgba(12,12,14,0.85);backdrop-filter:blur(8px);border:1px solid rgba(252,15,18,0.4);color:#FC0F12;font-family:var(--font-display);font-size:.65rem;font-weight:700;letter-spacing:.15em;text-transform:uppercase;padding:4px 10px;border-radius:9999px}
+    .gc-item__body{padding:1.5rem;display:flex;flex-direction:column;flex:1}
+    .gc-item__title{font-family:var(--font-display);font-size:1.15rem;font-weight:700;color:#F5F5F5;margin-bottom:.5rem}
+    .gc-item__desc{font-size:.825rem;color:#A5A5A5;line-height:1.6}
+
+    /* 12-Session Pass Card */
+    .gc-pass-card{background:linear-gradient(135deg,rgba(24,24,30,0.95) 0%,rgba(18,18,22,0.95) 100%);border:1px solid rgba(252,15,18,0.35);border-radius:16px;padding:2.5rem 3rem;display:flex;align-items:center;justify-content:space-between;gap:2.5rem;box-shadow:0 16px 48px rgba(0,0,0,0.6),inset 0 1px 0 rgba(255,255,255,0.1);position:relative;overflow:hidden;margin-top:2rem}
+    .gc-pass-card::before{content:'';position:absolute;top:0;left:0;width:4px;height:100%;background:#FC0F12}
+    @media(max-width:850px){.gc-pass-card{flex-direction:column;text-align:center;padding:2rem 1.5rem}}
+    .gc-pass-info{display:flex;flex-direction:column;gap:.5rem}
+    .gc-pass-label{font-family:var(--font-display);font-size:.7rem;font-weight:700;letter-spacing:.25em;text-transform:uppercase;color:#FC0F12}
+    .gc-pass-title{font-family:var(--font-display);font-size:1.75rem;font-weight:800;color:#F5F5F5;margin:0}
+    .gc-pass-desc{font-size:.875rem;color:#A5A5A5;max-width:540px;line-height:1.6;margin:0}
+    .gc-pass-pricing{display:flex;flex-direction:column;align-items:flex-end;gap:1rem;flex-shrink:0}
+    @media(max-width:850px){.gc-pass-pricing{align-items:center}}
+    .gc-pass-price-box{display:flex;align-items:baseline;gap:.4rem}
+    .gc-pass-currency{font-family:var(--font-display);font-size:1.25rem;font-weight:600;color:#A5A5A5}
+    .gc-pass-amount{font-family:var(--font-display);font-size:3rem;font-weight:800;color:#FC0F12;line-height:1}
+    .gc-pass-unit{font-size:.75rem;color:#888;text-transform:uppercase;letter-spacing:.1em;font-weight:600}
+
+    /* LOGO */
+    .nav__logo-img{height:48px;width:auto;object-fit:contain;display:block;background:transparent !important;transition:transform .25s ease, filter .25s ease;filter:drop-shadow(0 2px 8px rgba(0,0,0,0.45))}
+    .nav__logo:hover .nav__logo-img{transform:scale(1.04);filter:drop-shadow(0 4px 16px rgba(252,15,18,0.4))}
+    .footer__logo-img{height:42px;width:auto;object-fit:contain;display:block;background:transparent !important}
+    /* comparison */
+    .comparison-wrapper{overflow-x:auto;-webkit-overflow-scrolling:touch;border:1px solid #222;border-radius:12px}
+    .comparison-table{width:100%;border-collapse:collapse;font-size:.875rem}
+    .comparison-table th,.comparison-table td{padding:1rem 1.25rem;text-align:left;border-bottom:1px solid #1f1f1f;white-space:nowrap}
+    .comparison-table th{background:#181818;font-family:var(--font-display);font-size:.7rem;letter-spacing:.15em;text-transform:uppercase;color:#A5A5A5}
+    .comparison-table th.highlight{color:#FC0F12}
+    .comparison-table td{color:#A5A5A5}
+    .comparison-table td:first-child{color:#F5F5F5}
+    .comparison-table td.highlight{background:rgba(252,15,18,.04)}
+    .comparison-table tr:last-child td{border-bottom:none}
+    .check-icon{color:#FC0F12}
+
+    /* FAQ ACCORDION STYLES */
+    .faq-grid{display:flex;flex-direction:column;gap:0.85rem;margin-top:2.5rem}
+    .faq-item{background:#141418;border:1px solid rgba(255,255,255,0.08);border-radius:12px;overflow:hidden;transition:border-color .25s ease,box-shadow .25s ease,background .25s ease}
+    .faq-item:hover{border-color:rgba(252,15,18,0.3);box-shadow:0 6px 20px rgba(0,0,0,0.4)}
+    .faq-item.open{border-color:rgba(252,15,18,0.45);background:#16161B;box-shadow:0 10px 30px rgba(0,0,0,0.5),0 0 20px rgba(252,15,18,0.1)}
+    .faq-question{width:100%;text-align:left;padding:1.35rem 1.75rem;background:none;border:none;color:#F5F5F5;font-family:var(--font-display);font-size:.95rem;font-weight:600;cursor:pointer;display:flex;justify-content:space-between;align-items:center;gap:1rem;transition:color .2s ease}
+    .faq-question:hover,.faq-item.open .faq-question{color:#FFFFFF}
+    .faq-icon{color:#FC0F12;font-size:0.85rem;transition:transform .3s cubic-bezier(0.16,1,0.3,1);flex-shrink:0;display:inline-block}
+    .faq-item.open .faq-icon{transform:rotate(180deg)}
+    .faq-answer{display:none;padding:0 1.75rem 1.5rem;background:transparent;font-size:.9rem;color:#B5B5B5;line-height:1.75;border-top:1px solid rgba(255,255,255,0.05);padding-top:1rem}
+    .faq-item.open .faq-answer{display:block;animation:faqFadeIn .25s ease-out}
+    @keyframes faqFadeIn{from{opacity:0;transform:translateY(-4px)}to{opacity:1;transform:translateY(0)}}
+  </style>
+</head>
+<body>
+
+  <!-- ANNOUNCEMENT BAR -->
+  <div id="announcement-bar" class="announcement-bar" role="banner" aria-label="Announcement">
+    <span>PREMIUM UNISEX FITNESS ARENA IN NEELANKARAI — <a href="#join-modal" data-open-join-modal>JOIN TODAY</a></span>
+    <button id="announcement-close" class="announcement-close" aria-label="Close announcement">
+      <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><line x1="18" y1="6" x2="6" y2="18"/><line x1="6" y1="6" x2="18" y2="18"/></svg>
+    </button>
+  </div>
+
+  <!-- NAVIGATION -->
+  <nav id="main-nav" class="nav has-announcement" role="navigation" aria-label="Main navigation">
+    <div class="nav__inner">
+      <a href="index.html" class="nav__logo" aria-label="Beast Gym & Fitness - Home">
+        <img src="assets/beast-gym-logo.png" alt="Beast Gym &amp; Fitness Official Logo" class="nav__logo-img">
+      </a>
+      <div class="nav__links" role="menubar">
+        <a href="index.html" class="nav__link" role="menuitem">Home</a>
+        <a href="programs.html" class="nav__link" role="menuitem">Programs</a>
+        <a href="memberships.html" class="nav__link active" role="menuitem">Memberships</a>
+        <a href="about.html" class="nav__link" role="menuitem">About</a>
+        <a href="gallery.html" class="nav__link" role="menuitem">Gallery</a>
+        <a href="medical/index.html" class="nav__link nav__link--supplements" role="menuitem">Supplements</a>
+        <a href="contact.html" class="nav__link" role="menuitem">Contact</a>
+      </div>
+      <div class="nav__cta">
+        <a href="tel:+917092030786" class="btn btn--ghost btn--sm">
+          <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M22 16.92v3a2 2 0 01-2.18 2 19.79 19.79 0 01-8.63-3.07A19.5 19.5 0 014.5 11.5a19.79 19.79 0 01-3.07-8.63A2 2 0 013.41 0.68h3a2 2 0 012 1.72c.127.96.361 1.903.7 2.81a2 2 0 01-.45 2.11L7.09 8.91a16 16 0 006 6l1.27-1.27a2 2 0 012.11-.45c.907.339 1.85.573 2.81.7A2 2 0 0121.32 16z"/></svg>
+          Call
+        </a>
+        <a href="#join-modal" class="btn btn--primary btn--sm" id="nav-join-btn" data-open-join-modal>JOIN NOW</a>
+      </div>
+      <button id="nav-toggle" class="nav__toggle" aria-label="Open menu" aria-expanded="false" aria-controls="nav-drawer">
+        <span></span><span></span><span></span>
+      </button>
+    </div>
+  </nav>
+
+  <!-- MOBILE NAV OVERLAY -->
+  <div id="nav-overlay" class="nav__overlay" aria-hidden="true"></div>
+
+  <!-- MOBILE NAV DRAWER -->
+  <div id="nav-drawer" class="nav__drawer" role="dialog" aria-modal="true" aria-label="Navigation menu">
+    <nav class="nav__drawer-links" role="menubar" aria-label="Mobile navigation">
+      <a href="index.html" class="nav__drawer-link" role="menuitem">Home</a>
+      <a href="programs.html" class="nav__drawer-link" role="menuitem">Programs</a>
+      <a href="memberships.html" class="nav__drawer-link active" role="menuitem">Memberships</a>
+      <a href="about.html" class="nav__drawer-link" role="menuitem">About &amp; Coaches</a>
+      <a href="gallery.html" class="nav__drawer-link" role="menuitem">Facility Gallery</a>
+      <a href="medical/index.html" class="nav__drawer-link nav__drawer-link--red" role="menuitem">Supplements Store</a>
+      <a href="contact.html" class="nav__drawer-link" role="menuitem">Contact &amp; Location</a>
+    </nav>
+    <div class="nav__drawer-cta">
+      <a href="#join-modal" class="btn btn--primary btn--full" data-open-join-modal>JOIN BEAST GYM</a>
+      <a href="tel:+917092030786" class="btn btn--outline btn--full">
+        <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M22 16.92v3a2 2 0 01-2.18 2 19.79 19.79 0 01-8.63-3.07A19.5 19.5 0 014.5 11.5a19.79 19.79 0 01-3.07-8.63A2 2 0 013.41 0.68h3a2 2 0 012 1.72c.127.96.361 1.903.7 2.81a2 2 0 01-.45 2.11L7.09 8.91a16 16 0 006 6l1.27-1.27a2 2 0 012.11-.45c.907.339 1.85.573 2.81.7A2 2 0 0121.32 16z"/></svg>
+        +91 70920 30786
+      </a>
+    </div>
+  </div>
+
+<main>
+
+  <!-- PAGE HERO -->
+  <section class="page-hero">
+    <div class="page-hero__bg">
+      <img src="assets/Membership banner.png" alt="Beast Gym Membership Pricing Banner">
+    </div>
+    <div class="page-hero__overlay"></div>
+    <div class="page-hero__content">
+      <div class="breadcrumbs">
+        <a href="index.html">Home</a> &nbsp;/&nbsp; <span>Memberships</span>
+      </div>
+      <h1 style="font-size:clamp(2.5rem,6vw,4rem);margin-bottom:1rem;">
+        Straightforward Memberships.<br><span style="color:var(--beast-red);">Zero Hidden Charges.</span>
+      </h1>
+      <p style="max-width:620px;font-size:1.125rem;line-height:1.6;color:var(--muted-grey);">
+        Choose from four transparent gym membership plans, dedicated personal training packages, or group class sessions.
+      </p>
+    </div>
+  </section>
+
+
+  <!-- SECTION 1: GYM MEMBERSHIP PACKAGES -->
+  <section class="section" style="background:#090909;" aria-labelledby="gym-mem-title">
+    <div class="container">
+      <div class="text-center reveal">
+        <span class="section-label" style="justify-content:center;">Gym Membership</span>
+        <h2 id="gym-mem-title">Choose Your Commitment</h2>
+        <p style="max-width:560px;margin:.75rem auto 3rem;color:var(--muted-grey);">
+          Full gym floor access, cardio zone, locker amenities, and world-class equipment included in every plan.
+        </p>
+      </div>
+
+      <div class="mem4-grid">
+
+        <!-- MONTHLY -->
+        <div class="mem-card reveal reveal--delay-1">
+          <div class="mem-card__header">
+            <span class="mem-card__duration">1 Month</span>
+            <h3 class="mem-card__name">Monthly</h3>
+            <p style="color:#A5A5A5;font-size:.8rem;margin-top:.3rem;">Maximum flexibility</p>
+          </div>
+          <div class="mem-card__pricing">
+            <div class="mem-card__price">
+              <span class="mem-card__currency">&#8377;</span>
+              <span class="mem-card__amount">1,700</span>
+            </div>
+            <div style="font-size:.75rem;color:#A5A5A5;margin-top:.4rem;font-family:var(--font-display);letter-spacing:.05em;text-transform:uppercase;">Per Month</div>
+          </div>
+          <div class="mem-card__footer">
+            <a href="https://wa.me/917092030786?text=Hi%20Beast%20Gym%20%26%20Fitness%2C%20I%20am%20interested%20in%20the%20Monthly%20Gym%20Membership%20priced%20at%20%E2%82%B91%2C700.%20Please%20share%20the%20joining%20details."
+               target="_blank" rel="noopener noreferrer" class="btn btn--outline btn--full" id="btn-monthly-mem">JOIN MONTHLY</a>
+          </div>
+        </div>
+
+        <!-- QUARTERLY -->
+        <div class="mem-card reveal reveal--delay-2">
+          <div class="mem-card__header">
+            <span class="mem-card__duration">3 Months</span>
+            <h3 class="mem-card__name">Quarterly</h3>
+            <p style="color:#A5A5A5;font-size:.8rem;margin-top:.3rem;">Build a solid habit</p>
+          </div>
+          <div class="mem-card__pricing">
+            <div class="mem-card__price">
+              <span class="mem-card__currency">&#8377;</span>
+              <span class="mem-card__amount">4,200</span>
+            </div>
+            <div style="font-size:.75rem;color:#A5A5A5;margin-top:.4rem;font-family:var(--font-display);letter-spacing:.05em;text-transform:uppercase;">3-Month Total</div>
+          </div>
+          <div class="mem-card__footer">
+            <a href="https://wa.me/917092030786?text=Hi%20Beast%20Gym%20%26%20Fitness%2C%20I%20am%20interested%20in%20the%20Quarterly%20Gym%20Membership%20priced%20at%20%E2%82%B94%2C200.%20Please%20share%20the%20joining%20details."
+               target="_blank" rel="noopener noreferrer" class="btn btn--outline btn--full" id="btn-quarterly-mem">CHOOSE QUARTERLY</a>
+          </div>
+        </div>
+
+        <!-- HALF-YEARLY -->
+        <div class="mem-card reveal reveal--delay-3">
+          <div class="mem-card__header">
+            <span class="mem-card__duration">6 Months</span>
+            <h3 class="mem-card__name">Half-Yearly</h3>
+            <p style="color:#A5A5A5;font-size:.8rem;margin-top:.3rem;">Committed to progress</p>
+          </div>
+          <div class="mem-card__pricing">
+            <div class="mem-card__price">
+              <span class="mem-card__currency">&#8377;</span>
+              <span class="mem-card__amount">5,799</span>
+            </div>
+            <div style="font-size:.75rem;color:#A5A5A5;margin-top:.4rem;font-family:var(--font-display);letter-spacing:.05em;text-transform:uppercase;">6-Month Total</div>
+          </div>
+          <div class="mem-card__footer">
+            <a href="https://wa.me/917092030786?text=Hi%20Beast%20Gym%20%26%20Fitness%2C%20I%20am%20interested%20in%20the%20Half-Yearly%20Gym%20Membership%20priced%20at%20%E2%82%B95%2C799.%20Please%20share%20the%20joining%20details."
+               target="_blank" rel="noopener noreferrer" class="btn btn--outline btn--full" id="btn-halfyearly-mem">CHOOSE HALF-YEARLY</a>
+          </div>
+        </div>
+
+        <!-- YEARLY — BEST LONG-TERM VALUE -->
+        <div class="mem-card mem-card--best reveal reveal--delay-4">
+          <div class="mem-card__badge">&#9733; BEST LONG-TERM VALUE</div>
+          <div class="mem-card__header">
+            <span class="mem-card__duration">12 Months</span>
+            <h3 class="mem-card__name">Yearly</h3>
+            <p style="color:#A5A5A5;font-size:.8rem;margin-top:.3rem;">Maximum commitment, maximum results</p>
+          </div>
+          <div class="mem-card__pricing">
+            <div class="mem-card__price">
+              <span class="mem-card__currency">&#8377;</span>
+              <span class="mem-card__amount">7,199</span>
+            </div>
+            <div style="font-size:.75rem;color:#FC0F12;margin-top:.4rem;font-family:var(--font-display);letter-spacing:.05em;text-transform:uppercase;font-weight:600;">Full-Year Membership</div>
+          </div>
+          <div class="mem-card__footer">
+            <a href="https://wa.me/917092030786?text=Hi%20Beast%20Gym%20%26%20Fitness%2C%20I%20am%20interested%20in%20the%20Yearly%20Gym%20Membership%20priced%20at%20%E2%82%B97%2C199.%20Please%20share%20the%20joining%20details."
+               target="_blank" rel="noopener noreferrer" class="btn btn--primary btn--full" id="btn-yearly-mem">GET YEARLY MEMBERSHIP</a>
+          </div>
+        </div>
+
+      </div>
+
+      <!-- COMPARISON TABLE -->
+      <div class="comparison-wrapper reveal" style="margin-top:4rem;">
+        <table class="comparison-table">
+          <thead>
+            <tr>
+              <th>Plan</th>
+              <th>Monthly</th>
+              <th>Quarterly</th>
+              <th>Half-Yearly</th>
+              <th class="highlight">Yearly</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <td>Duration</td>
+              <td>1 month</td>
+              <td>3 months</td>
+              <td>6 months</td>
+              <td class="highlight">12 months</td>
+            </tr>
+            <tr>
+              <td>Total Price</td>
+              <td>&#8377;1,700</td>
+              <td>&#8377;4,200</td>
+              <td>&#8377;5,799</td>
+              <td class="highlight" style="color:#FC0F12;font-weight:600;">&#8377;7,199</td>
+            </tr>
+            <tr>
+              <td>Gym Floor &amp; Free Weights</td>
+              <td><span class="check-icon">&#10004;</span></td>
+              <td><span class="check-icon">&#10004;</span></td>
+              <td><span class="check-icon">&#10004;</span></td>
+              <td class="highlight"><span class="check-icon">&#10004;</span></td>
+            </tr>
+            <tr>
+              <td>Cardio Zone Access</td>
+              <td><span class="check-icon">&#10004;</span></td>
+              <td><span class="check-icon">&#10004;</span></td>
+              <td><span class="check-icon">&#10004;</span></td>
+              <td class="highlight"><span class="check-icon">&#10004;</span></td>
+            </tr>
+            <tr>
+              <td>Locker Room &amp; Showers</td>
+              <td><span class="check-icon">&#10004;</span></td>
+              <td><span class="check-icon">&#10004;</span></td>
+              <td><span class="check-icon">&#10004;</span></td>
+              <td class="highlight"><span class="check-icon">&#10004;</span></td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+
+    </div>
+  </section>
+
+
+  <!-- SECTION 2: FREE GOODIE PROMOTION -->
+  <section class="goodie-promo" aria-labelledby="goodie-title">
+    <div class="container">
+      <div class="text-center reveal">
+        <span class="section-label" style="justify-content:center;">Limited Offer</span>
+        <h2 id="goodie-title" class="goodie-headline">
+          GET 1 MONTH FREE<br><span>+ CHOOSE YOUR GOODIE</span>
+        </h2>
+        <p style="max-width:600px;margin:.75rem auto 3rem;color:var(--muted-grey);line-height:1.7;font-size:1rem;">
+          Join on a qualifying plan and receive one month free membership — plus your choice of one exclusive Beast Gym goodie. One month free. One goodie of your choice.
+        </p>
+      </div>
+
+      <div class="goodie-grid">
+        <!-- GOODIE 1: GYM T-SHIRT -->
+        <div class="goodie-card reveal reveal--delay-1">
+          <picture>
+            <source srcset="assets/goodie-tshirt.webp" type="image/webp">
+            <img src="assets/goodie-tshirt.jpg" alt="Premium Black Gym T-Shirt — Beast Gym Goodie Option 1" class="goodie-card__img" loading="lazy">
+          </picture>
+          <div class="goodie-card__body">
+            <span class="goodie-card__label">Option 1 &mdash; Choose This</span>
+            <div class="goodie-card__name">Gym T-Shirt</div>
+            <p class="goodie-card__desc">Premium black athletic T-shirt &mdash; moisture-wicking, performance fabric, built for intense training.</p>
+          </div>
+        </div>
+
+        <!-- GOODIE 2: GYM BAG -->
+        <div class="goodie-card reveal reveal--delay-2">
+          <picture>
+            <source srcset="assets/goodie-bag.webp" type="image/webp">
+            <img src="assets/goodie-bag.jpg" alt="Premium Black Gym Duffel Bag — Beast Gym Goodie Option 2" class="goodie-card__img" loading="lazy">
+          </picture>
+          <div class="goodie-card__body">
+            <span class="goodie-card__label">Option 2 &mdash; Choose This</span>
+            <div class="goodie-card__name">Gym Bag</div>
+            <p class="goodie-card__desc">Premium black gym duffel bag &mdash; durable, spacious compartments, handles and shoulder strap for easy carry.</p>
+          </div>
+        </div>
+
+        <!-- GOODIE 3: SHAKER BOTTLE -->
+        <div class="goodie-card reveal reveal--delay-3">
+          <picture>
+            <source srcset="assets/goodie-shaker.webp" type="image/webp">
+            <img src="assets/goodie-shaker.jpg" alt="Premium Black Gym Shaker Bottle — Beast Gym Goodie Option 3" class="goodie-card__img" loading="lazy">
+          </picture>
+          <div class="goodie-card__body">
+            <span class="goodie-card__label">Option 3 &mdash; Choose This</span>
+            <div class="goodie-card__name">Shaker Bottle</div>
+            <p class="goodie-card__desc">Sleek matte-black shaker bottle &mdash; leak-proof lid, mixing ball, measurement markings for accurate nutrition.</p>
+          </div>
+        </div>
+      </div>
+
+      <div class="text-center" style="margin-top:2.5rem;">
+        <div class="goodie-note reveal">
+          <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="#FC0F12" stroke-width="2.5"><circle cx="12" cy="12" r="10"/><line x1="12" y1="8" x2="12" y2="12"/><line x1="12" y1="16" x2="12.01" y2="16"/></svg>
+          You receive 1 month free + ONE goodie of your choice. Enquire at the desk to select your preferred goodie when joining.
+        </div>
+        <div style="margin-top:1.75rem;">
+          <a href="https://wa.me/917092030786?text=Hi%20Beast%20Gym%20%26%20Fitness%2C%20I%20am%20interested%20in%20the%20membership%20offer%20with%201%20month%20free%20and%20a%20goodie.%20Please%20share%20the%20details."
+             target="_blank" rel="noopener noreferrer" class="btn btn--primary btn--lg" id="btn-goodie-enquire">ENQUIRE ABOUT THIS OFFER</a>
+        </div>
+      </div>
+    </div>
+  </section>
+
+
+  <!-- SECTION 3: PERSONAL TRAINING PACKAGES -->
+  <section class="pt-section" aria-labelledby="pt-title">
+    <div class="container">
+      <div class="pt-separator reveal">
+        <span>Personal Training &mdash; Separate from Gym Membership</span>
+      </div>
+      <div class="text-center reveal">
+        <span class="section-label" style="justify-content:center;">Personal Training</span>
+        <h2 id="pt-title">Personal Training.<br>Personal Results.</h2>
+        <p style="max-width:640px;margin:.75rem auto 3rem;color:var(--muted-grey);line-height:1.7;">
+          Take your training to the next level with a dedicated personal training package designed around focused workouts and your fitness goals. Personal Training is a separate, stand-alone service &mdash; not included in standard gym membership.
+        </p>
+      </div>
+
+      <div class="pt-grid">
+
+        <!-- 12 SESSIONS -->
+        <div class="pt-card reveal reveal--delay-1">
+          <div class="pt-card__sessions">12</div>
+          <span class="pt-card__sessions-label">Sessions</span>
+          <div class="pt-card__price">
+            <span class="pt-card__currency">&#8377;</span>
+            <span class="pt-card__amount">10,000</span>
+          </div>
+          <p style="font-size:.8rem;color:#A5A5A5;line-height:1.6;margin-bottom:1.5rem;flex:1;">
+            A focused start to structured one-on-one coaching with your dedicated trainer.
+          </p>
+          <div class="pt-card__footer">
+            <a href="https://wa.me/917092030786?text=Hi%20Beast%20Gym%20%26%20Fitness%2C%20I%20am%20interested%20in%20the%2012-session%20Personal%20Training%20package%20priced%20at%20%E2%82%B910%2C000.%20Please%20share%20the%20details."
+               target="_blank" rel="noopener noreferrer" class="btn btn--outline btn--full" id="btn-pt-12">ENQUIRE NOW</a>
+          </div>
+        </div>
+
+        <!-- 16 SESSIONS -->
+        <div class="pt-card reveal reveal--delay-2">
+          <div class="pt-card__sessions">16</div>
+          <span class="pt-card__sessions-label">Sessions</span>
+          <div class="pt-card__price">
+            <span class="pt-card__currency">&#8377;</span>
+            <span class="pt-card__amount">15,000</span>
+          </div>
+          <p style="font-size:.8rem;color:#A5A5A5;line-height:1.6;margin-bottom:1.5rem;flex:1;">
+            Build momentum and consistency with a structured block of personalized training sessions.
+          </p>
+          <div class="pt-card__footer">
+            <a href="https://wa.me/917092030786?text=Hi%20Beast%20Gym%20%26%20Fitness%2C%20I%20am%20interested%20in%20the%2016-session%20Personal%20Training%20package%20priced%20at%20%E2%82%B915%2C000.%20Please%20share%20the%20details."
+               target="_blank" rel="noopener noreferrer" class="btn btn--outline btn--full" id="btn-pt-16">ENQUIRE NOW</a>
+          </div>
+        </div>
+
+        <!-- 20 SESSIONS -->
+        <div class="pt-card reveal reveal--delay-3">
+          <div class="pt-card__sessions">20</div>
+          <span class="pt-card__sessions-label">Sessions</span>
+          <div class="pt-card__price">
+            <span class="pt-card__currency">&#8377;</span>
+            <span class="pt-card__amount">23,000</span>
+          </div>
+          <p style="font-size:.8rem;color:#A5A5A5;line-height:1.6;margin-bottom:1.5rem;flex:1;">
+            An extended programme giving you ample sessions for meaningful, measurable progress.
+          </p>
+          <div class="pt-card__footer">
+            <a href="https://wa.me/917092030786?text=Hi%20Beast%20Gym%20%26%20Fitness%2C%20I%20am%20interested%20in%20the%2020-session%20Personal%20Training%20package%20priced%20at%20%E2%82%B923%2C000.%20Please%20share%20the%20details."
+               target="_blank" rel="noopener noreferrer" class="btn btn--outline btn--full" id="btn-pt-20">ENQUIRE NOW</a>
+          </div>
+        </div>
+
+        <!-- 26 SESSIONS -->
+        <div class="pt-card reveal reveal--delay-4" style="border-color:rgba(252,15,18,.3);">
+          <div class="pt-card__sessions" style="color:#F5F5F5;">26</div>
+          <span class="pt-card__sessions-label">Sessions</span>
+          <div class="pt-card__price">
+            <span class="pt-card__currency">&#8377;</span>
+            <span class="pt-card__amount" style="color:#FC0F12;">25,000</span>
+          </div>
+          <p style="font-size:.8rem;color:#A5A5A5;line-height:1.6;margin-bottom:1.5rem;flex:1;">
+            The most comprehensive personal training block for those fully committed to their fitness journey.
+          </p>
+          <div class="pt-card__footer">
+            <a href="https://wa.me/917092030786?text=Hi%20Beast%20Gym%20%26%20Fitness%2C%20I%20am%20interested%20in%20the%2026-session%20Personal%20Training%20package%20priced%20at%20%E2%82%B925%2C000.%20Please%20share%20the%20details."
+               target="_blank" rel="noopener noreferrer" class="btn btn--primary btn--full" id="btn-pt-26">ENQUIRE NOW</a>
+          </div>
+        </div>
+
+      </div>
+
+      <div class="text-center reveal" style="margin-top:2.5rem;">
+        <p style="font-size:.85rem;color:#A5A5A5;max-width:560px;margin:0 auto;">
+          Personal Training packages are purchased separately from gym membership. Enquire at reception or via WhatsApp to discuss availability with our trainers.
+        </p>
+      </div>
+    </div>
+  </section>
+
+
+  <!-- SECTION 4: GROUP CLASSES -->
+  <section class="gc-section" aria-labelledby="gc-title">
+    <div class="container">
+      <div class="text-center reveal">
+        <span class="section-label" style="justify-content:center;">Group Classes</span>
+        <h2 id="gc-title">Train Together.<br>Grow Stronger.</h2>
+        <p style="max-width:580px;margin:.75rem auto 0;color:var(--muted-grey);line-height:1.7;">
+          Discover the energy of group training and stay motivated through shared fitness sessions. Group Classes are a separate, stand-alone service.
+        </p>
+      </div>
+
+      <!-- GROUP CLASS DISCIPLINES GRID -->
+      <div class="gc-grid reveal">
+        <!-- 1. CrossFit & Functional -->
+        <div class="gc-item">
+          <div class="gc-item__img-wrap">
+            <img src="assets/group-crossfit.jpg" alt="CrossFit and Functional Group Training at Beast Gym" class="gc-item__img" loading="lazy">
+            <span class="gc-item__badge">HIIT &amp; Power</span>
+          </div>
+          <div class="gc-item__body">
+            <h3 class="gc-item__title">CrossFit &amp; Functional</h3>
+            <p class="gc-item__desc">Dynamic team circuits, Olympic bar technique, and high-octane conditioning built to forge elite stamina.</p>
+          </div>
+        </div>
+
+        <!-- 2. Zumba & Dance -->
+        <div class="gc-item">
+          <div class="gc-item__img-wrap">
+            <img src="assets/group-zumba.jpg" alt="Zumba & Dance Group Classes at Beast Gym" class="gc-item__img" loading="lazy">
+            <span class="gc-item__badge">Cardio &amp; Rhythm</span>
+          </div>
+          <div class="gc-item__body">
+            <h3 class="gc-item__title">Zumba &amp; Dance Fitness</h3>
+            <p class="gc-item__desc">High-tempo cardio dance parties blending infectious Latin choreography with intense calorie-burning intervals.</p>
+          </div>
+        </div>
+
+        <!-- 3. Yoga & Mobility -->
+        <div class="gc-item">
+          <div class="gc-item__img-wrap">
+            <img src="assets/group-yoga.jpg" alt="Yoga & Mobility Flow Group Classes at Beast Gym" class="gc-item__img" loading="lazy">
+            <span class="gc-item__badge">Mobility &amp; Core</span>
+          </div>
+          <div class="gc-item__body">
+            <h3 class="gc-item__title">Yoga &amp; Mobility Flow</h3>
+            <p class="gc-item__desc">Realign your posture, decompress tight hip flexors and shoulders, and cultivate deep core balance.</p>
+          </div>
+        </div>
+
+        <!-- 4. HIIT Bootcamp -->
+        <div class="gc-item">
+          <div class="gc-item__img-wrap">
+            <img src="assets/group-hiit.jpg" alt="HIIT & Athletic Bootcamp at Beast Gym" class="gc-item__img" loading="lazy">
+            <span class="gc-item__badge">Endurance</span>
+          </div>
+          <div class="gc-item__body">
+            <h3 class="gc-item__title">HIIT &amp; Turf Bootcamp</h3>
+            <p class="gc-item__desc">Sprint turf drills, kettlebell complexes, and plyometrics engineered to maximize VO2 max and shred body fat.</p>
+          </div>
+        </div>
+      </div>
+
+      <!-- 12-SESSION PASS CARD -->
+      <div class="gc-pass-card reveal">
+        <div class="gc-pass-info">
+          <span class="gc-pass-label">Separate Service &bull; Stand-Alone Pass</span>
+          <h3 class="gc-pass-title">12-Session Group Pass</h3>
+          <p class="gc-pass-desc">
+            Train together, stay accountable, and push your limits with our certified coaches. Valid across all scheduled group training disciplines with flexible attendance.
+          </p>
+        </div>
+        <div class="gc-pass-pricing">
+          <div class="gc-pass-price-box">
+            <span class="gc-pass-currency">&#8377;</span>
+            <span class="gc-pass-amount">3,500</span>
+            <span class="gc-pass-unit">/ 12 Sessions</span>
+          </div>
+          <a href="https://wa.me/917092030786?text=Hi%20Beast%20Gym%20%26%20Fitness%2C%20I%20am%20interested%20in%20the%2012-session%20Group%20Classes%20package%20priced%20at%20%E2%82%B93%2C500.%20Please%20share%20the%20details."
+             target="_blank" rel="noopener noreferrer" class="btn btn--primary btn--lg" id="btn-group-classes">ENQUIRE ABOUT GROUP CLASSES</a>
+        </div>
+      </div>
+    </div>
+  </section>
+
+
+  <!-- FAQ SECTION -->
+  <section class="section" style="background:#090909;" aria-labelledby="faq-title">
+    <div class="container" style="max-width:800px;">
+      <div class="text-center reveal">
+        <span class="section-label" style="justify-content:center;">Got Questions?</span>
+        <h2 id="faq-title">Frequently Asked Questions</h2>
+      </div>
+      <div class="faq-grid">
+        <div class="faq-item open">
+          <button class="faq-question" id="faq-q-1" aria-expanded="true" aria-controls="faq-a-1">Are there any hidden admission or maintenance fees? <span class="faq-icon">&#9662;</span></button>
+          <div class="faq-answer" id="faq-a-1">Zero hidden fees. The price you see is the price you pay. No mandatory annual maintenance surcharges or equipment upgrade fees.</div>
+        </div>
+        <div class="faq-item">
+          <button class="faq-question" id="faq-q-2" aria-expanded="false" aria-controls="faq-a-2">Is Personal Training included in the gym membership? <span class="faq-icon">&#9662;</span></button>
+          <div class="faq-answer" id="faq-a-2">No. Personal Training is a completely separate service with its own pricing. Gym membership covers full gym floor access. If you would like 1-on-1 coaching, please enquire about our Personal Training packages.</div>
+        </div>
+        <div class="faq-item">
+          <button class="faq-question" id="faq-q-3" aria-expanded="false" aria-controls="faq-a-3">Can I freeze my membership if I travel? <span class="faq-icon">&#9662;</span></button>
+          <div class="faq-answer" id="faq-a-3">Yes, quarterly and annual memberships can be paused for eligible reasons by giving notice to our front desk. Contact us for details.</div>
+        </div>
+        <div class="faq-item">
+          <button class="faq-question" id="faq-q-4" aria-expanded="false" aria-controls="faq-a-4">How do I claim the free month and goodie offer? <span class="faq-icon">&#9662;</span></button>
+          <div class="faq-answer" id="faq-a-4">Simply enquire at the gym reception or reach out via WhatsApp. Our team will provide full details and help you choose your preferred goodie (T-shirt, Gym Bag, or Shaker Bottle).</div>
+        </div>
+        <div class="faq-item">
+          <button class="faq-question" id="faq-q-5" aria-expanded="false" aria-controls="faq-a-5">Can I tour the facility before committing? <span class="faq-icon">&#9662;</span></button>
+          <div class="faq-answer" id="faq-a-5">Absolutely. Our team provides a full walkthrough and baseline fitness profile review so you can experience our arena and equipment before choosing your plan.</div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+</main>
+
+
+  <!-- FOOTER -->
+  <footer class="footer" role="contentinfo">
+    <div class="footer__grid">
+      <div class="footer__brand">
+        <a href="index.html" class="footer__logo" aria-label="Beast Gym & Fitness">
+          <img src="assets/beast-gym-logo.png" alt="Beast Gym &amp; Fitness" class="footer__logo-img">
+        </a>
+        <p class="footer__desc">Bespoke training facility, world-class equipment, certified coaches, and authentic sports nutrition. Train hard. Build strength. Transform.</p>
+        <div class="footer__contact">
+          <div class="footer__contact-item">
+            <div class="footer__contact-icon"><svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0118 0z"/><circle cx="12" cy="10" r="3"/></svg></div>
+            <a href="https://share.google/c82nGcmtq20Y6S7NX" target="_blank" rel="noopener noreferrer">1, Pandian Salai, Saraswathy Nagar North, Neelankarai, Chennai 600115</a>
+          </div>
+          <div class="footer__contact-item">
+            <div class="footer__contact-icon"><svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M22 16.92v3a2 2 0 01-2.18 2 19.79 19.79 0 01-8.63-3.07A19.5 19.5 0 014.5 11.5a19.79 19.79 0 01-3.07-8.63A2 2 0 013.41 0.68h3a2 2 0 012 1.72c.127.96.361 1.903.7 2.81a2 2 0 01-.45 2.11L7.09 8.91a16 16 0 006 6l1.27-1.27a2 2 0 012.11-.45c.907.339 1.85.573 2.81.7A2 2 0 0121.32 16z"/></svg></div>
+            <a href="tel:+917092030786">+91 70920 30786</a>
+          </div>
+          <div class="footer__contact-item">
+            <div class="footer__contact-icon"><svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"/><polyline points="22,6 12,13 2,6"/></svg></div>
+            <span>beastgym2018@gmail.com</span>
+          </div>
+          <div class="footer__contact-item">
+            <div class="footer__contact-icon"><svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="10"/><polyline points="12 6 12 12 16 14"/></svg></div>
+            <span>Mon&ndash;Sat: 5 AM &ndash; 10 PM | Sun: 5 AM &ndash; 12 PM &amp; 6 PM &ndash; 8 PM</span>
+          </div>
+        </div>
+      </div>
+      <div>
+        <h4 class="footer__heading">Programs</h4>
+        <ul class="footer__links">
+          <li><a href="programs.html" class="footer__link">CrossFit Training</a></li>
+          <li><a href="programs.html" class="footer__link">Zumba &amp; Dance</a></li>
+          <li><a href="programs.html" class="footer__link">Personal Coaching</a></li>
+          <li><a href="programs.html" class="footer__link">Youth Sports</a></li>
+          <li><a href="programs.html" class="footer__link">Yoga Classes</a></li>
+          <li><a href="programs.html" class="footer__link">Weight Training</a></li>
+          <li><a href="programs.html" class="footer__link">Diet &amp; Nutrition Plans</a></li>
+          <li><a href="programs.html#rehab" class="footer__link">Injury Rehab &amp; Recovery</a></li>
+        </ul>
+      </div>
+      <div>
+        <h4 class="footer__heading">Quick Navigation</h4>
+        <ul class="footer__links">
+          <li><a href="index.html" class="footer__link">Home</a></li>
+          <li><a href="programs.html" class="footer__link">Training Programs</a></li>
+          <li><a href="memberships.html" class="footer__link">Memberships &amp; Plans</a></li>
+          <li><a href="about.html" class="footer__link">About &amp; Coaches</a></li>
+          <li><a href="gallery.html" class="footer__link">Facility Gallery</a></li>
+          <li><a href="medical/index.html" class="footer__link footer__link--red">Supplements Store</a></li>
+          <li><a href="contact.html" class="footer__link">Contact &amp; Location</a></li>
+        </ul>
+      </div>
+      <div>
+        <h4 class="footer__heading">Membership Enquiries</h4>
+        <p style="font-size:.875rem;color:var(--muted-grey);margin-bottom:1rem;line-height:1.6;">Schedule a tour or enquire about memberships with our reception team.</p>
+        <a href="#join-modal" class="btn btn--primary btn--sm btn--full" data-open-join-modal style="margin-bottom:.75rem;">JOIN BEAST GYM</a>
+        <a href="https://wa.me/917092030786" target="_blank" rel="noopener noreferrer" class="btn btn--outline btn--sm btn--full">WHATSAPP CHAT</a>
+      </div>
+    </div>
+    <div class="footer__bottom">
+      <div class="footer__copyright">&copy; 2026 Beast Gym &amp; Fitness. All Rights Reserved. Crafted for Peak Performance.</div>
+      <div class="footer__legal">
+        <a href="about.html">Privacy Policy</a>
+        <a href="about.html">Terms of Service</a>
+        <a href="about.html">Gym Rules &amp; Etiquette</a>
+      </div>
+    </div>
+  </footer>
+
+  <!-- LIGHTBOX MODAL -->
+  <div id="lightbox" class="lightbox" role="dialog" aria-modal="true" aria-label="Facility photo preview">
+    <button id="lightbox-close" class="lightbox__close" aria-label="Close photo preview">
+      <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><line x1="18" y1="6" x2="6" y2="18"/><line x1="6" y1="6" x2="18" y2="18"/></svg>
+    </button>
+    <button id="lightbox-prev" class="lightbox__prev" aria-label="Previous photo">
+      <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="15 18 9 12 15 6"/></svg>
+    </button>
+    <img id="lightbox-img" class="lightbox__img" src="" alt="">
+    <button id="lightbox-next" class="lightbox__next" aria-label="Next photo">
+      <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="9 18 15 12 9 6"/></svg>
+    </button>
+  </div>
+
+  <!-- FLOATING WHATSAPP BUTTON -->
+  <a href="https://wa.me/917092030786?text=Hi%20Beast%20Gym%20%26%20Fitness%2C%20I%20would%20like%20to%20know%20more%20about%20memberships%20and%20training!" class="whatsapp-float" target="_blank" rel="noopener noreferrer" aria-label="Chat with Beast Gym on WhatsApp">
+    <svg xmlns="http://www.w3.org/2000/svg" width="32" height="32" viewBox="0 0 24 24" fill="currentColor">
+      <path d="M12.04 2c-5.46 0-9.91 4.45-9.91 9.91 0 1.75.46 3.45 1.32 4.95L2.05 22l5.25-1.38c1.45.79 3.08 1.21 4.74 1.21 5.46 0 9.91-4.45 9.91-9.91 0-2.65-1.03-5.14-2.9-7.01A9.816 9.816 0 0012.04 2zm5.78 14.34c-.24.68-1.39 1.3-1.92 1.35-.51.05-1.17.07-3.79-1.01-3.23-1.34-5.32-4.63-5.48-4.84-.16-.21-1.31-1.74-1.31-3.32 0-1.58.83-2.36 1.12-2.68.29-.32.64-.4.86-.4.21 0 .43 0 .62.01.2.01.47-.08.73.56.27.68.93 2.27 1.01 2.43.08.16.13.35.03.56-.11.21-.16.35-.32.53-.16.19-.34.42-.49.56-.16.16-.33.34-.14.67.19.32.84 1.39 1.8 2.25 1.24 1.1 2.29 1.44 2.61 1.6.32.16.51.13.7-.08.19-.21.8-.93 1.01-1.25.21-.32.43-.27.72-.16.29.11 1.86.88 2.18 1.04.32.16.53.24.61.37.08.13.08.79-.16 1.47z"/>
+    </svg>
+  </a>
+
+  <!-- SCRIPTS -->
+  <script src="js/main.js"></script>
+  <script src="js/animations.js"></script>
+
+
+</body>
+</html>

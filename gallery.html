@@ -1,0 +1,287 @@
+﻿<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Facility Photo Gallery &mdash; Beast Gym & Fitness | Inside The Arena</title>
+  <meta name="description" content="Explore our high-resolution facility gallery. High-end free weights, Olympic lifting platforms, functional turf, and clean locker amenities.">
+  <link rel="canonical" href="https://beastgym.in/gallery.html">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Cinzel:wght@600;700;800;900&family=Outfit:wght@300;400;500;600;700;800;900&family=Plus+Jakarta+Sans:ital,wght@0,300;0,400;0,500;0,600;0,700;0,800;1,400&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="css/design-system.css">
+  <link rel="stylesheet" href="css/main.css">
+  <link rel="stylesheet" href="css/animations.css">
+</head>
+<body>
+
+
+  <!-- ANNOUNCEMENT BAR -->
+  <div id="announcement-bar" class="announcement-bar" role="banner" aria-label="Announcement">
+    <span>PREMIUM UNISEX FITNESS ARENA IN NEELANKARAI &mdash; <a href="#join-modal" data-open-join-modal>JOIN TODAY</a></span>
+    <button id="announcement-close" class="announcement-close" aria-label="Close announcement">
+      <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><line x1="18" y1="6" x2="6" y2="18"/><line x1="6" y1="6" x2="18" y2="18"/></svg>
+    </button>
+  </div>
+
+  <!-- GLOSSY GLASSMORPHISM NAVIGATION -->
+  <nav id="main-nav" class="nav has-announcement" role="navigation" aria-label="Main navigation">
+    <div class="nav__inner">
+      <a href="index.html" class="nav__logo" aria-label="Beast Gym & Fitness - Home">
+        <img src="assets/beast-gym-logo.png" alt="Beast Gym &amp; Fitness Official Logo" class="nav__logo-img">
+      </a>
+
+      <div class="nav__links" role="menubar">
+        <a href="index.html" class="nav__link " role="menuitem">Home</a>
+        <a href="programs.html" class="nav__link " role="menuitem">Programs</a>
+        <a href="memberships.html" class="nav__link " role="menuitem">Memberships</a>
+        <a href="about.html" class="nav__link " role="menuitem">About</a>
+        <a href="gallery.html" class="nav__link active" role="menuitem">Gallery</a>
+        <a href="medical/index.html" class="nav__link nav__link--supplements " role="menuitem">Supplements</a>
+        <a href="contact.html" class="nav__link " role="menuitem">Contact</a>
+      </div>
+
+      <div class="nav__cta">
+        <a href="tel:+917092030786" class="btn btn--ghost btn--sm">
+          <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M22 16.92v3a2 2 0 01-2.18 2 19.79 19.79 0 01-8.63-3.07A19.5 19.5 0 014.5 11.5a19.79 19.79 0 01-3.07-8.63A2 2 0 013.41 0.68h3a2 2 0 012 1.72c.127.96.361 1.903.7 2.81a2 2 0 01-.45 2.11L7.09 8.91a16 16 0 006 6l1.27-1.27a2 2 0 012.11-.45c.907.339 1.85.573 2.81.7A2 2 0 0121.32 16z"/></svg>
+          Call
+        </a>
+        <a href="#join-modal" class="btn btn--primary btn--sm" id="nav-join-btn" data-open-join-modal>JOIN NOW</a>
+      </div>
+
+      <button id="nav-toggle" class="nav__toggle" aria-label="Open menu" aria-expanded="false" aria-controls="nav-drawer">
+        <span></span><span></span><span></span>
+      </button>
+    </div>
+  </nav>
+
+  <!-- MOBILE NAV OVERLAY -->
+  <div id="nav-overlay" class="nav__overlay" aria-hidden="true"></div>
+
+  <!-- MOBILE NAV DRAWER -->
+  <div id="nav-drawer" class="nav__drawer" role="dialog" aria-modal="true" aria-label="Navigation menu">
+    <nav class="nav__drawer-links" role="menubar" aria-label="Mobile navigation">
+      <a href="index.html" class="nav__drawer-link " role="menuitem">Home</a>
+      <a href="programs.html" class="nav__drawer-link " role="menuitem">Programs</a>
+      <a href="memberships.html" class="nav__drawer-link " role="menuitem">Memberships</a>
+      <a href="about.html" class="nav__drawer-link " role="menuitem">About &amp; Coaches</a>
+      <a href="gallery.html" class="nav__drawer-link active" role="menuitem">Facility Gallery</a>
+      <a href="medical/index.html" class="nav__drawer-link nav__drawer-link--red " role="menuitem">Supplements Store</a>
+      <a href="contact.html" class="nav__drawer-link " role="menuitem">Contact &amp; Location</a>
+    </nav>
+    <div class="nav__drawer-cta">
+      <a href="#join-modal" class="btn btn--primary btn--full" data-open-join-modal>JOIN BEAST GYM</a>
+      <a href="tel:+917092030786" class="btn btn--outline btn--full">
+        <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M22 16.92v3a2 2 0 01-2.18 2 19.79 19.79 0 01-8.63-3.07A19.5 19.5 0 014.5 11.5a19.79 19.79 0 01-3.07-8.63A2 2 0 013.41 0.68h3a2 2 0 012 1.72c.127.96.361 1.903.7 2.81a2 2 0 01-.45 2.11L7.09 8.91a16 16 0 006 6l1.27-1.27a2 2 0 012.11-.45c.907.339 1.85.573 2.81.7A2 2 0 0121.32 16z"/></svg>
+        +91 70920 30786
+      </a>
+    </div>
+  </div>
+
+
+<main>
+  <!-- PAGE HERO -->
+  <section class="page-hero">
+    <div class="page-hero__bg">
+      <img src="assets/unnamed.webp" alt="Beast Gym Facility Gallery Hero">
+    </div>
+    <div class="page-hero__overlay"></div>
+    <div class="page-hero__content">
+      <div class="breadcrumbs">
+        <a href="index.html">Home</a> &nbsp;/&nbsp; <span>Photo Gallery</span>
+      </div>
+      <h1 style="font-size:clamp(2.5rem, 6vw, 4rem);margin-bottom:1rem;">
+        Inside The Beast Arena.<br><span style="color:var(--beast-red);">A Visual Tour.</span>
+      </h1>
+      <p style="max-width:620px;font-size:1.125rem;line-height:1.6;color:var(--muted-grey);">
+        Click on any photo below to inspect our training floor, dumbbell stations, functional turf, and locker amenities in high resolution.
+      </p>
+    </div>
+  </section>
+
+  <!-- GALLERY WITH CATEGORY TABS -->
+  <section class="section" style="background:#090909;">
+    <div class="container">
+      <div class="text-center">
+        <div class="filter-pills">
+          <button class="filter-btn active" onclick="filterGallery('all', this)">All Photos (13)</button>
+          <button class="filter-btn" onclick="filterGallery('weights', this)">Weights &amp; Racks</button>
+          <button class="filter-btn" onclick="filterGallery('cardio', this)">Cardio &amp; Turf</button>
+          <button class="filter-btn" onclick="filterGallery('coaching', this)">Coaching &amp; Lockers</button>
+        </div>
+      </div>
+
+      <div class="gallery__grid" id="full-gallery" style="margin-top:2.5rem;">
+        <div class="gallery-item reveal" data-category="weights" data-src="assets/unnamed.webp" data-alt="Main gym training floor and dumbbell stations">
+          <img src="assets/unnamed.webp" alt="Main gym training floor and dumbbell stations" loading="lazy">
+          <div class="gallery-item__overlay"><div class="gallery-item__icon"><svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="11" cy="11" r="8"/><line x1="21" y1="21" x2="16.65" y2="16.65"/><line x1="11" y1="8" x2="11" y2="14"/><line x1="8" y1="11" x2="14" y2="11"/></svg></div></div>
+        </div>
+
+        <div class="gallery-item reveal reveal--delay-1" data-category="weights" data-src="assets/unnamed (1).webp" data-alt="Heavy dumbbell rack zone">
+          <img src="assets/unnamed (1).webp" alt="Heavy dumbbell rack zone" loading="lazy">
+          <div class="gallery-item__overlay"><div class="gallery-item__icon"><svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="11" cy="11" r="8"/><line x1="21" y1="21" x2="16.65" y2="16.65"/><line x1="11" y1="8" x2="11" y2="14"/><line x1="8" y1="11" x2="14" y2="11"/></svg></div></div>
+        </div>
+
+        <div class="gallery-item reveal reveal--delay-2" data-category="cardio" data-src="assets/unnamed (2).webp" data-alt="Cardio conditioning floor with treadmills">
+          <img src="assets/unnamed (2).webp" alt="Cardio conditioning floor with treadmills" loading="lazy">
+          <div class="gallery-item__overlay"><div class="gallery-item__icon"><svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="11" cy="11" r="8"/><line x1="21" y1="21" x2="16.65" y2="16.65"/><line x1="11" y1="8" x2="11" y2="14"/><line x1="8" y1="11" x2="14" y2="11"/></svg></div></div>
+        </div>
+
+        <div class="gallery-item reveal reveal--delay-1" data-category="weights" data-src="assets/unnamed (3).webp" data-alt="CrossFit rig and functional rack">
+          <img src="assets/unnamed (3).webp" alt="CrossFit rig and functional rack" loading="lazy">
+          <div class="gallery-item__overlay"><div class="gallery-item__icon"><svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="11" cy="11" r="8"/><line x1="21" y1="21" x2="16.65" y2="16.65"/><line x1="11" y1="8" x2="11" y2="14"/><line x1="8" y1="11" x2="14" y2="11"/></svg></div></div>
+        </div>
+
+        <div class="gallery-item reveal reveal--delay-2" data-category="weights" data-src="assets/unnamed (4).webp" data-alt="Cable crossover machine">
+          <img src="assets/unnamed (4).webp" alt="Cable crossover machine" loading="lazy">
+          <div class="gallery-item__overlay"><div class="gallery-item__icon"><svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="11" cy="11" r="8"/><line x1="21" y1="21" x2="16.65" y2="16.65"/><line x1="11" y1="8" x2="11" y2="14"/><line x1="8" y1="11" x2="14" y2="11"/></svg></div></div>
+        </div>
+
+        <div class="gallery-item reveal reveal--delay-3" data-category="weights" data-src="assets/unnamed (5).webp" data-alt="Olympic lifting deadlift platform">
+          <img src="assets/unnamed (5).webp" alt="Olympic lifting deadlift platform" loading="lazy">
+          <div class="gallery-item__overlay"><div class="gallery-item__icon"><svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="11" cy="11" r="8"/><line x1="21" y1="21" x2="16.65" y2="16.65"/><line x1="11" y1="8" x2="11" y2="14"/><line x1="8" y1="11" x2="14" y2="11"/></svg></div></div>
+        </div>
+
+        <div class="gallery-item reveal reveal--delay-1" data-category="coaching" data-src="assets/unnamed (6).webp" data-alt="Personal coach instructing athlete">
+          <img src="assets/unnamed (6).webp" alt="Personal coach instructing athlete" loading="lazy">
+          <div class="gallery-item__overlay"><div class="gallery-item__icon"><svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="11" cy="11" r="8"/><line x1="21" y1="21" x2="16.65" y2="16.65"/><line x1="11" y1="8" x2="11" y2="14"/><line x1="8" y1="11" x2="14" y2="11"/></svg></div></div>
+        </div>
+
+        <div class="gallery-item reveal reveal--delay-2" data-category="coaching" data-src="assets/unnamed (7).webp" data-alt="Clean changing and shower lockers">
+          <img src="assets/unnamed (7).webp" alt="Clean changing and shower lockers" loading="lazy">
+          <div class="gallery-item__overlay"><div class="gallery-item__icon"><svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="11" cy="11" r="8"/><line x1="21" y1="21" x2="16.65" y2="16.65"/><line x1="11" y1="8" x2="11" y2="14"/><line x1="8" y1="11" x2="14" y2="11"/></svg></div></div>
+        </div>
+
+        <div class="gallery-item reveal reveal--delay-3" data-category="cardio" data-src="assets/unnamed (8).webp" data-alt="Turf track for sled push and agility">
+          <img src="assets/unnamed (8).webp" alt="Turf track for sled push and agility" loading="lazy">
+          <div class="gallery-item__overlay"><div class="gallery-item__icon"><svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="11" cy="11" r="8"/><line x1="21" y1="21" x2="16.65" y2="16.65"/><line x1="11" y1="8" x2="11" y2="14"/><line x1="8" y1="11" x2="14" y2="11"/></svg></div></div>
+        </div>
+
+        <div class="gallery-item reveal reveal--delay-1" data-category="weights" data-src="assets/unnamed (9).webp" data-alt="Bench press station and barbells">
+          <img src="assets/unnamed (9).webp" alt="Bench press station and barbells" loading="lazy">
+          <div class="gallery-item__overlay"><div class="gallery-item__icon"><svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="11" cy="11" r="8"/><line x1="21" y1="21" x2="16.65" y2="16.65"/><line x1="11" y1="8" x2="11" y2="14"/><line x1="8" y1="11" x2="14" y2="11"/></svg></div></div>
+        </div>
+
+        <div class="gallery-item reveal reveal--delay-2" data-category="weights" data-src="assets/unnamed (10).webp" data-alt="Incline chest and shoulder press area">
+          <img src="assets/unnamed (10).webp" alt="Incline chest and shoulder press area" loading="lazy">
+          <div class="gallery-item__overlay"><div class="gallery-item__icon"><svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="11" cy="11" r="8"/><line x1="21" y1="21" x2="16.65" y2="16.65"/><line x1="11" y1="8" x2="11" y2="14"/><line x1="8" y1="11" x2="14" y2="11"/></svg></div></div>
+        </div>
+
+        <div class="gallery-item reveal reveal--delay-3" data-category="cardio" data-src="assets/unnamed (11).webp" data-alt="Stationary cycling studio bikes">
+          <img src="assets/unnamed (11).webp" alt="Stationary cycling studio bikes" loading="lazy">
+          <div class="gallery-item__overlay"><div class="gallery-item__icon"><svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="11" cy="11" r="8"/><line x1="21" y1="21" x2="16.65" y2="16.65"/><line x1="11" y1="8" x2="11" y2="14"/><line x1="8" y1="11" x2="14" y2="11"/></svg></div></div>
+        </div>
+
+        <div class="gallery-item reveal reveal--delay-1" data-category="coaching" data-src="assets/unnamed (12).webp" data-alt="Nutrition and front reception welcome desk">
+          <img src="assets/unnamed (12).webp" alt="Nutrition and front reception welcome desk" loading="lazy">
+          <div class="gallery-item__overlay"><div class="gallery-item__icon"><svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="11" cy="11" r="8"/><line x1="21" y1="21" x2="16.65" y2="16.65"/><line x1="11" y1="8" x2="11" y2="14"/><line x1="8" y1="11" x2="14" y2="11"/></svg></div></div>
+        </div>
+      </div>
+    </div>
+  </section>
+</main>
+
+
+  <!-- FOOTER -->
+  <footer class="footer" role="contentinfo">
+    <div class="footer__grid">
+      <div class="footer__brand">
+        <a href="index.html" class="footer__logo" aria-label="Beast Gym & Fitness">
+          <img src="assets/beast-gym-logo.png" alt="Beast Gym &amp; Fitness" class="footer__logo-img">
+        </a>
+        <p class="footer__desc">Bespoke training facility, world-class equipment, certified coaches, and authentic sports nutrition. Train hard. Build strength. Transform.</p>
+        <div class="footer__contact">
+          <div class="footer__contact-item">
+            <div class="footer__contact-icon"><svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0118 0z"/><circle cx="12" cy="10" r="3"/></svg></div>
+            <a href="https://share.google/c82nGcmtq20Y6S7NX" target="_blank" rel="noopener noreferrer">1, Pandian Salai, Saraswathy Nagar North, Neelankarai, Chennai 600115</a>
+          </div>
+          <div class="footer__contact-item">
+            <div class="footer__contact-icon"><svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M22 16.92v3a2 2 0 01-2.18 2 19.79 19.79 0 01-8.63-3.07A19.5 19.5 0 014.5 11.5a19.79 19.79 0 01-3.07-8.63A2 2 0 013.41 0.68h3a2 2 0 012 1.72c.127.96.361 1.903.7 2.81a2 2 0 01-.45 2.11L7.09 8.91a16 16 0 006 6l1.27-1.27a2 2 0 012.11-.45c.907.339 1.85.573 2.81.7A2 2 0 0121.32 16z"/></svg></div>
+            <a href="tel:+917092030786">+91 70920 30786</a>
+          </div>
+          <div class="footer__contact-item">
+            <div class="footer__contact-icon"><svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"/><polyline points="22,6 12,13 2,6"/></svg></div>
+            <span>beastgym2018@gmail.com</span>
+          </div>
+          <div class="footer__contact-item">
+            <div class="footer__contact-icon"><svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="10"/><polyline points="12 6 12 12 16 14"/></svg></div>
+            <span>Mon&ndash;Sat: 5 AM &ndash; 10 PM | Sun: 5 AM &ndash; 12 PM &amp; 6 PM &ndash; 8 PM</span>
+          </div>
+        </div>
+      </div>
+
+      <div>
+        <h4 class="footer__heading">Programs</h4>
+        <ul class="footer__links">
+          <li><a href="programs.html" class="footer__link">CrossFit Training</a></li>
+          <li><a href="programs.html" class="footer__link">Zumba &amp; Dance</a></li>
+          <li><a href="programs.html" class="footer__link">Personal Coaching</a></li>
+          <li><a href="programs.html" class="footer__link">Youth Sports</a></li>
+          <li><a href="programs.html" class="footer__link">Yoga Classes</a></li>
+          <li><a href="programs.html" class="footer__link">Weight Training</a></li>
+          <li><a href="programs.html" class="footer__link">Diet &amp; Nutrition Plans</a></li>
+          <li><a href="programs.html#rehab" class="footer__link">Injury Rehab &amp; Recovery</a></li>
+        </ul>
+      </div>
+
+      <div>
+        <h4 class="footer__heading">Quick Navigation</h4>
+        <ul class="footer__links">
+          <li><a href="index.html" class="footer__link">Home</a></li>
+          <li><a href="programs.html" class="footer__link">Training Programs</a></li>
+          <li><a href="memberships.html" class="footer__link">Memberships &amp; Plans</a></li>
+          <li><a href="about.html" class="footer__link">About &amp; Coaches</a></li>
+          <li><a href="gallery.html" class="footer__link">Facility Gallery</a></li>
+          <li><a href="medical/index.html" class="footer__link footer__link--red">Supplements Store</a></li>
+          <li><a href="contact.html" class="footer__link">Contact &amp; Location</a></li>
+        </ul>
+      </div>
+
+      <div>
+        <h4 class="footer__heading">Membership Enquiries</h4>
+        <p style="font-size:0.875rem;color:var(--muted-grey);margin-bottom:1rem;line-height:1.6;">Schedule a tour or enquire about memberships with our reception team.</p>
+        <a href="#join-modal" class="btn btn--primary btn--sm btn--full" data-open-join-modal style="margin-bottom:0.75rem;">JOIN BEAST GYM</a>
+        <a href="https://wa.me/917092030786" target="_blank" rel="noopener noreferrer" class="btn btn--outline btn--sm btn--full">WHATSAPP CHAT</a>
+      </div>
+    </div>
+
+    <div class="footer__bottom">
+      <div class="footer__copyright">
+        &copy; 2026 Beast Gym &amp; Fitness. All Rights Reserved. Crafted for Peak Performance.
+      </div>
+      <div class="footer__legal">
+        <a href="about.html">Privacy Policy</a>
+        <a href="about.html">Terms of Service</a>
+        <a href="about.html">Gym Rules &amp; Etiquette</a>
+      </div>
+    </div>
+  </footer>
+
+  <!-- LIGHTBOX MODAL -->
+  <div id="lightbox" class="lightbox" role="dialog" aria-modal="true" aria-label="Facility photo preview">
+    <button id="lightbox-close" class="lightbox__close" aria-label="Close photo preview">
+      <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><line x1="18" y1="6" x2="6" y2="18"/><line x1="6" y1="6" x2="18" y2="18"/></svg>
+    </button>
+    <button id="lightbox-prev" class="lightbox__prev" aria-label="Previous photo">
+      <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="15 18 9 12 15 6"/></svg>
+    </button>
+    <img id="lightbox-img" class="lightbox__img" src="" alt="">
+    <button id="lightbox-next" class="lightbox__next" aria-label="Next photo">
+      <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="9 18 15 12 9 6"/></svg>
+    </button>
+  </div>
+
+  <!-- FLOATING WHATSAPP BUTTON -->
+  <a href="https://wa.me/917092030786?text=Hi%20Beast%20Gym%20%26%20Fitness%2C%20I%20would%20like%20to%20know%20more%20about%20memberships%20and%20training!" class="whatsapp-float" target="_blank" rel="noopener noreferrer" aria-label="Chat with Beast Gym on WhatsApp">
+    <svg xmlns="http://www.w3.org/2000/svg" width="32" height="32" viewBox="0 0 24 24" fill="currentColor">
+      <path d="M12.04 2c-5.46 0-9.91 4.45-9.91 9.91 0 1.75.46 3.45 1.32 4.95L2.05 22l5.25-1.38c1.45.79 3.08 1.21 4.74 1.21 5.46 0 9.91-4.45 9.91-9.91 0-2.65-1.03-5.14-2.9-7.01A9.816 9.816 0 0012.04 2zm5.78 14.34c-.24.68-1.39 1.3-1.92 1.35-.51.05-1.17.07-3.79-1.01-3.23-1.34-5.32-4.63-5.48-4.84-.16-.21-1.31-1.74-1.31-3.32 0-1.58.83-2.36 1.12-2.68.29-.32.64-.4.86-.4.21 0 .43 0 .62.01.2.01.47-.08.73.56.27.68.93 2.27 1.01 2.43.08.16.13.35.03.56-.11.21-.16.35-.32.53-.16.19-.34.42-.49.56-.16.16-.33.34-.14.67.19.32.84 1.39 1.8 2.25 1.24 1.1 2.29 1.44 2.61 1.6.32.16.51.13.7-.08.19-.21.8-.93 1.01-1.25.21-.32.43-.27.72-.16.29.11 1.86.88 2.18 1.04.32.16.53.24.61.37.08.13.08.79-.16 1.47z"/>
+    </svg>
+  </a>
+
+  <!-- SCRIPTS -->
+  <script src="js/main.js"></script>
+  <script src="js/animations.js"></script>
+
+
+</body>
+</html>
